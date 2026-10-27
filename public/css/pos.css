@@ -1,0 +1,485 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', 'sans-serif', 'arial';
+    font-size: 1rem;
+    text-rendering: optimizeLegibility;
+}
+
+.scale-products-section {
+    background-color: #1f734c;
+    width: 45%; border-right: 1px solid green;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    color: #ffffff;
+}
+
+.search-header {
+    font-size: 1.245rem;
+    margin: 16px 0;
+}
+
+.scale-products-section .form-group input, .scale-products-section .form-group select {
+    height: 40px;
+    border-radius: 4px;
+    font-size: 1rem;
+
+}
+
+.scale-products-section .form-group input {
+    flex: 1;
+    padding: 8px;
+}
+
+.scale-products-section .product-footer img {
+    width: 60px;
+}
+
+.scale-products-section .product-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.scale-products-section .product-footer span {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.pos-fullscreen-body .appbar {
+    height: 60px;
+    min-height: 60px;
+    border: none;
+    background-color: #1f734c;
+    color: #ffffff;
+    box-sizing: border-box;
+}
+
+.appbar__container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px 0 24px;
+}
+
+.appbar__section {
+    display: flex;
+    align-items: center;
+}
+
+.appbar__section--menu .c_button {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+}
+
+.appbar__section--name {}
+.appbar__section--name span {
+    font-size: 1.1rem;
+    letter-spacing: 0.0454rem;
+    font-weight: 400;
+}
+
+.cashier-details option {
+    color: #000000;
+}
+
+/* Reset and ensure the body takes the full height without scrollbars */
+.pos-fullscreen-body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #f4f6f8;
+    overflow: hidden; 
+}
+
+/* The main container holding both panels */
+.pos-panel {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.pos-layout {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+.pos-cart-section {
+    border-right: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.pos-products-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.pos-products-section--search {
+    margin: 10px 24px;
+    position: relative;
+}
+
+.pos-products-section #pos_search_input {
+    height: 50px;
+    border: 1px solid #666666;
+    border-radius: 6px;
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 1rem;
+}
+
+.product-grid {
+    flex: 1;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+    align-content: start;
+}
+
+.product-grid {
+  scrollbar-color: #124a30 transparent;
+  scrollbar-width: thin;
+  scrollbar-gutter: stable; 
+}
+
+#pos_product_grid {
+    max-height: calc(100vh - 150px);
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    z-index: 10;
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* -------------------------------------------
+   2. WEBKIT/CHROMIUM LEGACY (For fine-tuning pixel sizes & borders)
+   ------------------------------------------- */
+/* The entire scrollbar area */
+.product-grid::-webkit-scrollbar {
+  width: 12px;              /* Width of vertical scrollbar */
+  height: 12px;             /* Height of horizontal scrollbar */
+}
+
+/* The background area under the thumb */
+.product-grid::-webkit-scrollbar-track {
+  background: #f1f1f1;       
+  border-radius: 6px;       /* Optional rounded background */
+}
+
+/* The draggable handle */
+.product-grid::-webkit-scrollbar-thumb {
+  background-color: #888888; 
+  border-radius: 6px;       /* Gives it smooth rounded edges */
+  border: 3px solid #f1f1f1; /* Creates padding around the thumb */
+}
+
+/* Change handle color on user hover */
+.product-grid::-webkit-scrollbar-thumb:hover {
+  background-color: #124a30; 
+}
+
+.product-grid .product-card {
+    padding: 6px 8px 6px 16px;
+    border-bottom: 1px solid #d3d3d3;
+    text-align: left;
+    background-color: #ffffff;
+    cursor: pointer;
+    width: 100%;
+}
+
+.product-card:focus {
+    outline: none;
+    background-color: #e1e1e1;
+}
+
+.product-card .product-card-title {
+    font-weight: bold; font-size: 1rem; margin-bottom: 2px;
+}
+
+.product-card .product-card-price {
+    color: green;
+    font-weight: bold; font-size: 0.9245rem;
+}
+
+.product-card .product-card-barcode {
+    color: #777777; font-family: monospace;
+    font-size: 0.9854ren;
+}
+
+/* POS Layout Structure */
+.pos-layout {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 64px); /* Adjust based on your appbar height */
+    background-color: #f4f6f8;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.pos-products-section, 
+.pos-cart-section {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Accessibility Focus States for Layouts */
+.pos-products-section:focus, 
+.pos-cart-section:focus {
+    border-color: #3b82f6; /* Elegant blue focus ring */
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+}
+
+.pos-cart-section__columns {
+    display: flex;
+    flex: 1;
+    position: relative;
+}
+
+.section-columns {
+    display: flex;
+}
+
+#pos_products_table_conntainer {
+    flex: 1;
+}
+
+.section__columns--table {
+    flex: 8;
+    flex-direction: column;
+}
+
+.pos-products__table {
+    display: flex;
+    position: relative;
+    gap: 12px;
+    background-color: var(--background);
+    height: 40px;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.pos-products__table-column {
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+}
+
+.pos-products__table-column--article, .cart-item-details {
+    flex: 7;
+}
+.pos-products__table-column--quantity, .cart-item-quantity {
+    flex: 2;
+}
+.pos-products__table-column--total, .cart-item-total-col {
+    flex: 1;
+    text-align: right;
+    align-items: end;
+    flex-flow: column-reverse;
+}
+
+.section__columns--checkout {
+    flex: 2;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-left: 1px solid #d7d7d7;
+    padding: 24px 20px 24px 20px;
+}
+
+.pos-column__products_ads {
+    flex: 1;
+}
+
+/* Search Input */
+.search-bar .form-control {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.search-bar .form-control:focus {
+    border-color: #3b82f6;
+}
+
+/* Cart Items Container */
+.cart-items-container {
+    max-height: calc(100dvh - 250px);
+    flex-grow: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.empty-cart-message {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+/* Cart Item Styling */
+.cart-item {
+    display: flex;
+    gap: 12px;
+    border-bottom: 1px solid #f3f4f6;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 24px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.cart-item:focus, 
+.cart-item:hover {
+    background: #eff6ff;
+    border-color: #3b82f6;
+}
+
+.cart-item:focus {
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.cart-item__meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cart-item-quantity {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: #4b5563;
+}
+
+.cart-item-qty-input {
+    width: 80px;
+    padding: 0.4rem;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.cart-item-qty-input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.cart-item-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.cart-item-sku {
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+.cart-item-price {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.cart-item-price>div:first-child {
+    color: #444444;
+}
+
+.cart-item-total {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+.cart-item-total-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.cart-item-discount-tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #059669; /* Clean green text indicating savings */
+    background: #ecfdf5;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-top: 2px;
+}
+
+
+.totals-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    color: #4b5563;
+    margin-bottom: 0.5rem;
+}
+
+.grand-total {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 1.5rem;
+}
+
+.cart-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: end;
+}
+
+/* Modals */
+.modal-content input[type="radio"] {
+    width: 1.2rem;
+    height: 1.2rem;
+    accent-color: #3b82f6;
+    cursor: pointer;
+}
+
+.scale-layout {
+    flex-direction: row;
+}
+
+#scale_dept_select {
+    padding: 0;
+}

@@ -1,0 +1,31 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+
+class CustomerDevice extends Model
+{
+    protected $fillable = [
+        'customer_id',
+        'token',
+        'token_hash',
+        'platform',
+        'last_seen_at',
+        'revoked_at',
+    ];
+
+    protected function casts(): array
+    {
+        return [
+            'last_seen_at' => 'datetime',
+            'revoked_at' => 'datetime',
+        ];
+    }
+
+    public function customer(): BelongsTo
+    {
+        return $this->belongsTo(Customer::class);
+    }
+}

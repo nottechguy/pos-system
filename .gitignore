@@ -1,0 +1,63 @@
+# Laravel Core Dependencies & Cache
+/vendor/
+/bootstrap/cache/*
+!/bootstrap/cache/.gitignore
+/storage/framework/cache/data/*
+!/storage/framework/cache/data/.gitignore
+/storage/framework/sessions/*
+!/storage/framework/sessions/.gitignore
+/storage/framework/testing/*
+!/storage/framework/testing/.gitignore
+/storage/framework/views/*
+!/storage/framework/views/*
+
+# Laravel Logs & Storage
+/storage/logs/*
+!/storage/logs/.gitignore
+/storage/app/public/*
+!/storage/app/public/.gitignore
+/storage/pail/
+/public/storage
+
+# Environment & Secrets (NEVER commit these)
+.env
+.env.*
+!.env.example
+auth.json
+
+# Front-End Assets & Dependencies (Vite / Mix / Node)
+/node_modules/
+/public/build/
+/public/hot/
+npm-debug.log
+yarn-error.log
+
+# Testing & Quality Assurance
+/.phpunit.cache/
+/.phpunit.result.cache
+/.pest/
+/.phpstan.cache/
+/.php-cs-fixer.cache/
+/.pint.cache/
+/coverage/
+
+# Local Dev Tooling (Docker, Sail, Homestead, Vagrant)
+/.sail/
+docker-compose.override.yml
+Homestead.json
+Homestead.yaml
+/.vagrant/
+
+# IDE and Editor Files
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.phpactor.json
+_ide_helper.php
+_ide_helper_models.php
+
+# OS Generated Files
+.DS_Store
+Thumbs.db
