@@ -76,6 +76,7 @@
             "dont-discover": []
         }
     },
+    /*
     "repositories": [
         {
             "type": "path",
@@ -83,6 +84,12 @@
             "options": {
                 "symlink": true
             }
+        }
+    ],*/
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:nottechguy/bmdc-laravel.git"
         }
     ],
     "config": {
