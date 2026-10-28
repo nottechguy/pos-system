@@ -76,16 +76,6 @@
             "dont-discover": []
         }
     },
-    /*
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../../../bmdc",
-            "options": {
-                "symlink": true
-            }
-        }
-    ],*/
     "repositories": [
         {
             "type": "vcs",
