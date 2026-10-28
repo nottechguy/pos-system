@@ -6,6 +6,29 @@ defineModule("POSCashierController", ["$", "AsyncRequest", "TemplateEngine", "Di
     var csrfToken = $.fromIDOrElement("csrf_token") ? $.fromIDOrElement("csrf_token").getAttribute("content") : "";
     var previousSelectedId = null;
 
+    // Register modal template inside the cashier module
+    TemplateEngine.register("cashier_auth_modal", `
+        <div class="modal-backdrop" id="cashier_auth_modal_wrapper" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: flex; justify-content: center; align-items: center; z-index: 1100;" tabindex="-1">
+            <div class="modal-content" style="background: #fff; padding: 2rem; border-radius: 8px; width: 400px; max-width: 95vw; display: flex; flex-direction: column; box-shadow: 0 8px 24px rgba(0,0,0,0.2);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                    <h3 style="margin: 0;">Autorizar Cambio de Cajero</h3>
+                    <button type="button" data-jscontroller="POSCashierController" data-jsclick="@closeAuthModal" style="background: none; border: none; font-size: 1.25rem; cursor: pointer;">&times;</button>
+                </div>
+                <p style="font-size: 0.9rem; color: #4b5563; margin-bottom: 1rem;">Ingrese la contraseña o PIN de <strong>{{cashier_name}}</strong> para continuar:</p>
+                
+                <input type="hidden" id="auth_target_cashier_id" value="{{cashier_id}}">
+                <div class="form-group" style="margin-bottom: 1.25rem;">
+                    <input type="password" id="cashier_credentials_input" class="form-control" placeholder="Contraseña o PIN" autocomplete="current-password" autofocus style="width: 100%; padding: 0.75rem; font-size: 1rem; border: 1px solid #d1d5db; border-radius: 6px;">
+                    <span id="cashier_auth_error" class="invalid-feedback" style="display: none; color: #dc2626; font-size: 0.85rem; margin-top: 0.25rem;"></span>
+                </div>
+                <div style="display: flex; justify-content: flex-end; gap: 0.75rem;">
+                    <button type="button" class="btn btn-secondary" data-jscontroller="POSCashierController" data-jsclick="@closeAuthModal" style="padding: 0.5rem 1rem; cursor: pointer;">Cancelar</button>
+                    <button type="button" class="btn btn-primary" data-jscontroller="POSCashierController" data-jsclick="@confirmSwitchCashier" style="padding: 0.5rem 1.5rem; background: #2e7d32; color: #fff; border: none; border-radius: 4px; cursor: pointer;">Autorizar</button>
+                </div>
+            </div>
+        </div>
+    `);
+
     function init(event, ctrlInstance) {
         fetchCashiersList();
     }

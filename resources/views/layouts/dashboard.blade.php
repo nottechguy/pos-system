@@ -43,6 +43,9 @@
 <script src="{{ asset('js/components.js') }}"></script>
 
 <script src="{{ asset('js/modules/dashboard.js') }}"></script>
+<script src="{{ asset('js/modules/DialogManager.js') }}"></script>
+<script src="{{ asset('js/modules/PosCashierController.js') }}"></script>
+<script>requireModule("POSCashierController").init();</script>
 
 @stack('scripts')
 
