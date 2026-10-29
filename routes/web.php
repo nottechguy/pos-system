@@ -28,6 +28,14 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Models\PaymentMethod;
 
+
+// Root Route Redirection
+Route::get('/', function () {
+    return Auth::check() 
+        ? redirect()->route('admin.dashboard') 
+        : redirect()->route('login');
+});
+
 Route::get('/admin/pos/payment-methods', function () {
     $paymentMethods = PaymentMethod::query()
         ->where('is_active', true)
