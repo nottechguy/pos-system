@@ -1814,7 +1814,7 @@ TAPADOMOEU "Tapas Domo EU 50pzas"    											"Aluminio y Plástico" "standard
 7501091726181 "Tapas Plásticas Luxury Lids Inix l77 100pzas"    					"Aluminio y Plástico" "standard" "piece" "piece" 0.00 0.00 0.00
 
 7502208800121 "Vaso Reyma #16 25pzas"    											"Aluminio y Plástico" "standard" "piece" "piece" 26.00 31.00 0.00
-CAJAVASOREYMA16->7502208800121:40 "Caja Vaso Reyma #16 16L 40paq 25pzas c/u"    							"Aluminio y Plástico" "standard" "piece" "piece" 1032.00 1135 0.00
+CAJAVASOREYMA16->7502208800121:40 "Caja Vaso Reyma #16 40paq 25pzas c/u"    							"Aluminio y Plástico" "standard" "piece" "piece" 1032.00 1135 0.00
 
 752216095409 "Flexivaso irrompible Jaguar #16 cap 484ml 20pzas"    					"Aluminio y Plástico" "standard" "piece" "piece" 0.00 0.00 0.00
 
@@ -1861,7 +1861,7 @@ CAJAVASOTERDART10->041594206607:40 "Caja Vaso térmico Dart #10 40paq"				"Alumi
 041594231173 "Vaso térmico Dart #8 25pzas cap 237ml"								"Aluminio y Plástico" "standard" "package" "package" 11.00 13.50 0.00
 CAJAVASOTERDART8->041594231173:40 "Caja Vaso térmico Dart #8 40paq"					"Aluminio y Plástico" "standard" "box" "box" 429.50 472.00 0.00
 
-7501219113299 "Bolsa de Popote Primo 200pzas"    									"Aluminio y Plástico" "standard" "piece" "piece" 0.00 0.00 0.00
+7501219113299 "Bolsa de Popote Primo 200pzas"    									"Aluminio y Plástico" "standard" "piece" "piece" 0.00 70.00 0.00
 
 VASOGELATINA5 "Vaso Gelatina #5"    												"Aluminio y Plástico" "standard" "piece" "piece" 0.00 0.00 0.00
 
@@ -1928,22 +1928,26 @@ CAJAVELADORAPAPEL "Caja de Veladoras de papel 48pzas"         				"Encendedores 
 7501232001306 "Cerillos Flama 5pzas 115 cerillos c/u"     					"Encendedores y Cerillos" "standard" "box" "box" 0.00 0.00 0.00
 
 [DEP-013 "Surtido Adicional (Mostrador)"]
+CSUELTOMBRBLANCO "Marlboro Blanco Suelto"  									"Cigarros" "standard" "piece" "piece" 0.00 0.00 0.00
 75035259 "Cajetilla Marlboro Blanco 20"  									"Cigarros" "standard" "package" "package" 0.00 0.00 0.00
 75068844 "Cajetilla Marlboro Blanco 14"  									"Cigarros" "standard" "package" "package" 0.00 0.00 0.00
-CSUELTOMBRBLANCO "Marlboro Blanco Suelto"  									"Cigarros" "standard" "package" "package" 0.00 0.00 0.00
 
-CSUELTOMBRROJO "Marlboro Rojo Suelto"  										"Cigarros" "standard" "package" "package" 4.87 7.00 0.00
+CSUELTOMBRROJO "Marlboro Rojo Suelto"  										"Cigarros" "standard" "piece" "piece" 4.87 7.00 0.00
 75001322 "Cajetilla Marlboro Rojo 20"  										"Cigarros" "standard" "package" "package" 97.40 117.00 0.00
 MARLBOROROJOPAQ20 "Paquete Marlboro Rojo 10pzas 20' c/u"  					"Cigarros" "standard" "package" "package" 974.00 1071.00 0.00
 
+CSUELTOMBRRUBI "Marlboro Rubí Suelto"  										"Cigarros" "standard" "piece" "piece" 0.00 0.00 0.00
 75001339 "Cajetilla Marlboro Rojo 14"  										"Cigarros" "standard" "package" "package" 0.00 0.00 0.00
 75021597 "Cajetilla Marlboro Rubí 20"  										"Cigarros" "standard" "package" "package" 95.00 105.00 0.00
-CSUELTOMBRRUBI "Marlboro Rubí Suelto"  										"Cigarros" "standard" "package" "package" 0.00 0.00 0.00
+
 75066345 "Cajetilla Marlboro Sandía 20"										"Cigarros" "standard" "package" "package" 0.00 0.00 0.00
 CSUELTOMBRSANDIA "Marlboro Sandía Suelto"  									"Cigarros" "standard" "package" "package" 0.00 0.00 0.00
+
+CSUELTOLMROJO "L&M Rojo Suelto"  											"Cigarros" "standard" "piece" "piece" 0.00 0.00 0.00
 75069902 "Cajetilla L&M Rojo 20"  											"Cigarros" "standard" "package" "package" 0.00 0.00 0.00
 75022266 "Cajetilla L&M Rojo 14"  											"Cigarros" "standard" "package" "package" 0.00 0.00 0.00
-CSUELTOLMROJO "L&M Rojo Suelto"  											"Cigarros" "standard" "package" "package" 0.00 0.00 0.00
+LMROJOPAQ20 "Paquete L&M Rojo 10pzas 20' c/u"  								"Cigarros" "standard" "package" "package" 974.00 1071.00 0.00
+
 75071295 "Cajetilla Pall Mall Alaska 20"  									"Cigarros" "standard" "package" "package" 0.00 0.00 0.00
 7501001258030 "PeptoBismol Tableta Masticable"  							"Medicamentos Libres" "standard" "package" "package" 0.00 0.00 0.00
 7501095451201 "Sal de Uvas Picot"  											"Medicamentos Libres" "standard" "package" "package" 0.00 0.00 0.00
