@@ -325,8 +325,8 @@ TemplateEngine.register("cashier_auth_modal", `
 
 }, null);
 
-defineModule("PosUIController", ["$", "CSSCore", "AsyncRequest", "TemplateEngine", "KeyboardShortcuts", "GlobalBarcodeScanner", "PosTemplateRegister", "DialogManager"], function (
-    global, requireModule, requireDynamic, requireLazy, module, exports, $, CSSCore, AsyncRequest, TemplateEngine, KeyboardShortcuts, Scanner, PosTemplateRegister, DialogManager
+defineModule("PosUIController", ["$", "CSSCore", "AsyncRequest", "TemplateEngine", "KeyboardShortcuts", "GlobalBarcodeScanner", "PosTemplateRegister", "DialogManager", "PosStorageManager"], function (
+    global, requireModule, requireDynamic, requireLazy, module, exports, $, CSSCore, AsyncRequest, TemplateEngine, KeyboardShortcuts, Scanner, PosTemplateRegister, DialogManager, PosStorageManager
 ) {
     'use strict';
 
@@ -532,6 +532,7 @@ defineModule("PosUIController", ["$", "CSSCore", "AsyncRequest", "TemplateEngine
     function selectCustomer(event, ctrlInstance) {
         var customerData = ctrlInstance.targetElement.getAttribute('data-customer');
         currentCustomer = JSON.parse(customerData);
+        PosStorageManager.saveCustomer(currentCustomer);
 
         var container = document.getElementById("pos_active_customer_container");
         var nameEl = document.getElementById("pos_active_customer_name");
@@ -565,10 +566,11 @@ defineModule("PosUIController", ["$", "CSSCore", "AsyncRequest", "TemplateEngine
             });
             req.send();
         }
-    }
+    }   
 
     function clearCustomer() {
         currentCustomer = null;
+        PosStorageManager.saveCustomer(null);
         document.getElementById("pos_active_customer_container").style.display = "none";
         
         if (cart.length > 0) {
@@ -717,12 +719,34 @@ defineModule("PosUIController", ["$", "CSSCore", "AsyncRequest", "TemplateEngine
         var selectElement = event.target;
         if (selectElement) {
             currentPrintMode = selectElement.value;
+            PosStorageManager.savePrintMode(currentPrintMode);
         }
     }
 
     function init(event, ctrlInstance) {
         var storeId = 1;
         fetchPaymentMethods();
+
+        // Restore persisted POS session state
+        cart = PosStorageManager.getCart();
+        currentCustomer = PosStorageManager.getCustomer();
+        currentPrintMode = PosStorageManager.getPrintMode();
+
+        var modeSelect = document.getElementById("ticket_mode_select");
+        if (modeSelect) {
+            modeSelect.value = currentPrintMode;
+        }
+
+        if (currentCustomer) {
+            var container = document.getElementById("pos_active_customer_container");
+            var nameEl = document.getElementById("pos_active_customer_name");
+            if (nameEl !== null) {
+                nameEl.innerText = "Cliente: " + currentCustomer.name;
+                container.style.display = "flex";
+            }
+        }
+
+        renderCart();
 
         KeyboardShortcuts.init();
         KeyboardShortcuts.register('f5', function() {
@@ -1081,6 +1105,7 @@ defineModule("PosUIController", ["$", "CSSCore", "AsyncRequest", "TemplateEngine
             cart.push(product);
         }
 
+        PosStorageManager.saveCart(cart);
         renderCart();
     }
 
@@ -1192,6 +1217,8 @@ defineModule("PosUIController", ["$", "CSSCore", "AsyncRequest", "TemplateEngine
                 item.line_total = Number(((item.quantity * Number(item.price)) - disc.amount).toFixed(2));
             }
             
+            PosStorageManager.saveCart(cart);
+
             if (itemEl) {
                 var inputEl = itemEl.querySelector('.cart-item-qty-input');
                 if (inputEl && document.activeElement !== inputEl) {
@@ -1220,6 +1247,7 @@ defineModule("PosUIController", ["$", "CSSCore", "AsyncRequest", "TemplateEngine
 
     function removeFromCart(productId) {
         cart = cart.filter(function(item) { return item.id !== productId; });
+        PosStorageManager.saveCart(cart);
         renderCart();
         var cartSec = $.fromIDOrElement('pos_cart_section');
         if (cartSec) cartSec.focus();
@@ -1227,6 +1255,7 @@ defineModule("PosUIController", ["$", "CSSCore", "AsyncRequest", "TemplateEngine
 
     function clearCart() {
         cart = [];
+        PosStorageManager.clearSession();
         renderCart();
         clearSearchInput();
     }

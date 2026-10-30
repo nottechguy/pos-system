@@ -21,6 +21,7 @@
     <script src="{{ asset('js/components.js') }}"></script>
     <script src="{{ asset('js/modules/scanner_module.js') }}"></script>
     <script src="{{ asset('js/modules/KeyboardShortcuts.js') }}"></script>
+    <script src="{{ asset('js/modules/PosStorageManager.js') }}"></script>
     <script src="{{ asset('js/modules/PosUIController.js') }}"></script>
     <script src="{{ asset('js/modules/PosCashierController.js') }}"></script>
     <script>requireModule("PosUIController").init();</script>
