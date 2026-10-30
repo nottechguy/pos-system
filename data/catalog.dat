@@ -147,12 +147,12 @@ JAMAICA1K "Jamaica 1kg" 																"Granos y Semillas" "standard" "kilogram
 JAMAICA500 "Jamaica 500g" 																"Granos y Semillas" "standard" "kilogram" "kilogram" 47.00 50.00 0.00
 !ALPISTE "Alpiste" 																		"Granos y Semillas" "standard" "kilogram" "kilogram" 17.15 35.00 0.00
 !FRIJOLPI "Frijol Pinto" 																"Granos y Semillas" "standard" "kilogram" "kilogram" 21.00 25.00 0.00
-FRIJOLPI1K "Frijol Pinto 1kg" 															"Granos y Semillas" "standard" "kilogram" "kilogram" 21.00 25.00 0.00
+FRIJOLPI1K "Frijol Pinto 1kg" 															"Granos y Semillas" "standard" "piece" "piece" 21.00 25.00 0.00
 !FRIJOLMI "Frijol Negro Michigan" 														"Granos y Semillas" "standard" "kilogram" "kilogram" 29.00 35.00 0.00
-FRIJOLMI1KG "Frijol Michigan 1kg" 														"Granos y Semillas" "standard" "kilogram" "kilogram" 29.00 35.00 0.00
+FRIJOLMI1K "Frijol Negro Michigan 1kg" 														"Granos y Semillas" "standard" "piece" "piece" 29.00 35.00 0.00
 BULTOFRIJOLMI "Bulto de Frijol Michigan 25kg" 											"Granos y Semillas" "standard" "bulk" "bulk" 725.00 775.00 0.00
 !FRIJOLPE "Frijol Peruano" 																"Granos y Semillas" "standard" "kilogram" "kilogram" 29.00 35.00 0.00
-FRIJOLPE1K "Frijol Peruano 1kg" 														"Granos y Semillas" "standard" "kilogram" "kilogram" 29.00 35.00 0.00
+FRIJOLPE1K "Frijol Peruano 1kg" 														"Granos y Semillas" "standard" "piece" "piece" 29.00 35.00 0.00
 BULTOFRIJOLPE "Bulto de Frijol Peruano 25kg" 											"Granos y Semillas" "standard" "bulk" "bulk" 725.00 775.00 0.00
 MAIZPOZCCABEZA "Maíz Pozolero con Cabeza 1kg" 											"Granos y Semillas" "standard" "kilogram" "kilogram" 39.00 46.00 0.00
 MAIZPOZSCABEZA "Maíz Pozolero sin Cabeza 1kg" 											"Granos y Semillas" "standard" "kilogram" "kilogram" 47.00 55.00 0.00
