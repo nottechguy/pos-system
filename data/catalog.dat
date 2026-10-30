@@ -126,11 +126,11 @@ GELATINALALAYOMI "Gelatina LALA Yomi 8pzas"          									"Gelatinas" "stand
 
 
 [DEP-003 "Canasta Básica"]
-HUEVOPIEZA "Pieza de Huevo" 															"Huevos" "standard" "piece" "piece" 2.50 3.00 0.00
-MCASILLEROHUEVO->HUEVOPIEZA:15 "Medio Casillero de Huevo" 								"Huevos" "standard" "box" "box" 35.00 42.00 0.00
-CASILLEROHUEVO->HUEVOPIEZA:30 "Casillero de Huevo" 										"Huevos" "standard" "box" "box" 70.00 82.00 0.00
-CAJAMHUEVO->CASILLEROHUEVO:6 "Media Caja de Huevo" 										"Huevos" "standard" "box" "box" 415.00 485.00 0.00
-CAJAHUEVO->CASILLEROHUEVO:12 "Caja de Huevo" 											"Huevos" "standard" "box" "box" 830.00 970.00 0.00
+H10005 "Pieza de Huevo" 															"Huevos" "standard" "piece" "piece" 2.50 3.00 0.00
+H20001->H10005:15 "Medio Casillero de Huevo" 								"Huevos" "standard" "box" "box" 35.00 42.00 0.00
+H30009->H10005:30 "Casillero de Huevo" 										"Huevos" "standard" "box" "box" 70.00 82.00 0.00
+H41005->H30009:6 "Media Caja de Huevo" 										"Huevos" "standard" "box" "box" 415.00 485.00 0.00
+H50015->H30009:12 "Caja de Huevo" 											"Huevos" "standard" "box" "box" 830.00 970.00 0.00
 
 CAJAMANTECACOLON "Caja Manteca Colón 24kg" 												"Grasas y Mantecas" "standard" "box" "box" 865.00 1000.00 0.00
 MANTECASANMIGUEL "Manteca San Miguel Cubeta 18kg" 										"Grasas y Mantecas" "standard" "piece" "piece" 845.00 930.00 0.00 185
