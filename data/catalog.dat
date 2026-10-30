@@ -954,7 +954,8 @@ CAJATOPOCHICOL600->7501055392759:6 "Caja Topo Chico Limonada 6pzas 600ml c/u"   
 036731100030 "Gatorade KIDS Limón 236ml"           	  				"Bebidas Rehidratantes" "standard" "piece" "piece" 0.00 0.00 0.00
 036731323002 "Gatorade sabor Lima-Limón 1L"          				"Bebidas Rehidratantes" "standard" "piece" "piece" 0.00 0.00 0.00
 036731321008 "Gatorade sabor Naranja 1L"              				"Bebidas Rehidratantes" "standard" "piece" "piece" 0.00 0.00 0.00
-036731321008 "Amper Regular 474ml"              		  			"Bebidas Rehidratantes" "standard" "piece" "piece" 16.28 20.50 0.00
+7506192507349 "Amper Regular 474ml"              		  			"Bebidas Rehidratantes" "standard" "piece" "piece" 16.28 20.50 0.00
+7506192507349 "Amper Energy 473ml"              		  				"Bebidas Rehidratantes" "standard" "piece" "piece" 18.00 21.00 0.00
 
 7501055317653 "Powerade sabor moras 1L"              				"Bebidas Rehidratantes" "standard" "piece" "piece" 0.00 0.00 0.00
 7501055329267 "Powerade sabor moras 500ml"              			"Bebidas Rehidratantes" "standard" "piece" "piece" 0.00 0.00 0.00
@@ -1925,7 +1926,7 @@ CAJAVELADORAPAPEL "Caja de Veladoras de papel 48pzas"         				"Encendedores 
 7502221793516 "Encendedor desechable fogo 25pzas"         					"Encendedores y Cerillos" "standard" "box" "box" 0.00 0.00 0.00
 077910000017 "Cerillos Maya 10pzas 50 cerillos c/u"      					"Encendedores y Cerillos" "standard" "box" "box" 0.00 0.00 0.00
 077910000000 "Cerillos Maya 5pzas 10 cajas 50 cerillos c/u"      			"Encendedores y Cerillos" "standard" "box" "box" 0.00 0.00 0.00
-7501232001306 "Cerillos Flama 5pzas 115 cerillos c/u"     					"Encendedores y Cerillos" "standard" "box" "box" 0.00 0.00 0.00
+7501232001306 "Cerillos Flama 5pzas 115 cerillos c/u"     					"Encendedores y Cerillos" "standard" "box" "box" 0.00 49.00 0.00
 
 [DEP-013 "Surtido Adicional (Mostrador)"]
 CSUELTOMBRBLANCO "Marlboro Blanco Suelto"  									"Cigarros" "standard" "piece" "piece" 0.00 0.00 0.00
@@ -1946,7 +1947,7 @@ CSUELTOMBRSANDIA "Marlboro Sandía Suelto"  									"Cigarros" "standard" "pack
 CSUELTOLMROJO "L&M Rojo Suelto"  											"Cigarros" "standard" "piece" "piece" 0.00 0.00 0.00
 75069902 "Cajetilla L&M Rojo 20"  											"Cigarros" "standard" "package" "package" 0.00 0.00 0.00
 75022266 "Cajetilla L&M Rojo 14"  											"Cigarros" "standard" "package" "package" 0.00 0.00 0.00
-LMROJOPAQ20 "Paquete L&M Rojo 10pzas 20' c/u"  								"Cigarros" "standard" "package" "package" 974.00 1071.00 0.00
+LMROJOPAQ20 "Paquete L&M Rojo 10pzas 20' c/u"  								"Cigarros" "standard" "package" "package" 0.00 741.00 0.00
 
 75071295 "Cajetilla Pall Mall Alaska 20"  									"Cigarros" "standard" "package" "package" 0.00 0.00 0.00
 7501001258030 "PeptoBismol Tableta Masticable"  							"Medicamentos Libres" "standard" "package" "package" 0.00 0.00 0.00
