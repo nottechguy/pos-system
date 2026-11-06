@@ -31,31 +31,40 @@
     <!-- Left Column: Line Items -->
     <div class="module-card" style="grid-column: span 2;">
         <h3>Artículos Vendidos</h3>
-        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px;">Información preservada en el momento de la venta.</p>
+        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px;">Información y costos preservados al momento de la transacción.</p>
         
         <table class="data-table" style="font-size: 0.9rem;">
             <thead>
                 <tr>
                     <th>Producto</th>
                     <th>Cant.</th>
-                    <th>Unidad</th>
+                    <th>Costo Unit.</th>
                     <th>Precio Unit.</th>
                     <th>Descuento</th>
+                    <th>Utilidad</th>
                     <th>Total</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach($sale->items as $item)
+                @php
+                    $unitCost = $item->effective_unit_cost;
+                    $itemCostTotal = $unitCost * (float)$item->quantity;
+                    $itemProfit = (float)$item->line_total - $itemCostTotal;
+                @endphp
                 <tr>
                     <td>
                         <strong>{{ $item->name_snapshot }}</strong><br>
                         <small style="color: #666;">SKU: {{ $item->sku_snapshot }}</small>
                     </td>
                     <td>{{ (float) $item->quantity }}</td>
-                    <td>{{ $item->unit?->code ? ucwords(__("messages.measurement_units.{$item->unit?->code}.name")) : '—' }}</td>
+                    <td>${{ number_format($unitCost, 2) }}</td>
                     <td>${{ number_format($item->unit_price, 2) }}</td>
                     <td style="color: red;">
                         {{ $item->discount_total > 0 ? '-$' . number_format($item->discount_total, 2) : '$0.00' }}
+                    </td>
+                    <td style="color: {{ $itemProfit >= 0 ? 'green' : 'red' }}; font-weight: bold;">
+                        ${{ number_format($itemProfit, 2) }}
                     </td>
                     <td><strong>${{ number_format($item->line_total, 2) }}</strong></td>
                 </tr>
@@ -64,21 +73,33 @@
         </table>
     </div>
 
-    <!-- Right Column: Sale Summary -->
+    <!-- Right Column: Sale Summary & Earnings Breakdown -->
     <div class="module-card">
-        <h3>Resumen de Venta</h3>
+        <h3>Resumen Financiero</h3>
         <ul style="list-style: none; padding: 0; margin: 0;">
-            <li style="padding: 10px 0; border-bottom: 1px solid #eee; display: flex; justify-content: space-between;">
+            <li style="padding: 8px 0; border-bottom: 1px solid #eee; display: flex; justify-content: space-between;">
                 <span>Subtotal:</span>
                 <span>${{ number_format($sale->subtotal, 2) }}</span>
             </li>
-            <li style="padding: 10px 0; border-bottom: 1px solid #eee; display: flex; justify-content: space-between;">
+            <li style="padding: 8px 0; border-bottom: 1px solid #eee; display: flex; justify-content: space-between;">
                 <span>Descuentos:</span>
                 <span style="color: red;">-${{ number_format($sale->discount_total, 2) }}</span>
             </li>
-            <li style="padding: 10px 0; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; font-weight: bold; font-size: 1.1rem;">
-                <span>Total:</span>
-                <span style="color: green;">${{ number_format($sale->total, 2) }}</span>
+            <li style="padding: 8px 0; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; font-weight: bold;">
+                <span>Total Venta:</span>
+                <span style="color: #2563eb;">${{ number_format($sale->total, 2) }}</span>
+            </li>
+            <li style="padding: 8px 0; border-bottom: 1px solid #eee; display: flex; justify-content: space-between;">
+                <span>Costo Total (COGS):</span>
+                <span style="color: #dc2626;">-${{ number_format($totalCost, 2) }}</span>
+            </li>
+            <li style="padding: 10px 0; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; font-weight: bold; font-size: 1.1rem; background: #f0fdf4;">
+                <span style="padding-left: 5px;">Utilidad Neta:</span>
+                <span style="color: #059669; padding-right: 5px;">${{ number_format($netProfit, 2) }}</span>
+            </li>
+            <li style="padding: 8px 0; display: flex; justify-content: space-between; font-size: 0.9rem;">
+                <span>Margen de Ganancia:</span>
+                <span style="font-weight: bold; color: #059669;">{{ number_format($profitMargin, 1) }}%</span>
             </li>
         </ul>
         
@@ -86,7 +107,7 @@
         <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem;">
             @foreach($sale->payments as $payment)
             <li style="padding: 5px 0; display: flex; justify-content: space-between;">
-                <span>{{ $payment->paymentMethod ? __("payment_methods." . $payment->paymentMethod->code . ".name") : 'N/A' }}</span>
+                <span>{{ $payment->paymentMethod ? __('payment_methods.' . $payment->paymentMethod->code . '.name') : 'N/A' }}</span>
                 <span>${{ number_format($payment->amount, 2) }}</span>
             </li>
             @endforeach

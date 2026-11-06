@@ -96,6 +96,10 @@ html {
     font-weight: 400;
 }
 
+#menu_shift_dropdown {
+    width: 240px !important;
+}
+
 .cashier-details option {
     color: #000000;
 }

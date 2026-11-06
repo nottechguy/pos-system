@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\DB;
 
 class PosController extends Controller
 {
-public function index()
+    public function index()
     {
         // Find an open shift for the current store/terminal
         $activeShift = CashShift::where('store_id', 1) // Or dynamically resolved store ID

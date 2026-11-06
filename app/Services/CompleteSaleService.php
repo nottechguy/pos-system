@@ -143,6 +143,15 @@ class CompleteSaleService
                             ->value('product_prices.sale_price') ?? 0.00;
                     }
 
+                    // D. Fetch Unit Cost Price for Historical Margin Tracking
+                    $unitCost = DB::table('product_prices')
+                        ->where('product_id', $product->id)
+                        ->where(function ($q) {
+                            $q->whereNull('valid_until')->orWhere('valid_until', '>=', now());
+                        })
+                        ->where('valid_from', '<=', now())
+                        ->value('cost_price') ?? 0.00;
+
                     $lineGross = $unitPrice * $itemData['quantity'];
 
                     // Evaluate pricing rules
@@ -194,7 +203,7 @@ class CompleteSaleService
 
                     $lineTotal = $lineGross - $itemDiscount;
 
-                    // 5. Create Sale Item
+                    // 5. Create Sale Item with unit_cost_snapshot populated
                     $saleItem = SaleItem::create([
                         'sale_id' => $sale->id,
                         'product_id' => $product->id,
@@ -204,6 +213,7 @@ class CompleteSaleService
                         'unit_snapshot' => $product->saleUnit->name,
                         'quantity' => $itemData['quantity'],
                         'unit_price' => $unitPrice,
+                        'unit_cost_snapshot' => $unitCost, // <-- Populated correctly here
                         'gross_total' => $lineGross,
                         'line_total' => $lineTotal,
                     ]);

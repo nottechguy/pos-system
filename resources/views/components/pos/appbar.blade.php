@@ -29,7 +29,18 @@
 		        </x-bmdc-button>
 			</div>
 		</div>
-		
+
+		    <!-- Shift Menu Anchor Component -->
+		    <x-bmdc-menu-anchor>
+		        <x-bmdc-button id="button_menu_shift" data-open-menu="menu_shift_dropdown" variant="outlined" style="color: #fff; border-color: rgba(255,255,255,0.3);">Turno</x-bmdc-button>
+		        <x-bmdc-menu id="menu_shift_dropdown" type="exposed">
+		            <x-bmdc-list role="menu">
+		                <x-bmdc-list-item text="Cerrar Turno Actual" role="menuitem" data-jscontroller="CashShiftUIController" data-jsclick="@openCloseShiftModal" />
+		                <x-bmdc-list-item text="Reporte / Reabrir Turno" role="menuitem" data-jscontroller="CashShiftUIController" data-jsclick="@openShiftSummaryModal" />
+		            </x-bmdc-list>
+		        </x-bmdc-menu>
+		    </x-bmdc-menu-anchor>
+
 		<!-- Cashier Component Integration -->
 		<x-pos.cashier />
 	</div>

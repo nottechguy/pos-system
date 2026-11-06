@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Facades\DB;
 
 class SaleItem extends Model
 {
@@ -67,5 +68,26 @@ class SaleItem extends Model
     public function taxes(): HasMany
     {
         return $this->hasMany(SaleItemTax::class);
+    }
+
+/**
+     * Get the effective unit cost with fallback to current product prices if snapshot is zero.
+     */
+    public function getEffectiveUnitCostAttribute(): float
+    {
+        if (!empty($this->unit_cost_snapshot) && (float) $this->unit_cost_snapshot > 0) {
+            return (float) $this->unit_cost_snapshot;
+        }
+
+        // Fallback lookup if snapshot was saved as zero
+        $currentCost = DB::table('product_prices')
+            ->where('product_id', $this->product_id)
+            ->where(function ($q) {
+                $q->whereNull('valid_until')->orWhere('valid_until', '>=', now());
+            })
+            ->where('valid_from', '<=', now())
+            ->value('cost_price');
+
+        return (float) ($currentCost ?? 0.00);
     }
 }

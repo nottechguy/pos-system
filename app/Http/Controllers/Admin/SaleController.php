@@ -36,13 +36,30 @@ class SaleController extends Controller
         // Eager load everything needed to render the snapshot correctly
         $sale->load([
             'items.discounts', 
-            'items.product', 
+            'items.product.prices', // Eager load product prices for fallback cost lookup
             'payments.paymentMethod', 
             'cashier', 
             'store'
         ]);
         
-        return view('admin.sales.show', compact('sale'));
+        // Calculate Cost of Goods Sold (COGS) and Net Profit for this sale
+        $totalCost = 0;
+        foreach ($sale->items as $item) {
+            $costPerUnit = (float) $item->unit_cost_snapshot;
+            
+            // Fallback if snapshot was recorded as 0
+            if ($costPerUnit <= 0 && $item->product) {
+                $costPerUnit = (float) ($item->product->prices->where('cost_price', '>', 0)->first()?->cost_price ?? 0);
+            }
+
+            $totalCost += $costPerUnit * (float) $item->quantity;
+        }
+
+        $grossRevenue = (float) $sale->total;
+        $netProfit = $grossRevenue - $totalCost;
+        $profitMargin = $grossRevenue > 0 ? ($netProfit / $grossRevenue) * 100 : 0;
+
+        return view('admin.sales.show', compact('sale', 'totalCost', 'netProfit', 'profitMargin'));
     }
 
     public function print(Request $request, Sale $sale)

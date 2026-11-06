@@ -15,6 +15,14 @@
         <h2>Historial de Ventas</h2>
         <p>Consulte y reimprima los tickets de las ventas completadas.</p>
     </div>
+    <div class="dashboard-header__actions">
+        <x-bmdc-button type="link" href="{{ route('admin.sales.statistics') }}" variant="unelevated">
+            <x-slot name="mIcon">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#ffffff"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+            </x-slot>
+            Ver Estadísticas y Utilidades
+        </x-bmdc-button>
+    </div>
 </div>
 
 <!-- Search & Filter Trigger Bar -->
@@ -72,7 +80,7 @@
             <td><strong style="color: green;">${{ number_format($sale->total, 2) }}</strong></td>
             <td>
                 <span style="color: {{ $sale->status === 'completed' ? 'green' : 'red' }}; font-weight: bold;">
-                    {{ ucfirst($sale->status) }}
+                    {{ ucfirst(__('sales.' . $sale->status . '.name')) }}
                 </span>
             </td>
             <td class="action-links">

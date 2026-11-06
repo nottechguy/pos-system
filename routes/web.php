@@ -164,9 +164,12 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
         Route::post('/print', [LabelPrinterController::class, 'print'])->name('print');
     });
 
-    // Sales History & Reprint Routes
-    Route::resource('sales', SaleController::class)->only(['index', 'show']);
-    Route::post('sales/{sale}/print', [SaleController::class, 'print'])->name('sales.print');
+    Route::prefix('sales')->name('sales.')->group(function () {
+        Route::get('/', [App\Http\Controllers\Admin\SaleController::class, 'index'])->name('index');
+        Route::get('/statistics', [App\Http\Controllers\Admin\SalesStatisticsController::class, 'index'])->name('statistics');
+        Route::get('/{sale}', [App\Http\Controllers\Admin\SaleController::class, 'show'])->name('show');
+        Route::post('/{sale}/print', [App\Http\Controllers\Admin\SaleController::class, 'print'])->name('print');
+    });
 
     // Customer Management & Custom Prices
     Route::resource('customers', CustomerController::class);
@@ -175,6 +178,15 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
     
     Route::post('/customers/search', [PosController::class, 'searchCustomer'])->name('customers.search');
     Route::post('/recalculate-cart', [PosController::class, 'recalculateCart'])->name('recalculate_cart');
+
+    Route::prefix('shifts')->name('shifts.')->group(function () {
+        Route::get('/', [App\Http\Controllers\Admin\ShiftController::class, 'index'])->name('index');
+        Route::get('/active/summary', [App\Http\Controllers\CashShiftController::class, 'activeSummary'])->name('active.summary');
+        Route::post('/open', [App\Http\Controllers\CashShiftController::class, 'open'])->name('open');
+        Route::post('/{shift}/close', [App\Http\Controllers\CashShiftController::class, 'close'])->name('close');
+        Route::post('/{shift}/reopen', [App\Http\Controllers\CashShiftController::class, 'reopen'])->name('reopen');
+        Route::get('/{shift}/summary', [App\Http\Controllers\CashShiftController::class, 'showSummary'])->name('summary');
+    });
 
     /*
     // Modules (Placeholders for CRUD controllers)

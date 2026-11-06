@@ -10,6 +10,20 @@ use App\Services\OpenShiftService;
 
 class ShiftController extends Controller
 {
+    public function index(Request $request)
+    {
+        $query = CashShift::with(['opener', 'closer', 'terminal', 'store'])
+            ->orderBy('opened_at', 'desc');
+
+        if ($request->filled('status')) {
+            $query->where('status', $request->status);
+        }
+
+        $shifts = $query->paginate(20)->withQueryString();
+
+        return view('admin.shifts.index', compact('shifts'));
+    }
+
     public function create()
     {
         // Prevent opening multiple shifts simultaneously

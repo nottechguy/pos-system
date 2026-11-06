@@ -9,6 +9,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class User extends Authenticatable {
     use HasApiTokens, HasFactory, Notifiable, SoftDeletes;
@@ -66,5 +67,9 @@ class User extends Authenticatable {
     
     public function getFullNameAttribute(): string {
         return trim("{$this->first_name} {$this->last_name}");
+    }
+
+    public function sales(): HasMany {
+        return $this->hasMany(Sale::class, 'cashier_user_id');
     }
 }
