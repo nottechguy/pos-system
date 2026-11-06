@@ -50,6 +50,8 @@
 17501020565956->7501020565959:12 "Caja Leche LALA semidescremada 12pzas 1L c/u"    		"Leches" "standard" "box" "box" 265.00 288.00 0.00
 7501020565935 "Leche LALA entera 1L"                        							"Leches" "standard" "piece" "piece" 22.08 25.00 0.00
 17501020565932->7501020565935:12 "Caja Leche LALA entera 12pzas 1L c/u"            		"Leches" "standard" "box" "box" 270.00 288.00 0.00
+7501020565942 "Leche LALA Light 1L"                        								"Leches" "standard" "piece" "piece" 22.08 29.00 0.00
+CAJALECHELALALIGHT->7501020565942:12sopa "Caja Leche LALA Light 12pzas 1L c/u"			"Leches" "standard" "box" "box" 315.00 325.00 0.00
 7501020572858 "Leche LALA Yomi chocogol 180ml"              							"Leches" "standard" "piece" "piece" 0.00 12.00 0.00
 7501020570854 "Leche LALA Yomi sabor chocolate 180ml"       							"Leches" "standard" "piece" "piece" 10.70 12.50 0.00
 7501020544596 "Leche LALA chocolatada 330ml"                							"Leches" "standard" "piece" "piece" 0.00 25.00 0.00
@@ -126,53 +128,58 @@ GELATINALALAYOMI "Gelatina LALA Yomi 8pzas"          									"Gelatinas" "stand
 
 
 [DEP-003 "Canasta Básica"]
-H10005 "Pieza de Huevo" 															"Huevos" "standard" "piece" "piece" 2.50 3.00 0.00
-H20001->H10005:15 "Medio Casillero de Huevo" 								"Huevos" "standard" "box" "box" 35.00 42.00 0.00
-H30009->H10005:30 "Casillero de Huevo" 										"Huevos" "standard" "box" "box" 70.00 82.00 0.00
-H41005->H30009:6 "Media Caja de Huevo" 										"Huevos" "standard" "box" "box" 415.00 485.00 0.00
-H50015->H30009:12 "Caja de Huevo" 											"Huevos" "standard" "box" "box" 830.00 970.00 0.00
+H10005 "Pieza de Huevo" 																"Huevos" "standard" "piece" "piece" 2.50 3.00 0.00
+H20001->H10005:15 "Medio Casillero de Huevo" 											"Huevos" "standard" "box" "box" 35.00 42.00 0.00
+H30009->H10005:30 "Casillero de Huevo" 													"Huevos" "standard" "box" "box" 70.00 82.00 0.00
+H41005->H30009:6 "Media Caja de Huevo" 													"Huevos" "standard" "box" "box" 415.00 485.00 0.00
+H50015->H30009:12 "Caja de Huevo" 														"Huevos" "standard" "box" "box" 830.00 970.00 0.00
 
 CAJAMANTECACOLON "Caja Manteca Colón 24kg" 												"Grasas y Mantecas" "standard" "box" "box" 865.00 1000.00 0.00
 MANTECASANMIGUEL "Manteca San Miguel Cubeta 18kg" 										"Grasas y Mantecas" "standard" "piece" "piece" 845.00 930.00 0.00 185
 
 !MANTECA "Manteca" 																		"Grasas y Mantecas" "standard" "kilogram" "kilogram" 47.00 60.00 0.00
 !CUERITO "Cuerito" 																		"Grasas y Mantecas" "standard" "kilogram" "kilogram" 50.00 69.00 0.00
+
+SALGRANO1K "Sal de Grano 1kg" 															"Granos y Semillas" "standard" "kilogram" "kilogram" 6.00 8.00 0.00
 !SALGRANO "Sal de Grano" 																"Granos y Semillas" "standard" "kilogram" "kilogram" 6.00 8.00 0.00
+
 BULTOSALFINA "Bulto de Sal Fina 25kg" 													"Granos y Semillas" "standard" "bulk" "bulk" 200.00 250.00 0.00
-SALFINA "Sal Fina 1kg" 																		"Granos y Semillas" "standard" "kilogram" "kilogram" 8.00 12.00 0.00
+!SALFINA "Sal Fina" 																	"Granos y Semillas" "standard" "piece" "piece" 8.00 12.00 0.00
+SALFINA1K "Sal Fina 1kg" 																"Granos y Semillas" "standard" "piece" "piece" 8.00 12.00 0.00
 
 BULTOJAMAICA "Bulto de Jamaica 25kg" 													"Granos y Semillas" "standard" "bulk" "bulk" 1975.00 2225.00 0.00
-JAMAICA1K "Jamaica 1kg" 																"Granos y Semillas" "standard" "kilogram" "kilogram" 79.00 90.00 0.00
+JAMAICA1K "Jamaica 1kg" 																"Granos y Semillas" "standard" "piece" "piece" 79.00 90.00 0.00
 !JAMAICA "Jamaica" 																		"Granos y Semillas" "standard" "kilogram" "kilogram" 0.00 100.00 0.00
-JAMAICA500 "Jamaica 500g" 																"Granos y Semillas" "standard" "kilogram" "kilogram" 47.00 50.00 0.00
+JAMAICA500 "Jamaica 500g" 																"Granos y Semillas" "standard" "piece" "piece" 47.00 50.00 0.00
 !ALPISTE "Alpiste" 																		"Granos y Semillas" "standard" "kilogram" "kilogram" 17.15 35.00 0.00
 !FRIJOLPI "Frijol Pinto" 																"Granos y Semillas" "standard" "kilogram" "kilogram" 21.00 25.00 0.00
 FRIJOLPI1K "Frijol Pinto 1kg" 															"Granos y Semillas" "standard" "piece" "piece" 21.00 25.00 0.00
 !FRIJOLMI "Frijol Negro Michigan" 														"Granos y Semillas" "standard" "kilogram" "kilogram" 29.00 35.00 0.00
-FRIJOLMI1K "Frijol Negro Michigan 1kg" 														"Granos y Semillas" "standard" "piece" "piece" 29.00 35.00 0.00
+FRIJOLMI1K "Frijol Negro Michigan 1kg" 													"Granos y Semillas" "standard" "piece" "piece" 29.00 35.00 0.00
 BULTOFRIJOLMI "Bulto de Frijol Michigan 25kg" 											"Granos y Semillas" "standard" "bulk" "bulk" 725.00 775.00 0.00
 !FRIJOLPE "Frijol Peruano" 																"Granos y Semillas" "standard" "kilogram" "kilogram" 29.00 35.00 0.00
 FRIJOLPE1K "Frijol Peruano 1kg" 														"Granos y Semillas" "standard" "piece" "piece" 29.00 35.00 0.00
 BULTOFRIJOLPE "Bulto de Frijol Peruano 25kg" 											"Granos y Semillas" "standard" "bulk" "bulk" 725.00 775.00 0.00
-MAIZPOZCCABEZA "Maíz Pozolero con Cabeza 1kg" 											"Granos y Semillas" "standard" "kilogram" "kilogram" 39.00 46.00 0.00
-MAIZPOZSCABEZA "Maíz Pozolero sin Cabeza 1kg" 											"Granos y Semillas" "standard" "kilogram" "kilogram" 47.00 55.00 0.00
+MAIZPOZCCABEZA "Maíz Pozolero con Cabeza 1kg" 											"Granos y Semillas" "standard" "piece" "piece" 39.00 46.00 0.00
+MAIZPOZSCABEZA "Maíz Pozolero sin Cabeza 1kg" 											"Granos y Semillas" "standard" "piece" "piece" 47.00 55.00 0.00
 BULTOALIMGALLO "Alimento para Gallo 40kg"      											"Granos y Semillas" "standard" "bulk" "bulk" 480.00 529.00 0.00
 BULTOALIMGALLOS20 "Alimento para Gallo 25kg"    										"Granos y Semillas" "standard" "bulk" "bulk" 300.00 330.00 0.00
-ALIMGALLO "Alimento para Gallo"      													"Granos y Semillas" "standard" "kilogram" "kilogram" 13.00 15.00 0.00
+!ALIMGALLO "Alimento para Gallo"      													"Granos y Semillas" "standard" "kilogram" "kilogram" 13.00 15.00 0.00
+ALIMGALLO1K "Alimento para Gallo 1kg"      												"Granos y Semillas" "standard" "piece" "piece" 13.00 15.00 0.00
 !AZUCAR "Azúcar" 																		"Azúcar" "standard" "kilogram" "kilogram" 18.00 20.00 0.00
-AZUCAR1K "Azúcar 1kg" 																	"Azúcar" "standard" "kilogram" "kilogram" 18.00 20.00 0.00
+AZUCAR1K "Azúcar 1kg" 																	"Azúcar" "standard" "piece" "piece" 18.00 20.00 0.00
 BULTOAZUCAR "Bulto de Azúcar 25kg" 														"Azúcar" "standard" "bulk" "bulk" 445.00 495.00 0.00
 !ARROZ "Arroz" 																			"Granos y Semillas" "standard" "kilogram" "kilogram" 16.21 19.00 0.00
-ARROZ "Arroz 1kg"																		"Granos y Semillas" "standard" "kilogram" "kilogram" 16.21 19.00 0.00
+ARROZ1K "Arroz 1kg"																		"Granos y Semillas" "standard" "piece" "piece" 16.21 19.00 0.00
 BULTOARROZ "Bulto de Arroz 25kg" 														"Granos y Semillas" "standard" "bulk" "bulk" 405.00 450.00 0.00
 !MAIZPAL "Maíz Palomero" 																"Granos y Semillas" "standard" "kilogram" "kilogram" 15.00 25.00 0.00
-MAIZPAL1K "Maíz Palomero 1kg" 															"Granos y Semillas" "standard" "kilogram" "kilogram" 15.00 25.00 0.00
+MAIZPAL1K "Maíz Palomero 1kg" 															"Granos y Semillas" "standard" "piece" "piece" 15.00 25.00 0.00
 PILONCILLOCAJA "Caja Piloncillo" 														"Endulzantes" "standard" "box" "box" 24.50 28.00 0.00
 !PILONCILLO "Piloncillo" 																"Endulzantes" "standard" "kilogram" "kilogram" 29.00 35.00 0.00
-PILONCILLO1K "Piloncillo 1kg 4pzas" 													"Endulzantes" "standard" "kilogram" "kilogram" 25.00 30.00 0.00
+PILONCILLO1K "Piloncillo 1kg 4pzas" 													"Endulzantes" "standard" "piece" "piece" 25.00 30.00 0.00
 PILONCILLOCUBO	"Piloncillo Cubo"														"Endulzantes" "standard" "kilogram" "kilogram" 0.00 39.00 0.00
 !HARINA "Harina" 																		"Harinas y Aceites" "standard" "kilogram" "kilogram" 17.50 20.00 0.00
-HARINA1K "Harina 1kg" 																	"Harinas y Aceites" "standard" "kilogram" "kilogram" 17.50 20.00 0.00
+HARINA1K "Harina 1kg" 																	"Harinas y Aceites" "standard" "piece" "piece" 17.50 20.00 0.00
 BULTOHARINA "Bulto de Harina 25kg" 														"Harinas y Aceites" "standard" "bulk" "bulk" 420.00 435.50 0.00
 !LENTEJASG "Lentejas Grandes" 															"Granos y Semillas" "standard" "kilogram" "kilogram" 25.00 35.00 0.00
 !LENTEJAS "Lentejas" 																	"Granos y Semillas" "standard" "kilogram" "kilogram" 20.00 30.00 0.00
@@ -209,7 +216,8 @@ COCORAIMP10K "Coco Rallado Imperial 10kg" 												"Frutas y Verduras" "stand
 CEBOLLAP1KG "Cebolla Molida 1kg" 														"Frutas y Verduras" "standard" "kilogram" "kilogram" 100.00 120.00 0.00
 !CEBOLLAP "Cebolla Molida" 																"Frutas y Verduras" "standard" "kilogram" "kilogram" 100.00 150.00 0.00
 CAJAJITOMATE "Caja de Jitomate"	 														"Frutas y Verduras" "standard" "box" "box" 550.00 775.00 0.00
-!JITOMATE "Jitomate"	 																"Frutas y Verduras" "standard" "kilogram" "kilogram" 20.00 27.00 0.00
+!JITOMATE "Jitomate"	 																"Frutas y Verduras" "standard" "kilogram" "kilogram" 20.00 33.00 0.00
+!JITOMATE2 "Jitomate"	 																"Frutas y Verduras" "standard" "kilogram" "kilogram" 20.00 39.00 0.00
 !TOMATE "Tomate verde" 																	"Frutas y Verduras" "standard" "kilogram" "kilogram" 24.00 39.00 0.00
 !LECHUGA "Lechuga" 																		"Frutas y Verduras" "standard" "kilogram" "kilogram" 25.00 30.00 0.00
 !BROCOLI "Brócoli" 																		"Frutas y Verduras" "standard" "kilogram" "kilogram" 30.00 39.00 0.00
@@ -232,7 +240,7 @@ CEREZAS "Bote de Cerezas 3,400kg"			 											"Frutas y Verduras" "standard" "
 CHILEGUA1K "Chile Guajillo 1kg" 														"Chiles" "standard" "piece" "piece" 158.00 160.00 0.00
 !CHILEMUL "Chile Mulato" 																"Chiles" "standard" "kilogram" "kilogram" 204.00 270.00 0.00
 !CHILEPUYA "Chile Puya" 																"Chiles" "standard" "kilogram" "kilogram" 170.00 265.00 0.00
-CHILEARB1K "Chile de Árbol 1kg" 														"Chiles" "standard" "kilogram" "kilogram" 95.00 119.00 0.00
+CHILEARB1K "Chile de Árbol 1kg" 														"Chiles" "standard" "piece" "piece" 95.00 119.00 0.00
 !CHILEARB "Chile de Árbol" 																"Chiles" "standard" "kilogram" "kilogram" 95.00 220.00 0.00
 !CHILEANCHO "Chile Ancho" 																"Chiles" "standard" "kilogram" "kilogram" 190.00 250.00 0.00
 !CHILEPOB "Chile Poblano" 																"Chiles" "standard" "kilogram" "kilogram" 45.00 59.00 0.00
@@ -244,7 +252,7 @@ CHILEARB1K "Chile de Árbol 1kg" 														"Chiles" "standard" "kilogram" "k
 !YERBABUENA "Ramo de Yerbabuena" 														"Especias y Condimentos" "standard" "kilogram" "kilogram" 0.00 15.00 0.00
 !AJOCHICO "Ajo chico #6" 																"Especias y Condimentos" "standard" "kilogram" "kilogram" 0.00 75.00 0.00
 !AJO "Ajo #10" 																			"Especias y Condimentos" "standard" "kilogram" "kilogram" 78.00 125.00 0.00
-AJOENPOLVO1K "Ajo en Polvo 1kg" 														"Especias y Condimentos" "standard" "kilogram" "kilogram" 40.00 120.00 0.00
+AJOENPOLVO1K "Ajo en Polvo 1kg" 														"Especias y Condimentos" "standard" "piece" "piece" 40.00 120.00 0.00
 !AJOENPOLVO "Ajo en Polvo" 																"Especias y Condimentos" "standard" "kilogram" "kilogram" 40.00 150.00 0.00
 !COMINO "Comino" 																		"Especias y Condimentos" "standard" "kilogram" "kilogram" 54.00 150.00 0.00
 COMINO1K "Comino 1kg" 																	"Especias y Condimentos" "standard" "kilogram" "kilogram" 54.00 100.00 0.00
@@ -252,7 +260,7 @@ COMINO1K "Comino 1kg" 																	"Especias y Condimentos" "standard" "kilo
 !PIMIENTA "Pimienta Chica" 																"Especias y Condimentos" "standard" "kilogram" "kilogram" 160.00 250.00 0.00
 !PIMIENTANM "Pimienta Comercial negra molida" 											"Especias y Condimentos" "standard" "kilogram" "kilogram" 60.00 120.00 0.00
 7501003302090 "Pimienta Negra Molida McCORMICK 64g" 									"Especias y Condimentos" "standard" "kilogram" "kilogram" 0.00 67.00 0.00
-CLAVO1K "Clavo 1kg" 																	"Especias y Condimentos" "standard" "kilogram" "kilogram" 300.00 350.00 0.00
+CLAVO1K "Clavo 1kg" 																	"Especias y Condimentos" "standard" "piece" "piece" 300.00 350.00 0.00
 !CLAVO "Clavo" 																			"Especias y Condimentos" "standard" "kilogram" "kilogram" 300.00 400.00 0.00
 !CLAVOPOLVO "Clavo en Polvo Comercial" 													"Especias y Condimentos" "standard" "kilogram" "kilogram" 60.00 120.00 0.00
 !OREGANO "Oregano" 																		"Especias y Condimentos" "standard" "kilogram" "kilogram" 85.00 120.00 0.00
@@ -270,23 +278,22 @@ LAUREL "Laurel" 																		"Especias y Condimentos" "standard" "kilogram"
 !GARBANZA "Garbanza Chica"      														"Granos y Semillas" "standard" "kilogram" "kilogram" 16.00 30.00 0.00
 !GARBANZAGRANDE "Garbanza Grande"      													"Granos y Semillas" "standard" "kilogram" "kilogram" 30.00 50.00 0.00
 !CHIA "Chia"      																		"Granos y Semillas" "standard" "kilogram" "kilogram" 80.00 120.00 0.00
-CHIA1K "Chia 1kg"      																	"Granos y Semillas" "standard" "kilogram" "kilogram" 0.00 100.00 0.00
-CHIA500 "Chia 500g"      																"Granos y Semillas" "standard" "kilogram" "kilogram" 0.00 50.00 0.00
-CHIA250 "Chia 250g"      																"Granos y Semillas" "standard" "kilogram" "kilogram" 0.00 30.00 0.00
+CHIA1K "Chia 1kg"      																	"Granos y Semillas" "standard" "piece" "piece" 80.00 100.00 0.00
+CHIA500 "Chia 500g"      																"Granos y Semillas" "standard" "piece" "piece" 0.00 50.00 0.00
+CHIA250 "Chia 250g"      																"Granos y Semillas" "standard" "piece" "piece" 0.00 30.00 0.00
 !SOYA "Soya"      																		"Granos y Semillas" "standard" "kilogram" "kilogram" 25.00 39.00 0.00
 HOJATAMALC "Hoja para Tamal Chica" 														"Granos y Semillas" "standard" "package" "package" 45.00 65.00 0.00
 HOJATAMALG "Hoja para Tamal Grande" 													"Granos y Semillas" "standard" "package" "package" 110.00 120.00 0.00
 HOJATAMALJ "Hoja para Tamal Jumbo" 														"Granos y Semillas" "standard" "package" "package" 120.00 140.00 0.00
 !AJONJOLI "Ajonjolí"		 															"Granos y Semillas" "standard" "kilogram" "kilogram" 65.00 120.00 0.00
-AJONJOLI1K "Ajonjolí 1kg"		 														"Granos y Semillas" "standard" "kilogram" "kilogram" 65.00 90.00 0.00
+AJONJOLI1K "Ajonjolí 1kg"		 														"Granos y Semillas" "standard" "piece" "piece" 65.00 90.00 0.00
 !CIRUELAPASA "Ciruela Pasa sin hueso"	 												"Granos y Semillas" "standard" "kilogram" "kilogram" 108.00 160.00 0.000
 !PASITASJUMBO "Pasas Jumbo"		 														"Granos y Semillas" "standard" "kilogram" "kilogram" 65.00 100.00 0.00
 !CANELAP "Canela Molida" 																"Granos y Semillas" "standard" "kilogram" "kilogram" 0.00 160.00 0.00
 !CANELAV "Canela en Vara" 																"Granos y Semillas" "standard" "kilogram" "kilogram" 0.00 600.00 0.00
 !NUEZ "Nuez Extra"			 															"Granos y Semillas" "standard" "kilogram" "kilogram" 272.00 320.00 0.00
 !NUEZDELAINDIA "Nuez de la India" 														"Granos y Semillas" "standard" "kilogram" "kilogram" 230.00 290.00 0.00
-!ALMENDRA "Almendra"		 															"Granos y Semillas" "standard" "kilogram" "kilogram" 195.00 250.00 0.00
-####!ALMENDRA "Almendra"		 														"Granos y Semillas" "standard" "kilogram" "kilogram" 210.00 260.00 0.00
+!ALMENDRA "Almendra"		 															"Granos y Semillas" "standard" "kilogram" "kilogram" 210.00 260.00 0.00
 PANOCHA "Panocha"			 															"Endulzantes" "standard" "piece" "piece" 20.00 25.00 0.00
 !KNORRSZ "Knorr Suiza"			 														"Sazonadores" "standard" "kilogram" "kilogram" 40.00 80.00 0.00
 !LINAZA "Linaza"			 															"Sazonadores" "standard" "kilogram" "kilogram" 30.00 70.00 0.00
@@ -327,6 +334,9 @@ CAJAFRIJOLPEREISA430->7501071307775:12 "Caja Frijoles Peruanos Refritos Isadora 
 
 7501071307775 "Frijoles Peruanos Refritos Isadora 450g"         											"Frijoles en Bolsa"  "standard"  "piece" "piece" 16.66 20.00 0.00
 CAJAFRIJOLPEREISA450->7501071307775:12 "Caja Frijoles Peruanos Refritos Isadora 12pzas 450g c/u"			"Frijoles en Bolsa"  "standard"  "box" "box" 200.00 220.00 0.00
+
+7501005129947 "Sopa Knorr de Estrellas 95g"                    												"Pastas y Sopas" "standard" "piece" "piece" 18.25 22.00 0.00
+17501005105528->7501005129947:12 "Caja Sopa Knorr de Pollo 12pzas 95g c/u"									"Pastas y Sopas" "standard" "box" "box" 0.00 240.00 0.00
 
 7501018310103 "Pasta tipo Spaghetti La Moderna #5 200g"                    									"Pastas y Sopas" "standard" "piece" "piece" 7.76 10.00 0.00
 CAJAPASTASPAGUETTILAMODERNA->7501018310103:20 "Caja Pasta tipo Spaghetti La Moderna #5 20paq 200g c/u"		"Pastas y Sopas" "standard" "box" "box" 155.36 175.00 0.00
@@ -574,7 +584,7 @@ CAJALECHECLAVEL360->7501058611062:48 "Caja Leche Evaporada Carnation 48pzas 360g
 
 [DEP-006 "Desayunos y Merienda"]
 !CAFEATC "Café Atoyac"			 																	"Café y Té" "standard" "kilogram" "kilogram" 0.00 230.00 0.00
-7503002216019 "Café Mezclado Oriental"             													"Café y Té" "standard" "piece" "piece" 0.00 6.00 0.00
+7503002216019 "Café Mezclado Oriental"             													"Café y Té" "standard" "piece" "piece" 4.90 6.00 0.00
 CAFEMEZCLADOORIENTAL "Paquete Café Mezclado Oriental 10pzas"             							"Café y Té" "standard" "piece" "piece" 49.00 55.00 0.00
 
 7501058628466 "Nescafé decaf 40g"             														"Café y Té" "standard" "piece" "piece" 42.00 49.00 0.00
@@ -621,20 +631,20 @@ TIRAVUALACHOCOLATE "Tira Vualá sabor Chocolate 60g"                       					
 
 7501000664221 "Saladitas gamesa 186g"                                 		"Galletas y Panes" "standard" "piece" "piece" 0.00 0.00 0.00
 
-7500810047811 "Mini Pan tostado clásico Bimbo 3paq 115g"                 	 0"Galletas y Panes" "standard" "piece" "piece" 18.00 20.00 0.00
+7500810047811 "Mini Pan tostado clásico Bimbo 3paq 115g"                 	 "Galletas y Panes" "standard" "piece" "piece" 20.75 25.00 0.00
 
 7501000111800 "Pan tostado clásico Bimbo 14pzas 210g"                 		"Galletas y Panes" "standard" "piece" "piece" 29.05 35.00 0.00
-7501030491668 "Pan tostado Integral Bimbo 14pzas 250g"                 		"Galletas y Panes" "standard" "piece" "piece" 29.88 36.00 0.00
+7501030491668 "Pan tostado Integral Bimbo 14pzas 250g"                 		"Galletas y Panes" "standard" "piece" "piece" 31.54 38.00 0.00
 7501000375295 "Pan 12 granos Oroweat 16 rebanadas 680g"    					"Galletas y Panes" "standard" "piece" "piece" 65.60 80.00 0.00
-7500810032978 "Pan Integral Bimbo 12 rebanadas 300g"                  		"Galletas y Panes" "standard" "piece" "piece" 23.24 28.00 0.00
-7500810022061 "Pan Integral Bimbo 20 rebanadas 620g"                  		"Galletas y Panes" "standard" "piece" "piece" 43.16 52.00 0.00  
-7500810032985 "Pan Blanco Bimbo 12 rebanadas 300g"                    		"Galletas y Panes" "standard" "piece" "piece" 21.58 26.00 0.00
-7500810029183 "Pan Blanco Bimbo 20 rebanadas 620g"                    		"Galletas y Panes" "standard" "piece" "piece" 41.50 50.00 0.00
-7501000111503 "Medias Noches Bimbo 8pzas 340g"                  			"Galletas y Panes" "standard" "piece" "piece" 38.18 46.00 0.00
+7500810032978 "Pan Integral Bimbo 12 rebanadas 300g"                  		"Galletas y Panes" "standard" "piece" "piece" 24.90 30.00 0.00
+7500810022061 "Pan Integral Bimbo 20 rebanadas 620g"                  		"Galletas y Panes" "standard" "piece" "piece" 44.82 54.00 0.00  
+7500810032985 "Pan Blanco Bimbo 12 rebanadas 300g"                    		"Galletas y Panes" "standard" "piece" "piece" 23.24 28.00 0.00
+7500810029183 "Pan Blanco Bimbo 20 rebanadas 620g"                    		"Galletas y Panes" "standard" "piece" "piece" 43.16 52.00 0.00
+7501000111503 "Medias Noches Bimbo 8pzas 340g"                  			"Galletas y Panes" "standard" "piece" "piece" 39.84 48.00 0.00
 7501000111855 "Pan Molido Clásico Bimbo 252g"                         		"Galletas y Panes" "standard" "piece" "piece" 23.24 28.00 0.00
-7501000149100 "Empanizador Crujiente Bimbo 175g"                      		"Galletas y Panes" "standard" "piece" "piece" 23.24 28.00 0.00
+7501000149100 "Empanizador Crujiente Bimbo 175g"                      		"Galletas y Panes" "standard" "piece" "piece" 20.75 25.00 0.00
 7500810035399 "Panko Bimbo 300g"                                     		"Galletas y Panes" "standard" "piece" "piece" 33.20 38.00 0.00
-7500810022092 "Bimbollos Parrilleros Bimbo 6pzas 516g"               		"Galletas y Panes" "standard" "piece" "piece" 46.48 56.00 0.00
+7500810022092 "Bimbollos Parrilleros Bimbo 6pzas 516g"               		"Galletas y Panes" "standard" "piece" "piece" 48.14 58.00 0.00
 7500478021079 "arcoiris gamesa 94g"                                 		"Galletas y Panes" "standard" "piece" "piece" 0.00 0.00 0.00
 7500478044993 "Marías postresitos gamesa 70g"                       		"Galletas y Panes" "standard" "piece" "piece" 0.00 0.00 0.00
 7500478037254 "Marías Doradas gamesa 199g"                          		"Galletas y Panes" "standard" "piece" "piece" 0.00 0.00 0.00
@@ -643,22 +653,23 @@ TIRAVUALACHOCOLATE "Tira Vualá sabor Chocolate 60g"                       					
 CAJAMARIASGAMESA->7500478010592:20 "Caja Marías gamesa 20pzas 177g c/u"		"Galletas y Panes" "standard" "box" "box" 0.00 275.00 0.00
 
 7500478035922 "Marías azucaradas gamesa 144g"                       		"Galletas y Panes" "standard" "piece" "piece" 0.00 0.00 0.00
-7501000116447 "Bran Frut Bimbo sabor fresa 58g"                     		"Galletas y Panes" "standard" "piece" "piece" 8.00 14.00 0.00
-7501000116430 "Bran Frut Bimbo sabor piña 58g"                      		"Galletas y Panes" "standard" "piece" "piece" 8.00 14.00 0.00
+7501000116447 "Bran Frut Bimbo sabor fresa 58g"                     		"Galletas y Panes" "standard" "piece" "piece" 8.31 10.00 0.00
+7501000116430 "Bran Frut Bimbo sabor piña 58g"                      		"Galletas y Panes" "standard" "piece" "piece" 8.31 10.00 0.00
+7501000112845 "Rebanadas 2pzas 55g"                                    		"Galletas y Panes" "standard" "piece" "piece" 8.31 10.00 0.00
 7500810035436 "Hotkis Bimbo 38g"                                    		"Galletas y Panes" "standard" "piece" "piece" 6.64 8.00 0.00
 7500810026854 "Mini Panqué Bimbo con Nuez 70g"                      		"Galletas y Panes" "standard" "piece" "piece" 9.96 12.00 0.00
-7500810040515 "Panqué Hershey's Bimbo 280g"                         		"Galletas y Panes" "standard" "piece" "piece" 34.86 42.00 0.00
-7500810015797 "Panqué Mármol Bimbo 280g"                         			"Galletas y Panes" "standard" "piece" "piece" 34.86 42.00 0.00
-7500810015803 "Panqué con Pasas Bimbo 280g"                         		"Galletas y Panes" "standard" "piece" "piece" 34.86 42.00 0.00
-7500810015810 "Panqué con Nuez Bimbo 280g"                         			"Galletas y Panes" "standard" "piece" "piece" 34.86 42.00 0.00
-7501000612161 "Cremax sabor vainilla 213g"                          		"Galletas y Panes" "standard" "piece" "piece" 25.42.64 30.00 0.00
+7500810040515 "Panqué Hersheys Bimbo 280g"                         			"Galletas y Panes" "standard" "piece" "piece" 37.35 45.00 0.00
+7500810015797 "Panqué Mármol Bimbo 280g"                         			"Galletas y Panes" "standard" "piece" "piece" 36.52 44.00 0.00
+7500810015803 "Panqué con Pasas Bimbo 280g"                         		"Galletas y Panes" "standard" "piece" "piece" 36.52 44.00 0.00
+7500810015810 "Panqué con Nuez Bimbo 280g"                         			"Galletas y Panes" "standard" "piece" "piece" 36.52 44.00 0.00
+7501000612161 "Cremax sabor vainilla 213g"                          		"Galletas y Panes" "standard" "piece" "piece" 25.42 30.00 0.00
 7500478022892 "Cremax sabor vainilla 113g"                          		"Galletas y Panes" "standard" "piece" "piece" 18.64 22.00 0.00
-7500478022908 "Cremax sabor fresa 113g"                             		"Galletas y Panes" "standard" "piece" "piece" 18.64 22.000.00
+7500478022908 "Cremax sabor fresa 113g"                             		"Galletas y Panes" "standard" "piece" "piece" 18.64 22.00 0.00
 7500478022885 "Cremax sabor chocolate 113g"                         		"Galletas y Panes" "standard" "piece" "piece" 18.64 22.00 0.00
-7501030418399 "Donitas espolvoreadas Bimbo 140g"                    		"Galletas y Panes" "standard" "piece" "piece" 18.26 22.00 0.00
-7500810020920 "Donitas espolvoreadas Bimbo 52,5g"                    		"Galletas y Panes" "standard" "piece" "piece" 7.60 10.00 0.00
-7501030474227 "Donas Bimbo 158g"                                    		"Galletas y Panes" "standard" "piece" "piece" 18.26 22.00 0.00
-7501000112784 "Nito Bimbo 62g"                                      		"Galletas y Panes" "standard" "piece" "piece" 14.94 18.00 0.00
+7501030418399 "Donitas espolvoreadas Bimbo 140g"                    		"Galletas y Panes" "standard" "piece" "piece" 19.92 24.00 0.00
+7500810020920 "Donitas espolvoreadas Bimbo 52,5g"                    		"Galletas y Panes" "standard" "piece" "piece" 8.30 10.00 0.00
+7501030474227 "Donas Bimbo 158g"                                    		"Galletas y Panes" "standard" "piece" "piece" 19.92 24.00 0.00
+7501000112784 "Nito Bimbo 62g"                                      		"Galletas y Panes" "standard" "piece" "piece" 16.60 20.00 0.00
 7501000651375 "Mamut gamesa 44g"                                    		"Galletas y Panes" "standard" "piece" "piece" 10.17 12.00 0.00
 7500478038886 "Delicias gamesa sabor mantequilla 153g"              		"Galletas y Panes" "standard" "piece" "piece" 16.93 22.00 0.00
 7500478021598 "Giro gamesa 114g"                                    		"Galletas y Panes" "standard" "piece" "piece" 18.64 22.00 0.00
@@ -666,20 +677,20 @@ CAJAMARIASGAMESA->7500478010592:20 "Caja Marías gamesa 20pzas 177g c/u"		"Galle
 7500478022519 "Emperador sabor vainilla 109g"                       		"Galletas y Panes" "standard" "piece" "piece" 18.64 22.00 0.00
 7500478021581 "Emperador combinado 109g"                            		"Galletas y Panes" "standard" "piece" "piece" 18.64 22.00 0.00
 7500478043804 "Emperador sabor chocolate 121g"                      		"Galletas y Panes" "standard" "piece" "piece" 18.64 22.00 0.00
-7500478043767 "Emperador sabor chocolate Paketón 222g"                      "Galletas y Panes" "standard" "piece" "piece" 25.42 30.00 0.00
+7500478043767 "Emperador sabor chocolate Paketón 222g"                      "Galletas y Panes" "standard" "piece" "piece" 25.42 32.00 0.00
 7500478022373 "Emperador senzo 117g"                                		"Galletas y Panes" "standard" "piece" "piece" 18.64 22.00 0.00
 7501761802351 "Quaker avena manzana y canela 60g"                   		"Galletas y Panes" "standard" "piece" "piece" 13.56 16.00 0.00
 7500478005581 "Pan Crema 151g"                                      		"Galletas y Panes" "standard" "piece" "piece" 0.00 0.00 0.00
 7501000112203 "Colchones Bimbo sabor naranja 130g"                  		"Galletas y Panes" "standard" "piece" "piece" 13.28 16.00 0.00
 7500478018109 "Surtido Rico gamesa 164g"                            		"Galletas y Panes" "standard" "piece" "piece" 0.00 0.00 0.00
-7503030374019 "Crossantines Bimbo 32g"                             			"Galletas y Panes" "standard" "piece" "piece" 0.00 0.00 0.00
-7500810045695 "Crossantines minis Bimbo 5pzas 60g"                 			"Galletas y Panes" "standard" "piece" "piece" 16.60 20.00 0.00
+7503030374019 "Crossantines Bimbo 32g"                             			"Galletas y Panes" "standard" "piece" "piece" 5.81 7.00 0.00
+7500810045695 "Crossantines minis Hersheys Bimbo 5pzas 60g"                	"Galletas y Panes" "standard" "piece" "piece" 16.60 20.00 0.00
 7500478038794 "Ricanelas gamesa 113g"                               		"Galletas y Panes" "standard" "piece" "piece" 16.95 20.00 0.00
 7500478015931 "Fruts gamesa 130g"                                   		"Galletas y Panes" "standard" "piece" "piece" 21.19 26.00 0.00
 7500478037421 "Chokis chocolate gamesa 73,5g"                       		"Galletas y Panes" "standard" "piece" "piece" 18.64 24.00 0.00
 7501000604685 "Chokis Rellenas gamesa 90"                       			"Galletas y Panes" "standard" "piece" "piece" 18.64 24.00 0.00
 7500478014569 "Chokis gamesa 76g"                                   		"Galletas y Panes" "standard" "piece" "piece" 18.64 24.00 0.00
-7500478014569 "Chokis clásica gamesa Paketón 180,5gg"                       "Galletas y Panes" "standard" "piece" "piece" 25.42 30.00 0.00
+7500478014569 "Chokis clásica gamesa Paketón 180,5gg"                       "Galletas y Panes" "standard" "piece" "piece" 25.42 32.00 0.00
 7500478022694 "Mini Chokis gamesa 42g"                              		"Galletas y Panes" "standard" "piece" "piece" 0.00 0.00 0.00
 7500478005857 "Bizcochitos gamesa 150g"                             		"Galletas y Panes" "standard" "piece" "piece" 0.00 0.00 0.00
 
@@ -688,34 +699,35 @@ CAJACRACKETS135->7500478005512:20 "Caja Crackets gamesa 20pzas 135g c/u"	"Gallet
 
 7500478042401 "Barras de Coco gamesa 140g"                          		"Galletas y Panes" "standard" "piece" "piece" 0.00 0.00 0.00
 7501000142453 "Conchas Tía Rosa sabor vainilla y chocolate 120g"    		"Galletas y Panes" "standard" "piece" "piece" 18.26 22.00 0.00
-7500810029077 "Bigotes Tía Rosa sabor chocolate 120g"               		"Galletas y Panes" "standard" "piece" "piece" 0.00 0.00 0.00
-7503030374002 "Roles con canela glaseados Bimbo 205g"               		"Galletas y Panes" "standard" "piece" "piece" 20.75 25.00 0.00
-7503030199995 "Roles con canela Bimbo 180g"                         		"Galletas y Panes" "standard" "piece" "piece" 20.75 25.00 0.00
+7500810029077 "Bigotes Tía Rosa sabor chocolate 120g"               		"Galletas y Panes" "standard" "piece" "piece" 18.26 22.00 0.00
+7503030374002 "Roles con canela glaseados Bimbo 205g"               		"Galletas y Panes" "standard" "piece" "piece" 19.92 24.00 0.00
+7503030199995 "Roles con canela Bimbo 180g"                         		"Galletas y Panes" "standard" "piece" "piece" 19.92 24.00 0.00
 7501030472698 "Bimbuñuelos Bimbo 99g"                               		"Galletas y Panes" "standard" "piece" "piece" 18.26 22.00 0.00
-7501030475514 "Mantecadas Bimbo con nuez 184,5g"                  			"Galletas y Panes" "standard" "piece" "piece" 26.56 32.00 0.00
+7501030475514 "Mantecadas Bimbo con nuez 184,5g"                  			"Galletas y Panes" "standard" "piece" "piece" 28.22 34.00 0.00
 7501030477488 "Madalenas Bimbo 3pzas 93g"                                 	"Galletas y Panes" "standard" "piece" "piece" 18.26 22.00 0.00
-7501030475521 "Mantecadas Bimbo sabor vainilla 188g"                		"Galletas y Panes" "standard" "piece" "piece" 26.56 32.00 0.00
+7501030475521 "Mantecadas Bimbo sabor vainilla 188g"                		"Galletas y Panes" "standard" "piece" "piece" 28.22 34.00 0.00
 7501000112388 "Panquecitos Bimbo con Chispas de chocolate 58g"      		"Galletas y Panes" "standard" "piece" "piece" 18.26 22.00 0.00
 7500478026562 "Florentias sabor fresa 110g"                         		"Galletas y Panes" "standard" "piece" "piece" 16.95 24.00 0.00
 7500478026579 "Florentias sabor cajeta 110g"                        		"Galletas y Panes" "standard" "piece" "piece" 16.95 24.00 0.00
-7501030418504 "Príncipe Marinela Maxi Tubo 210g"                    		"Galletas y Panes" "standard" "piece" "piece" 26.88 32.00 0.00
-7500810011126 "Príncipe Marinela relleno sabor chocolate 126g"      		"Galletas y Panes" "standard" "piece" "piece" 20.16 35.00 0.00
-7500810011140 "Príncipe Marinela relleno sabor chocolate blanco 126g"     	"Galletas y Panes" "standard" "piece" "piece" 20.16 24.00 0.00
-7501030418528 "Triki Trakes Marinela Maxi Tubo 215g"                		"Galletas y Panes" "standard" "piece" "piece" 26.88 32.00 0.00
-7501000140855 "Triki Trakes Marinela 85g"                           		"Galletas y Panes" "standard" "piece" "piece" 18.48 22.00 0.00
-7501000138944 "Sponch Marinela 120g"                                		"Galletas y Panes" "standard" "piece" "piece" 18.48 22.00 0.00
-7501030418559 "Polvorones Marinela Maxi Tubo 310g"                  		"Galletas y Panes" "standard" "piece" "piece" 26.88 32.00 0.00
-7500810028032 "Polvorones Marinela 148g"                            		"Galletas y Panes" "standard" "piece" "piece" 20.16 24.00 0.00
-7501030457183 "Mini Barritas Marinela sabor piña 222g"              		"Galletas y Panes" "standard" "piece" "piece" 0.00 0.00 0.00
-7501030457190 "Mini Barritas Marinela sabor fresa 222g"             		"Galletas y Panes" "standard" "piece" "piece" 0.00 0.00 0.00
-7500810014738 "Barritas Marinela sabor piña 75g"                    		"Galletas y Panes" "standard" "piece" "piece" 15.12 18.00 0.00
-7500810014721 "Barritas Marinela sabor fresa 75g"                   		"Galletas y Panes" "standard" "piece" "piece" 15.12 18.00 0.00
-7500810014745 "Barritas Marinela sabor moras 75g"                   		"Galletas y Panes" "standard" "piece" "piece" 15.12 18.00 0.00
+7501030418504 "Príncipe Marinela Maxi Tubo 210g"                    		"Galletas y Panes" "standard" "piece" "piece" 28.56 34.00 0.00
+7500810011133 "Príncipe Marinela Avellanas 126g"      						"Galletas y Panes" "standard" "piece" "piece" 21.00 25.00 0.00
+7500810011126 "Príncipe Marinela Chocolate 126g"      						"Galletas y Panes" "standard" "piece" "piece" 21.00 25.00 0.00
+7500810011140 "Príncipe Marinela Chocolate Blanco 126g"     				"Galletas y Panes" "standard" "piece" "piece" 21.00 25.00 0.00
+7501030418528 "Triki Trakes Marinela Maxi Tubo 215g"                		"Galletas y Panes" "standard" "piece" "piece" 28.56 34.00 0.00
+7501000140855 "Triki Trakes Marinela 86g"                           		"Galletas y Panes" "standard" "piece" "piece" 20.16 24.00 0.00
+7501000138944 "Sponch Marinela 120g"                                		"Galletas y Panes" "standard" "piece" "piece" 20.16 24.00 0.00
+7501030418559 "Polvorones Marinela Maxi Tubo 310g"                  		"Galletas y Panes" "standard" "piece" "piece" 28.56 34.00 0.00
+7500810028032 "Polvorones Marinela 148g"                            		"Galletas y Panes" "standard" "piece" "piece" 21.00 25.00 0.00
+7501030457183 "Mini Barritas Marinela sabor piña 222g"              		"Galletas y Panes" "standard" "piece" "piece" 28.56 34.00 0.00
+7501030457190 "Mini Barritas Marinela sabor fresa 222g"             		"Galletas y Panes" "standard" "piece" "piece" 28.56 34.00 0.00
+7500810014738 "Barritas Marinela sabor piña 75g"                    		"Galletas y Panes" "standard" "piece" "piece" 12.60 15.00 0.00
+7500810014721 "Barritas Marinela sabor fresa 75g"                   		"Galletas y Panes" "standard" "piece" "piece" 12.60 15.00 0.00
+7500810014745 "Barritas Marinela sabor moras 75g"                   		"Galletas y Panes" "standard" "piece" "piece" 12.60 15.00 0.00
 7501000156214 "Submarinos Marinela sabor chocolate 105g"            		"Galletas y Panes" "standard" "piece" "piece" 16.60 20.00 0.00
 7501000153282 "Submarinos Marinela sabor vainilla 105g"             		"Galletas y Panes" "standard" "piece" "piece" 16.60 20.00 0.00
-7500810022801 "Canelitas Marinela 120g"                             		"Galletas y Panes" "standard" "piece" "piece" 20.16 24.00 0.00
-7501030418542 "Canelitas Marinela Maxi Tubo 224g"                           "Galletas y Panes" "standard" "piece" "piece" 20.16 32.00 0.00
-7500810020418 "Qé Choxs sabor Chocolate  81g"                             	"Galletas y Panes" "standard" "piece" "piece" 0.0 0.00 0.00
+7500810022801 "Canelitas Marinela 120g"                             		"Galletas y Panes" "standard" "piece" "piece" 21.00 25.00 0.00
+7501030418542 "Canelitas Marinela Maxi Tubo 224g"                           "Galletas y Panes" "standard" "piece" "piece" 28.56 34.00 0.00
+7500810020418 "Qé Choxs sabor Chocolate  81g"                             	"Galletas y Panes" "standard" "piece" "piece" 10.08 12.00 0.00
 
 7501008703441 "Mexicanas Cuétara 135g"                              		"Galletas y Panes" "standard" "piece" "piece" 0.00 0.00 0.00
 
@@ -771,7 +783,7 @@ CAJAZUKOLIMON "Caja Zuko sabor Limón 96 sobres"										"Polvo para Bebidas" "
 CAJAZUKOGUANABANA "Caja Zuko sabor Guanabana 96 sobres"								"Polvo para Bebidas" "standard" "box" "box" 630.00 693.00 0.00
 
 7503061640459 "Zuko sabor Sandía 8g"                     							"Polvo para Bebidas" "standard" "piece" "piece" 6.56 10.00 0.00
-7503061640640->7503032460222:8 "Exhibidor Zuko sabor Sandía 8 sobres 8g c/u"		"Polvo para Bebidas" "standard" "box" "box" 52.54 63.00 0.00
+7503061640640->7503032460222:8 "Exhibidor Zuko sabor Sandía 8 sobres 8g c/u"		"Polvo para Bebidas" "standard  " "box" "box" 52.54 63.00 0.00
 CAJAZUKOSANDIA "Caja Zuko sabor Sandía 96 sobres"									"Polvo para Bebidas" "standard" "box" "box" 630.00 693.00 0.00
 
 7506205807589 "Choco Milk sabor chocolate 160g"                      		 		"Polvo para Bebidas" "standard" "piece" "piece" 24.22 29.00 0.00
@@ -840,11 +852,15 @@ CAJAJUMEXBIDAFRESA237->7501013106794:24 "Caja JUMEX Bida Fresa 24pzas 237ml c/u"
 7501013191066 "JUMEX Bida Guayaba 500ml"              				"Jugos y Néctares" "standard" "piece" "piece" 11.50 14.00 0.00
 7501013191141 "JUMEX Bida Uva 500ml"                  				"Jugos y Néctares" "standard" "piece" "piece" 11.50 14.00 0.00
 7501013191028 "JUMEX Bida Manzana 500ml"              				"Jugos y Néctares" "standard" "piece" "piece" 11.50 14.00 0.00
+7501013191219 "JUMEX Bida Fresa 500ml"              				"Jugos y Néctares" "standard" "piece" "piece" 11.50 14.00 0.00
 
 7501013104066 "JUMEX Durazno 960ml"                   				"Jugos y Néctares" "standard" "piece" "piece" 0.00 0.00 0.00
 7501013104073 "JUMEX Manzana 960ml"                   				"Jugos y Néctares" "standard" "piece" "piece" 0.00 0.00 0.00
 
 7501013106893 "JUMEX Arándano 960ml"                   				"Jugos y Néctares" "standard" "piece" "piece" 0.00 0.00 0.00
+
+031200454577 "Ocean Spray Uva y Arándano 1L"                   		"Jugos y Néctares" "standard" "piece" "piece" 0.00 38.00 0.00
+031200454560 "Ocean Spray Arándano 1L"                   			"Jugos y Néctares" "standard" "piece" "piece" 0.00 38.00 0.00
 
 613008772840 "Arizona Sandía 570ml"                   				"Jugos y Néctares" "standard" "piece" "piece" 0.00 0.00 0.00
 
@@ -861,25 +877,25 @@ CAJACALAHUA "Caja Calahua Crema de Coco 12pzas 1L c/u"           			"Jugos y Né
 810990001112 "Calahua Crema de Coco 423ml"           						"Jugos y Néctares" "standard" "piece" "piece" 31.67 38.00 0.00
 CAJACALAHUALATA "Caja Calahua Crema de Coco 24pzas 423ml c/u"           	"Jugos y Néctares" "standard" "box" "box" 760.12 836.00 0.00
 
-7501055304653 "Delaware Punch 600ml"                  						"Refrescos" "standard" "piece" "piece" 0.00 0.00 0.00
-7501055304691 "Delaware Punch 2L"                     						"Refrescos" "standard" "piece" "piece" 0.00 0.00 0.00
+7501055304653 "Delaware Punch 600ml"                  						"Refrescos" "standard" "piece" "piece" 20.59 24.00 0.00
+7501055304691 "Delaware Punch 2L"                     						"Refrescos" "standard" "piece" "piece" 35.51 44.00 0.00
 7501055303779 "Fanta sabor naranja 600ml"             						"Refrescos" "standard" "piece" "piece" 0.00 0.00 0.00
-7501055303878 "Fanta sabor naranja 2L"                						"Refrescos" "standard" "piece" "piece" 0.00 0.00 0.00
+7501055303878 "Fanta sabor naranja 2L"                						"Refrescos" "standard" "piece" "piece" 0.00 44.00 0.00
 7501055305230 "Fanta sabor fresa 600ml"               						"Refrescos" "standard" "piece" "piece" 0.00 0.00 0.00
 7501055301386 "Fanta sabor fresa 2L"                  						"Refrescos" "standard" "piece" "piece" 0.00 0.00 0.00
-7501055303786 "Fresca 600ml"                          						"Refrescos" "standard" "piece" "piece" 0.00 0.00 0.00
+7501055303786 "Fresca 600ml"                          						"Refrescos" "standard" "piece" "piece" 0.00 44.00 0.00
 
 7501055303830 "Fresca 1,5L"                           						"Refrescos" "standard" "piece" "piece" 23.00 27.00 0.00
-CAJAFRESCA15L->7501055303830:6 "Caja Fresca 6pzas 1,5L c/u"					"Refrescos" "standard" "box" "box" 135.00 148.00 0.00
+CAJAFRESCA15L->7501055303830:6 "Reja Fresca 6pzas 1,5L c/u"					"Refrescos" "standard" "box" "box" 135.00 148.00 0.00
 
 7501055303885 "Fresca 2L"                             						"Refrescos" "standard" "piece" "piece" 28.00 40.00 0.00
-CAJAFRESCA2L->7501055303885:4 "Caja Fresca 4pzas 2L c/u"					"Refrescos" "standard" "box" "box" 112.00 123.00 0.00
+CAJAFRESCA2L->7501055303885:4 "Reja Fresca 4pzas 2L c/u"					"Refrescos" "standard" "box" "box" 112.00 123.00 0.00
 
 7501055304813 "Fresca 3L"                             						"Refrescos" "standard" "piece" "piece" 0.00 0.00 0.00
 7501055329915 "Yoli 600ml"                            						"Refrescos" "standard" "piece" "piece" 0.00 24.00 0.00
 
 7501055329939 "Yoli 1,5L"                             						"Refrescos" "standard" "piece" "piece" 23.00 27.00 0.00
-CAJAYOLI15L->7501055329939:6 "Caja Yoli 6pzas 1,5L c/u"						"Refrescos" "standard" "box" "box" 135.00 148.00 0.00
+CAJAYOLI15L->7501055329939:6 "Reja Yoli 6pzas 1,5L c/u"						"Refrescos" "standard" "box" "box" 135.00 148.00 0.00
 
 7501055329946 "Yoli 2L"                               						"Refrescos" "standard" "piece" "piece" 0.00 44.00 0.00
 7501055305629 "Sprite 600ml"                          						"Refrescos" "standard" "piece" "piece" 0.00 0.00 0.00
@@ -890,25 +906,25 @@ CAJAYOLI15L->7501055329939:6 "Caja Yoli 6pzas 1,5L c/u"						"Refrescos" "standa
 7501055356256 "Coca Cola Zero 355ml"                  						"Refrescos" "standard" "piece" "piece" 0.00 0.00 0.00
 
 7501055332175 "Coca Cola 355ml"                       						"Refrescos" "standard" "piece" "piece" 13.50 16.00 0.00
-CAJACOCACOLA355->7501055332175:12 "Caja Coca Cola 12pzas 355ml c/u"			"Refrescos" "standard" "box" "box" 160.00 176.00 0.00
+CAJACOCACOLA355->7501055332175:12 "Reja Coca Cola 12pzas 355ml c/u"			"Refrescos" "standard" "package" "package" 160.00 176.00 0.00
 
-7501055361540 "Coca Cola lata 355ml"                  						"Refrescos" "standard" "piece" "piece" 0.00 0  .00 0.00
+7501055361540 "Coca Cola lata 355ml"                  						"Refrescos" "standard" "piece" "piece" 0.00 24.00 0.00
 
 75007614 "Coca Cola 600ml"                            						"Refrescos" "standard" "piece" "piece" 21.37 24.00 0.00
-CAJACOCACOLA600->75007614:24 "Caja Coca Cola 24pzas 600ml c/u"				"Refrescos" "standard" "box" "box" 466.00 513.00 0.00
+CAJACOCACOLA600->75007614:24 "Reja Coca Cola 24pzas 600ml c/u"				"Refrescos" "standard" "package" "package" 466.00 513.00 0.00
 
 7501055371655 "Coca Cola 1,35L"                       						"Refrescos" "standard" "piece" "piece" 31.00 37.00 0.00
-CAJACOCACOLA135L->7501055371655:6 "Caja Coca Cola 6pzas 1,35L c/u"			"Refrescos" "standard" "box" "box" 185.00 204.00 0.00
+CAJACOCACOLA135L->7501055371655:6 "Reja Coca Cola 6pzas 1,35L c/u"			"Refrescos" "standard" "package" "package" 185.00 204.00 0.00
 
 7501055303540 "Coca Cola 1,5L"                        						"Refrescos" "standard" "piece" "piece" 0.00 0.00 0.00
 
 7501055313532 "Coca Cola 1,75L"                       						"Refrescos" "standard" "piece" "piece" 34.37 41.00 0.00
-CAJACOCACOLA175L->7501055313532:8 "Caja Coca Cola 8pzas 1,75L c/u"			"Refrescos" "standard" "box" "box" 275.00 302.00 0.00
+CAJACOCACOLA175L->7501055313532:8 "Reja Coca Cola 8pzas 1,75L c/u"			"Refrescos" "standard" "package" "package" 275.00 302.00 0.00
 
-7501055302925 "Coca Cola 2L"                          						"Refrescos" "standard" "piece" "piece" 0.00 0.00 0.00
+7501055302925 "Coca Cola 2L"                          						"Refrescos" "standard" "piece" "piece" 0.00 48.00 0.00
 
 7501055304745 "Coca Cola 3L"                          						"Refrescos" "standard" "piece" "piece" 46.00 55.00 0.00
-CAJACOCACOLA3L->7501055304745:8 "Caja Coca Cola 8pzas 3L c/u"				"Refrescos" "standard" "box" "box" 369.00 406.00 0.00
+CAJACOCACOLA3L->7501055304745:8 "Reja Coca Cola 8pzas 3L c/u"				"Refrescos" "standard" "package" "package" 369.00 406.00 0.00
 
 7501071120183 "Squirt 600ml"                          				"Refrescos" "standard" "piece" "piece" 0.00 0.00 0.00
 7501031310012 "Pepsi 600ml"                           				"Refrescos" "standard" "piece" "piece" 0.00 0.00 0.00
@@ -922,34 +938,38 @@ CAJACOCACOLA3L->7501055304745:8 "Caja Coca Cola 8pzas 3L c/u"				"Refrescos" "st
 7501073800113 "AGUAFIEL 1,5L"                         				"Aguas Purificadas" "standard" "piece" "piece" 0.00 0.00 0.00
 
 7501055307906 "Ciel 600ml"                            								"Aguas Purificadas" "standard" "piece" "piece" 12.50 15.00 0.00
-CAJACIEL600->7501055307906:12 "Caja Ciel 12pzas 600ml c/u"							"Aguas Purificadas" "standard" "box" "box" 151.00 166.00 0.00
+CAJACIEL600->7501055307906:12 "Reja Ciel 12pzas 600ml c/u"							"Aguas Purificadas" "standard" "package" "package" 151.00 166.00 0.00
 	
 7501055310883 "Ciel 1L"                               								"Aguas Purificadas" "standard" "piece" "piece" 0.00 18.00 0.00
 7501055304721 "Ciel 1,5L"                             								"Aguas Purificadas" "standard" "piece" "piece" 0.00 22.00 0.00
 
 7501055337033 "Ciel 2L"                               								"Aguas Purificadas" "standard" "piece" "piece" 21.31 25.00 0.00
-CAJACIEL2L->7501055337033:8 "Caja Ciel 8pzas 2L c/u"								"Aguas Purificadas" "standard" "box" "box" 170.52 188.00 0.00
+CAJACIEL2L->7501055337033:8 "Reja Ciel 8pzas 2L c/u"								"Aguas Purificadas" "standard" "package" "package" 170.52 188.00 0.00
 
 7501055310487 "Ciel 5L"                               								"Aguas Purificadas" "standard" "piece" "piece" 0.00 0.00 0.00
 7501277412433 "Taxco 600ml"                           								"Aguas Minerales" "standard" "piece" "piece" 0.00 24.00 0.00
 7501277412617 "Taxco 2L"                              								"Aguas Minerales" "standard" "piece" "piece" 0.00 39.00 0.00
 
 021136010541 "Topo Chico 600ml"                       								"Aguas Minerales" "standard" "piece" "piece" 19.50 24.00 0.00
-CAJATOPOCHICO600->021136010541:6 "Topo Chico 6pzas 600ml c/u"                       "Aguas Minerales" "standard" "piece" "piece" 116.00 127.00 0.00
+CAJATOPOCHICO600->021136010541:6 "Reja Topo Chico 6pzas 600ml c/u"                  "Aguas Minerales" "standard" "package" "package" 116.00 127.00 0.00
 
 7501055392759 "Topo Chico Limonada 600ml"                       					"Aguas Minerales" "standard" "piece" "piece" 16.50 22.00 0.00
-CAJATOPOCHICOL600->7501055392759:6 "Caja Topo Chico Limonada 6pzas 600ml c/u"       "Aguas Minerales" "standard" "box" "box" 16.66 20.00 0.00
+CAJATOPOCHICOL600->7501055392759:6 "Reja Topo Chico Limonada 6pzas 600ml c/u"       "Aguas Minerales" "standard" "package" "package" 16.66 20.00 0.00
 
 7501055392766 "Topo Chico Naranjada 600ml"                       					"Aguas Minerales" "standard" "piece" "piece" 16.50 22.00 0.00
 
-815154022705 "PREDATOR Energy 473ml"                  				"Bebidas Energizantes" "standard" "piece" "piece" 0.00 0.00 0.00
-070847035916 "Monster Energy 473ml"                   				"Bebidas Energizantes" "standard" "piece" "piece" 0.00 0.00 0.00
-9002490100070 "Red Bull Energy Drink 250ml"							"Bebidas Energizantes" "standard" "piece" "piece" 0.00 0.00 0.00
+815154022705 "PREDATOR Energy 473ml"                  								"Bebidas Energizantes" "standard" "piece" "piece" 0.00 0.00 0.00
+070847035916 "Monster Energy 473ml"                   								"Bebidas Energizantes" "standard" "piece" "piece" 0.00 0.00 0.00
+9002490100070 "Red Bull Energy Drink 250ml"											"Bebidas Energizantes" "standard" "piece" "piece" 0.00 0.00 0.00
 
-7501125144851 "Electrolit sabor Uva 625ml"           	  				"Bebidas Rehidratantes" "standard" "piece" "piece" 0.00 0.00 0.00
-7501125104268 "Electrolit sabor Fresa 625ml"           	  				"Bebidas Rehidratantes" "standard" "piece" "piece" 0.00 0.00 0.00
+7501125144851 "Electrolit sabor Uva 625ml"           	  							"Bebidas Rehidratantes" "standard" "piece" "piece" 0.00 0.00 0.00
+CAJAELECTROLITUVA->7501125144851:12 "Caja Electrolit sabor Uva 12pzas 625ml c/u"	"Bebidas Rehidratantes" "standard" "piece" "piece" 0.00 255.00 0.00
 
-7501125104411 "Electrolit sabor Coco 625ml"           	  				"Bebidas Rehidratantes" "standard" "piece" "piece" 0.00 0.00 0.00
+7501125104268 "Electrolit sabor Fresa 625ml"           	  								"Bebidas Rehidratantes" "standard" "piece" "piece" 0.00 0.00 0.00
+CAJAELECTROLITFRESA->7501125144851:12 "Caja Electrolit sabor Fresa 12pzas 625ml c/u" 	"Bebidas Rehidratantes" "standard" "piece" "piece" 0.00 255.00 0.00
+
+7501125104411 "Electrolit sabor Coco 625ml"           	  							"Bebidas Rehidratantes" "standard" "piece" "piece" 0.00 0.00 0.00
+CAJAELECTROLITCOCO->7501125144851:12 "Caja Electrolit sabor Coco 12pzas 625ml c/u"	"Bebidas Rehidratantes" "standard" "piece" "piece" 0.00 255.00 0.00
 
 036731100030 "Gatorade KIDS Limón 236ml"           	  				"Bebidas Rehidratantes" "standard" "piece" "piece" 0.00 0.00 0.00
 036731323002 "Gatorade sabor Lima-Limón 1L"          				"Bebidas Rehidratantes" "standard" "piece" "piece" 0.00 0.00 0.00
@@ -971,13 +991,14 @@ CAJATOPOCHICOL600->7501055392759:6 "Caja Topo Chico Limonada 6pzas 600ml c/u"   
 744607840804 "New Mix PALOMA 350ml"                   				"Cervezas y Licores" "standard" "piece" "piece" 0.00 0.00 0.00
 
 7501363200067 "Rompope Esmeralda 960ml"               				"Cervezas y Licores" "standard" "piece" "piece" 136.50 165.00 0.00
-7501363200067 "Caja Rompope Esmeralda 960ml"               				"Cervezas y Licores" "standard" "piece" "piece" 1636.17 1800.00 0.00
+CAJAROMPOPEESMERALDA960 "Caja Rompope Esmeralda 12pzas 960ml c/u"	"Cervezas y Licores" "standard" "piece" "piece" 1636.17 1800.00 0.00
 
 7501363200029 "Rompope Esmeralda 500ml"               				"Cervezas y Licores" "standard" "piece" "piece" 79.08 95.00 0.00
-7501363200029 "Caja Rompope Esmeralda 500ml"               				"Cervezas y Licores" "standard" "piece" "piece" 949.00 1044.00 0.00
+CAJAROMPOPEESMERALDA500 "Caja Rompope Esmeralda 12pzas 500ml c/u"	"Cervezas y Licores" "standard" "piece" "piece" 949.00 1044.00 0.00
 
 50196135 "Black & White Whisky 700ml"                 				"Cervezas y Licores" "standard" "piece" "piece" 0.00 235.00 0.00
 7501035012028 "José Cuervo Tequila Reposado 695ml"                 	"Cervezas y Licores" "standard" "piece" "piece" 300.00 350.00 0.00
+
 MEZCALORIGINAL "Mezcal Original 1L"                   				"Cervezas y Licores" "standard" "piece" "piece" 0.00 0.00 0.00
 MEZCALPRIMERA "Mezcal de Primera 1L"                  				"Cervezas y Licores" "standard" "piece" "piece" 0.00 0.00 0.00
 7501032485023 "Caribe Cooler Tinto 300ml"             				"Cervezas y Licores" "standard" "piece" "piece" 18.00 22.00 0.00
@@ -1025,15 +1046,15 @@ CHOCOLATEABUELITA6->7501001656454:6 "Chocolate Abuelita Exhibidor 6pzas"	"Chocol
 7622202807060 "Halls Vamos México 12paq 297g"                  				"Gomas de Mascar y Caramelos" "standard" "piece" "piece" 0.00 0.00 0.00
 7622210267870 "Halls Colors 9pzas 25,2g"                       				"Gomas de Mascar y Caramelos" "standard" "piece" "piece" 0.00 12.00 0.00
 7622210267825 "Halls Cereza 9pzas 25,2g"                       				"Gomas de Mascar y Caramelos" "standard" "piece" "piece" 0.00 12.00 0.00
-7622210267856 "Halls Mora Azul 9pzas 25,2g"                    				"Gomas de Mascar y Caramelos" "standard" "piece" "piece" 0.00 0.00 0.00
+7622210267856 "Halls Mora Azul 9pzas 25,2g"                    				"Gomas de Mascar y Caramelos" "standard" "piece" "piece" 0.00 12.00 0.00
 7622210267818 "Halls Menta 9pzas 25,2g"                        				"Gomas de Mascar y Caramelos" "standard" "piece" "piece" 0.00 12.00 0.00
-7622210457462 "Halls Menta 12paq 302,4g"                       				"Gomas de Mascar y Caramelos" "standard" "piece" "piece" 0.00 0.00 0.00
+7622210457462 "Halls Menta 12paq 302,4g"                       				"Gomas de Mascar y Caramelos" "standard" "piece" "piece" 0.00 12.00 0.00
 7622210529688 "Halls Extra Strong 9pzas 24,75g"                				"Gomas de Mascar y Caramelos" "standard" "piece" "piece" 0.00 12.00 0.00
 7622210529671 "Halls Extra Strong 12paq 297g"                  				"Gomas de Mascar y Caramelos" "standard" "piece" "piece" 0.00 0.00 0.00
 7622210267863 "Halls Miel y Limón 9pzas 25,2g"                 				"Gomas de Mascar y Caramelos" "standard" "piece" "piece" 0.00 12.00 0.00
-7622210457516 "Halls Miel y Limón 12paq 302,4g"                				"Gomas de Mascar y Caramelos" "standard" "piece" "piece" 0.00 0.00 0.00
+7622210457516 "Halls Miel y Limón 12paq 302,4g"                				"Gomas de Mascar y Caramelos" "standard" "piece" "piece" 0.00 12.00 0.00
 7622210267832 "Halls Yerbabuena 9pzas 25,2g"                   				"Gomas de Mascar y Caramelos" "standard" "piece" "piece" 0.00 12.00 0.00
-7622210457486 "Halls Yerbabuena 12paq 302,4g"                  				"Gomas de Mascar y Caramelos" "standard" "piece" "piece" 0.00 0.00 0.00
+7622210457486 "Halls Yerbabuena 12paq 302,4g"                  				"Gomas de Mascar y Caramelos" "standard" "piece" "piece" 0.00 12.00 0.00
 75083472 "Clorets 2's 2,8g"                               					"Gomas de Mascar y Caramelos" "standard" "piece" "piece" 0.00 0.00 0.00
 75068011 "Clorets 4's 5,2g"                               					"Gomas de Mascar y Caramelos" "standard" "piece" "piece" 0.00 0.00 0.00
 7622210620989 "Clorets plus 4's 40paq 208g"                    				"Gomas de Mascar y Caramelos" "standard" "piece" "piece" 0.00 0.00 0.00
@@ -1046,16 +1067,23 @@ CHOCOLATEABUELITA6->7501001656454:6 "Chocolate Abuelita Exhibidor 6pzas"	"Chocol
 7622201692766 "Bubbaloo sabor Yerbabuena 47pzas 239,7g"        				"Gomas de Mascar y Caramelos" "standard" "piece" "piece" 0.00 0.00 0.00
 75073237 "Bubbaloo sabor Piña Chamoy 5,1g"                					"Gomas de Mascar y Caramelos" "standard" "piece" "piece" 0.00 0.00 0.00
 
-FRIBOROJOS "Fritura Fribo tipo Chetos rojos"         						"Papas Fritas, Frituras y Cacahuates" "standard" "piece" "piece" 0.00 17.00 0.00
-FRIBONARANJA "Fritura Fribo tipo Chetos naranja"         					"Papas Fritas, Frituras y Cacahuates" "standard" "piece" "piece" 0.00 17.00 0.00
-FRIBOHARINA "Fritura Fribo papa"         									"Papas Fritas, Frituras y Cacahuates" "standard" "piece" "piece" 0.00 17.00 0.00
-FRIBOPAPA "Fritura Fribo harina"         									"Papas Fritas, Frituras y Cacahuates" "standard" "piece" "piece" 0.00 17.00 0.00
+FRIBO001 "Chetos rojos Fribo"         										"Papas Fritas, Frituras y Cacahuates" "standard" "piece" "piece" 0.00 17.00 0.00
+FRIBO002 "Chetos naranja Fribo"         									"Papas Fritas, Frituras y Cacahuates" "standard" "piece" "piece" 0.00 17.00 0.00
+FRIBO101 "Chicharrón de papa Fribo"         								"Papas Fritas, Frituras y Cacahuates" "standard" "piece" "piece" 0.00 17.00 0.00
+FRIBO102 "Chicharrón de harina Fribo"         								"Papas Fritas, Frituras y Cacahuates" "standard" "piece" "piece" 0.00 17.00 0.00
+FRIBO201 "Plátanos Fritos Fribo"         									"Papas Fritas, Frituras y Cacahuates" "standard" "piece" "piece" 0.00 20.00 0.00
+FRIBO301 "Cacahuates Enchilados Fribo"         								"Papas Fritas, Frituras y Cacahuates" "standard" "piece" "piece" 0.00 14.00 0.00
+FRIBO351 "Habas Enchiladas Fribo"         									"Papas Fritas, Frituras y Cacahuates" "standard" "piece" "piece" 0.00 14.00 0.00
+FRIBO401 "Pistaches Fribo"         											"Papas Fritas, Frituras y Cacahuates" "standard" "piece" "piece" 0.00 0.00 0.00
+FRIBO402 "Semillas de Calabaza Fribo"         								"Papas Fritas, Frituras y Cacahuates" "standard" "piece" "piece" 0.00 0.00 0.00
+FRIBO501 "Gomitas Fribo"         											"Papas Fritas, Frituras y Cacahuates" "standard" "piece" "piece" 0.00 0.00 0.00
 
-CAJAPALMEXMINIRUEDAHARINA "Palmex Mini rueda Harina 15pzas"         		"Papas Fritas, Frituras y Cacahuates" "standard" "box" "box" 564.00 0.00 0.00
+
+CAJAPALMEXMINIRUEDAHARINA "Caja Palmex Mini rueda Harina 15pzas"         	"Papas Fritas, Frituras y Cacahuates" "standard" "box" "box" 564.00 0.00 0.00
 PALMEXMINIRUEDAHARINA1K "Palmex Mini rueda Harina 1kg"         				"Papas Fritas, Frituras y Cacahuates" "standard" "piece" "piece" 38.00 45.00 0.00
 !PALMEXMINIRUEDAHARINA "Palmex Mini rueda Harina"         					"Papas Fritas, Frituras y Cacahuates" "standard" "kilogram" "kilogram" 38.00 60.00 0.00
 
-CAJAPALMEXMRUEDAPAPA "Palmex Mini rueda Papa 15pzas"         				"Papas Fritas, Frituras y Cacahuates" "standard" "box" "box" 669.00 0.00 0.00
+CAJAPALMEXMRUEDAPAPA "Caja Palmex Mini rueda Papa 15pzas"         			"Papas Fritas, Frituras y Cacahuates" "standard" "box" "box" 669.00 736.00 0.00
 PALMEXMINIRUEDAPAPA "Palmex Mini rueda Papa 1kg"         					"Papas Fritas, Frituras y Cacahuates" "standard" "piece" "piece" 45.00 55.00 0.00
 !PALMEXMINIRUEDAPAPA "Palmex Mini rueda Papa"         						"Papas Fritas, Frituras y Cacahuates" "standard" "kilogram" "kilogram" 45.00 80.00 0.00
 
@@ -1115,7 +1143,7 @@ PALMEXMINIRUEDAPAPA "Palmex Mini rueda Papa 1kg"         					"Papas Fritas, Fri
 7500810003671 "Takis Fuego 70g"                               				"Papas Fritas, Frituras y Cacahuates" "standard" "piece" "piece" 0.00 0.00 0.00
 7501030448242 "Takis Fuego mini 35g"                          				"Papas Fritas, Frituras y Cacahuates" "standard" "piece" "piece" 0.00 0.00 0.00
 7500810000441 "Takis Original 70g"                            				"Papas Fritas, Frituras y Cacahuates" "standard" "piece" "piece" 0.00 0.00 0.00
-7500810046609 "Takis PIX 65g"                                 				"Papas Fritas, Frituras y Cacahuates" "standard" "piece" "piece" 0.00 0.00 0.00
+7500810046609 "Takis PIX 65g"                                 				"Papas Fritas, Frituras y Cacahuates" "standard" "piece" "piece" 12.60 15.00 0.00
 7500810049600 "Takis Misterio 56g"                            				"Papas Fritas, Frituras y Cacahuates" "standard" "piece" "piece" 0.00 0.00 0.00
 7501011112254 "Fritos Chorizo y Chipotle 60g"                 				"Papas Fritas, Frituras y Cacahuates" "standard" "piece" "piece" 15.85 20.00 0.00
 7501011110335 "Fritos Limón y sal 60g"                        				"Papas Fritas, Frituras y Cacahuates" "standard" "piece" "piece" 15.85 20.00 0.00
@@ -1176,40 +1204,43 @@ PALMEXMINIRUEDAPAPA "Palmex Mini rueda Papa 1kg"         					"Papas Fritas, Fri
 7503029320034 "Nuez India con sal de mar Premier 1kg"          				"Granos y Semillas" "standard" "piece" "piece" 0.00 0.00 0.00
 
 097339000054 "Salsa Valentina 370ml"                   									"Salsas" "standard" "piece" "piece" 15.91 19.00 0.00
-0097339000054->097339000054:24 "Caja Salsa Valentina 24pzas 370ml c/u"                  "Salsas" "standard" "piece" "box" 382.05 420.00 0.00
+0097339000054->097339000054:24 "Caja de Salsa Valentina 24pzas 370ml c/u"                  "Salsas" "standard" "piece" "box" 382.05 420.00 0.00
 
 7501003393050 "Salsa Búfalo Clásica 150g"             									"Salsas" "standard" "piece" "piece" 14.35 17.00 0.00
-CAJASALSABUFALO150->7501003393050:24 "Caja Salsa Búfalo Clásica 24pzas 150g c/u"        "Salsas" "standard" "box" "box" 344.51 379.00 0.00
+CAJASALSABUFALO150->7501003393050:24 "Caja de Salsa Búfalo Clásica 24pzas 150g c/u"        "Salsas" "standard" "box" "box" 344.51 379.00 0.00
 
 7501003393067 "Salsa Búfalo Clásica 380ml"             									"Salsas" "standard" "piece" "piece" 18.00 22.00 0.00
-CAJASALSABUFALO380->7501003393067:24 "Caja Salsa Búfalo Clásica 24pzas 380ml"         	"Salsas" "standard" "box" "box" 433.00 476.00 0.00
+CAJASALSABUFALO380->7501003393067:24 "Caja de Salsa Búfalo Clásica 24pzas 380ml"         	"Salsas" "standard" "box" "box" 433.00 476.00 0.00
 
 7501003393081 "Salsa Búfalo Clásica 990g"              									"Salsas" "standard" "piece" "piece" 46.75 56.00 0.00
-CAJASALSABUFALO990 "Caja Salsa Búfalo Clásica 12pzas 990g c/u"              			"Salsas" "standard" "box" "box" 561.08 617.00 0.00
+CAJASALSABUFALO990 "Caja de Salsa Búfalo Clásica 12pzas 990g c/u"              			"Salsas" "standard" "box" "box" 561.08 617.00 0.00
 
 647541022049 "Salsa Chamoy El Chilerito 1.5L"         									"Salsas" "standard" "piece" "piece" 42.00 49.00 0.00
-CAJACHILERITO15L:647541022049:12 "Caja Salsa Chamoy El Chilerito 12pzas 1.5L c/u"     	"Salsas" "standard" "box" "box" 500.00 550.00 0.00
+CAJACHILERITO15L:647541022049:12 "Caja de Salsa Chamoy El Chilerito 12pzas 1.5L c/u"     	"Salsas" "standard" "box" "box" 500.00 550.00 0.00
  
 647541022032 "Salsa Chamoy El Chilerito 1L"         									"Salsas" "standard" "piece" "piece" 32.00 39.00 0.00
-CAJACHILERITO1L->647541022032:12 "Caja Salsa Chamoy El Chilerito 12pzas 1L c/u"			"Salsas" "standard" "box" "box" 382.00 420.00 0.00
+CAJACHILERITO1L->647541022032:12 "Caja de Salsa Chamoy El Chilerito 12pzas 1L c/u"			"Salsas" "standard" "box" "box" 382.00 420.00 0.00
 
 647541022025 "Salsa Chamoy El Chilerito 400ml"         									"Salsas" "standard" "piece" "piece" 16.00 19.00 0.00
-CAJACHILERITO400->647541022025:24 "Caja Salsa Chamoy El Chilerito 24pzas 400ml c/u"     "Salsas" "standard" "box" "box" 379.00 417.00 0.00
+CAJACHILERITO400->647541022025:24 "Caja de Salsa Chamoy El Chilerito 24pzas 400ml c/u"     "Salsas" "standard" "box" "box" 379.00 417.00 0.00
 
 097339000078 "Salsa Costa Brava 1L"            											"Salsas" "standard" "piece" "piece" 28.00 34.00 0.00
-1097339000078->097339000078:12 "Caja Salsa Costa Brava 12pzas 1L c/u"        			"Salsas" "standard" "box" "box" 339.00 373.00 0.00
+1097339000078->097339000078:12 "Caja de Salsa Costa Brava 12pzas 1L c/u"        			"Salsas" "standard" "box" "box" 339.00 373.00 0.00
 
 097339000115 "Salsa Costa Brava 1.5L"            										"Salsas" "standard" "piece" "piece" 37.00 45.00 0.00
-97339000115548->097339000115:12 "Caja Salsa Costa Brava 12pzas 1.5L c/u"     			"Salsas" "standard" "box" "box" 448.00 493.00 0.00
+97339000115548->097339000115:12 "Caja de Salsa Costa Brava 12pzas 1.5L c/u"     			"Salsas" "standard" "box" "box" 448.00 493.00 0.00
                                                                                       
 SALSAVALENTINA "Paquete Salsa Valentina 50pzas 8g c/u"									"Salsas" "standard" "piece" "piece" 33.00 45.00 0.00
 
 [DEP-008 "Limpieza del Hogar"]
 7501026017001 "Jabón de tocador Mädi 150g"                       						"Detergentes y Suavizantes" "standard" "piece" "piece" 13.55 16.00 0.00
-CAJAJABONMADI150->7501026017001:40 "Caja Jabón de tocador Mädi 40pzas 150g c/u"			"Detergentes y Suavizantes" "standard" "box" "box" 542.03 596.00 0.00
+CAJAJABONMADI150->7501026017001:40 "Caja de Jabón de tocador Mädi 40pzas 150g c/u"			"Detergentes y Suavizantes" "standard" "box" "box" 542.03 596.00 0.00
 
-7501026006654 "Jabón de tocador Rosa Venus color rosa 200g"            					"Detergentes y Suavizantes" "standard" "piece" "piece" 14.48 18.00 0.00
-CAJAJABONROSAVENUS->7501026006654:30 "Caja Jabón de tocador Rosa Venus 30pzas 200g c/u"	"Detergentes y Suavizantes" "standard" "box" "box" 434.51 478.00 0.00
+7501026006654 "Jabón de tocador Rosa Venus rosa 200g"            								"Detergentes y Suavizantes" "standard" "piece" "piece" 14.48 18.00 0.00
+CAJAJABONROSAVENUS->7501026006654:30 "Caja de Jabón de tocador Rosa Venus rosa 30pzas 200g c/u"	"Detergentes y Suavizantes" "standard" "box" "box" 434.51 478.00 0.00
+
+7501026006654 "Jabón de tocador Rosa Venus blanco 200g"            								"Detergentes y Suavizantes" "standard" "piece" "piece" 14.48 18.00 0.00
+CAJAJABONROSAVENUS->7501026006654:30 "Caja de Jabón de tocador Rosa Venus blanco 30pzas 200g c/u"	"Detergentes y Suavizantes" "standard" "box" "box" 434.51 478.00 0.00
 
 7501026006753 "Jabón de tocador blanco neutro Vennus 200g"       						"Detergentes y Suavizantes" "standard" "piece" "piece" 15.06 19.00 0.00
 7501026006722 "Jabón de tocador azul neutro Vennus 200g"         						"Detergentes y Suavizantes" "standard" "piece" "piece" 15.06 19.00 0.00
@@ -1221,7 +1252,7 @@ CAJAJABONROSAVENUS->7501026006654:30 "Caja Jabón de tocador Rosa Venus 30pzas 2
 7501026011481 "Murano jabón exfoliante con Frambuesa y Chia 150g"  						"Detergentes y Suavizantes" "standard" "piece" "piece" 12.35 16.00 0.00
 7501026011412 "Murano jabón con Pepino 150g"                     						"Detergentes y Suavizantes" "standard" "piece" "piece" 12.35 16.00 0.00
 
-CAJAJABONMURANO150 "Caja jabón Murano 40pzas 150g c/u"									"Detergentes y Suavizantes" "standard" "box" "box" 493.95 543.00 0.00
+CAJAJABONMURANO150 "Caja de Jabón Murano 40pzas 150g c/u"									"Detergentes y Suavizantes" "standard" "box" "box" 493.95 543.00 0.00
 
 7501026008504 "Tuit jabón natural hipoalergénico 100g"           						"Detergentes y Suavizantes" "standard" "piece" "piece" 8.86 10.00 0.00
 7501026007101 "Tersso jabón neutro 200g"                         						"Detergentes y Suavizantes" "standard" "piece" "piece" 14.78 19.00 0.00
@@ -1293,6 +1324,12 @@ CAJAFOCAPOL5K->7501026026508:4 "Caja Detergente Foca 4pzas 5kg c/u"             
 7501026005404 "Jabón en barra Zote azul 400g"            										"Detergentes y Suavizantes" "standard" "piece" "piece" 22.93 27.40 0.00
 CAJAZOTEBARRAAZUL400->7501026005404:25 "Caja Jabón en barra Zote azul 25pzas 400g c/u"			"Detergentes y Suavizantes" "standard" "box" "box" 573.35 631.00 0.00
 
+7501026005275 "Jabón líquido Zote azul 500ml"   	 											"Detergentes y Suavizantes" "standard" "piece" "piece" 19.93 24.00 0.00
+CAJAZOTELIQAZUL500->7501026005282:12 "Caja Jabón líquido Zote azul 12pzas 500ml c/u"   	 		"Detergentes y Suavizantes" "standard" "box" "box" 239.11 263.00 0.00
+
+
+7501026005978 "Jabón en barra Zote blanco 100g"            										"Detergentes y Suavizantes" "standard" "piece" "piece" 5.87 7.00 0.00
+CAJAZOTEBARRABLANCO100->7501026005978:50 "Caja Jabón en barra Zote blanco 60pzas 100g c/u"		"Detergentes y Suavizantes" "standard" "box" "box" 352.61 388.00 0.00
 
 7501026005381 "Jabón en barra Zote blanco 200g"            										"Detergentes y Suavizantes" "standard" "piece" "piece" 11.47 14.00 0.00
 CAJAZOTEBARRABLANCO200->7501026005381:50 "Caja Jabón en barra Zote blanco 50pzas 200g c/u"		"Detergentes y Suavizantes" "standard" "box" "box" 573.35 631.00 0.00
@@ -1308,8 +1345,8 @@ CAJAZOTELIQBLANCO1L->7501026005329:12 "Caja Jabón líquido Zote blanco 12pzas 1
 
 
 
-7501026005985 "Jabón en barra Zote rosa 100g"            										"Detergentes y Suavizantes" "standard" "piece" "piece" 5.88 9.00 0.00
-CAJAZOTEBARRAROSA100->7501026005985:60 "Caja Jabón en barra Zote rosa 60pzas 100g c/u"          "Detergentes y Suavizantes" "standard" "box" "box" 352.60 388.00 0.00
+7501026005985 "Jabón en barra Zote rosa 100g"            										"Detergentes y Suavizantes" "standard" "piece" "piece" 5.87 7.00 0.00
+CAJAZOTEBARRAROSA100->7501026005985:60 "Caja Jabón en barra Zote rosa 60pzas 100g c/u"          "Detergentes y Suavizantes" "standard" "box" "box" 352.61 388.00 0.00
 
 7501026005688 "Jabón en barra Zote rosa 200g"            										"Detergentes y Suavizantes" "standard" "piece" "piece" 11.47 14.00 0.00
 CAJAZOTEBARRAROSA200->7501026005688:50 "Caja Jabón en barra Zote rosa 50pzas 200g c/u"			"Detergentes y Suavizantes" "standard" "box" "box" 573.35 631.00 0.00
@@ -1365,7 +1402,7 @@ CAJACARISMAPOL250->7501026023057:40 "Caja Detergente Carisma 40pzas 250g c/u"   
 CAJACARISMAPOL500->7501026023040:20 "Caja Detergente Carisma 20pzas 500g c/u"               	"Detergentes y Suavizantes" "standard" "box" "box" 430.88 474.00 0.00
 
 7501026023033 "Detergente Carisma 1kg"            												"Detergentes y Suavizantes" "standard" "piece" "piece" 42.88 51.00 0.00
-CAJACARISMAPOL1K->7501026023033:10 "Caja Detergente Carisma 10pzas 1kg c/u"               		"Detergentes y Suavizantes" "standard" "box" "box" 428.80 472.00 0.00
+CAJACARISMAPOL1K->7501026023033:10 "Caja Detergente Carisma 10pzas 1kg c/u"               		"Detergentes y Suavizantes" "standard" "box" "box" 428.81 472.00 0.00
 
 7501026023026 "Detergente Carisma 2kg"            												"Detergentes y Suavizantes" "standard" "piece" "piece" 85.35 102.00 0.00
 CAJACARISMAPOL2K->7501026023026:10 "Caja Detergente Carisma 10pzas 2kg c/u"               		"Detergentes y Suavizantes" "standard" "box" "box" 853.55 939.00 0.00
@@ -1380,8 +1417,8 @@ CAJACARISMALIQ1L->7501026010002:12 "Caja Jabón líquido Carisma 12pzas 1L c/u" 
 CAJACARISMALIQGAL->7501026010002:4 "Caja Jabón líquido Carisma 4gal 3.785L c/u"    				"Detergentes y Suavizantes" "standard" "box" "box" 386.11 425.00 0.00
 
 
-7501026000805 "Jabón en barra Blanca Nieves 400g"            									"Detergentes y Suavizantes" "standard" "piece" "piece" 21.17 25.00 0.00
-CAJABLANCANIEVESBARRA400->7501026000805:25 "Caja Jabón en barra Roma 25pzas 400g c/u"			"Detergentes y Suavizantes" "standard" "box" "box" 529.22 582.00 0.00
+7501026000805 "Jabón en barra Blanca Nieves 400g"            									"Detergentes y Suavizantes" "standard" "piece" "piece" 21.54 25.00 0.00
+CAJABLANCANIEVESBARRA400->7501026000805:25 "Caja Jabón en barra Roma 25pzas 400g c/u"			"Detergentes y Suavizantes" "standard" "box" "box" 528.47 582.00 0.00
 
 7501026027543 "Detergente Blanca Nieves 100g"            										"Detergentes y Suavizantes" "standard" "piece" "piece" 4.95 6.00 0.00
 CAJABLANCANIEVESPOL100 "Caja Detergente Blanca Nieves 1000pzas 100g c/u"            			"Detergentes y Suavizantes" "standard" "box" "box" 495.18 545.00 0.00
@@ -1434,6 +1471,13 @@ CAJATEPEYACTOCADORAMARILLO200->7501026001123:30 "Caja Jabón de tocador Tepeyac 
 7501026001147 "Jabón de tocador Tepeyac verde 200g"              											"Detergentes y Suavizantes" "standard" "piece" "piece" 14.48 18.00 0.00
 CAJATEPEYACTOCADORVERDE200->7501026001147:30 "Caja Jabón de tocador Tepeyac verde 30pzas 200g c/u"			"Detergentes y Suavizantes" "standard" "box" "box" 434.51 478.00 0.00
 
+7501026001154 "Jabón de tocador Tepeyac lila 200g"              											"Detergentes y Suavizantes" "standard" "piece" "piece" 14.48 18.00 0.00
+17501026001151->7501026001154:30 "Caja Jabón de tocador Tepeyac lila 30pzas 200g c/u"						"Detergentes y Suavizantes" "standard" "box" "box" 434.51 478.00 0.00
+
+7501026001161 "Jabón de tocador Tepeyac rosa 200g"              											"Detergentes y Suavizantes" "standard" "piece" "piece" 14.48 18.00 0.00
+17501026001168->7501026001161:30 "Caja Jabón de tocador Tepeyac rosa 30pzas 200g c/u"						"Detergentes y Suavizantes" "standard" "box" "box" 434.51 478.00 0.00
+
+
 
 7501026006340 "Jabón en barra Tepeyac amarillo 400g"            											"Detergentes y Suavizantes" "standard" "piece" "piece" 22.93 27.00 0.00
 CAJATEPEYACAMARILLO400->7501026006340:25 "Caja Jabón en barra Tepeyac amarillo 25pzas 400g c/u"				"Detergentes y Suavizantes" "standard" "box" "box" 434.51 478.00 0.00
@@ -1444,8 +1488,8 @@ CAJATEPEYACBLANCO400->7501026031052:25 "Caja Jabón en barra Tepeyac blanco 25pz
 7501026000201 "Jabón en barra Daroma 400g"            														"Detergentes y Suavizantes" "standard" "piece" "piece" 21.14 25.00 0.00
 CAJADAROMA400->7501026000201:25 "Caja Jabón en barra Daroma 25pzas 400g c/u"								"Detergentes y Suavizantes" "standard" "box" "box" 528.48 581.00 0.00
 
-7501026007347 "Jabón en barra Corona tradicional 400g"            											"Detergentes y Suavizantes" "standard" "piece" "piece" 22.11 26.00 0.00
-CAJACORONATRA400->7501026007347:25 "Caja Jabón en barra Corona tradicional 25pzas 400g c/u"					"Detergentes y Suavizantes" "standard" "box" "box" 552.76 608.00 0.00
+7501026007347 "Jabón en barra Corona tradicional 400g"            											"Detergentes y Suavizantes" "standard" "piece" "piece" 22.93 27.00 0.00
+CAJACORONATRA400->7501026007347:25 "Caja Jabón en barra Corona tradicional 25pzas 400g c/u"					"Detergentes y Suavizantes" "standard" "box" "box" 573.25 631.00 0.00
 
 7501026007316 "Jabón en barra Corona con aroma 400g"            											"Detergentes y Suavizantes" "standard" "piece" "piece" 22.93 27.00 0.00
 CAJACORONAARO400->7501026007316:25 "Caja Jabón en barra Corona con aroma 25pzas 400g c/u"					"Detergentes y Suavizantes" "standard" "box" "box" 573.35 631.00 0.00
@@ -1682,7 +1726,10 @@ CAJAPLATOHAMBURGUESERO "Caja Contenedor Hamburguesero"    								"Platos y Cubi
 7502208804174 "Contenedor Hamburguesero 50pzas"    										"Platos y Cubiertos" "standard" "piece" "piece" 0.00 55.00 0.00
 
 7501219112551 "Platos desechables de plástico Primo 20pzas #2"    						"Platos y Cubiertos" "standard" "piece" "piece" 0.00 0.00 0.00
+CAJAPLATOPRIMO2 "Caja de Platos desechables de plástico Primo #2 50paq"    				"Platos y Cubiertos" "standard" "piece" "piece" 0.00 0.00 0.00
+
 7501219112230 "Platos desechables de plástico Primo 25pzas #3"    						"Platos y Cubiertos" "standard" "piece" "piece" 0.00 0.00 0.00
+CAJAPLATOPRIMO2 "Caja de Platos desechables de plástico Primo #3 50paq"    				"Platos y Cubiertos" "standard" "piece" "piece" 0.00 0.00 0.00
 
 764451343849 "Cucharas pasteleras chicas EcoZac 50pzas"    								"Platos y Cubiertos" "standard" "piece" "piece" 0.00 12.00 0.00
 724373655314 "Cucharas pasteleras grandes EcoZac 50pzas"    							"Platos y Cubiertos" "standard" "piece" "piece" 0.00 12.00 0.00
@@ -1690,12 +1737,12 @@ CAJAPLATOHAMBURGUESERO "Caja Contenedor Hamburguesero"    								"Platos y Cubi
 7503004361069 "Tenedor grande Fantasy 25pzas"    										"Platos y Cubiertos" "standard" "piece" "piece" 0.00 12.00 0.00
 7503004361021 "Tenedor pastelero Fantasy 50pzas"    									"Platos y Cubiertos" "standard" "piece" "piece" 0.00 12.00 0.00
 
-CHAROLAJAGUAR66 "Charola térmica Jaguar #66 1pza"    									"Platos y Cubiertos" "standard" "piece" "piece" 0.00 1.00 0.00
-752216081044->CHAROLAJAGUAR66:50 "Charola térmica Jaguar #66 50pzas"    				"Platos y Cubiertos" "standard" "package" "package" 11.00 14.00 0.00
+PLATOJAGUAR66 "Charola térmica Jaguar #66 1pza"    										"Platos y Cubiertos" "standard" "piece" "piece" 0.00 1.00 0.00
+752216081044->PLATOJAGUAR66:50 "Charola térmica Jaguar #66 50pzas"    					"Platos y Cubiertos" "standard" "package" "package" 11.00 14.00 0.00
 COLCHONCHAROLAJAGUAR66->752216081044:10 "Colchón Charola térmica Jaguar #66 10paq"		"Platos y Cubiertos" "standard" "box" "box" 108.00 130.00 0.00
 
-CHAROLAJAGUAR855 "Charola térmica Jaguar #855 1pza"    									"Platos y Cubiertos" "standard" "piece" "piece" 0.00 1.00 0.00
-752216081051->CHAROLAJAGUAR855:50 "Charola térmica Jaguar #855 50pzas"    				"Platos y Cubiertos" "standard" "package" "package" 16.00 20.00 0.00
+PLATOJAGUAR855 "Charola térmica Jaguar #855 1pza"    									"Platos y Cubiertos" "standard" "piece" "piece" 0.00 1.00 0.00
+752216081051->PLATOJAGUAR855:50 "Charola térmica Jaguar #855 50pzas"    				"Platos y Cubiertos" "standard" "package" "package" 16.00 20.00 0.00
 COLCHONCHAROLAJAGUAR855->752216081051:10 "Colchón Charola térmica Jaguar #855 10paq"	"Platos y Cubiertos" "standard" "box" "box" 157.00 187.00 0.00
 
 PLATOJAGUAR9D "Plato térmico Jaguar #9D 1pza"    										"Platos y Cubiertos" "standard" "piece" "piece" 0.00 1.00 0.00
@@ -1761,7 +1808,7 @@ BOLSA25X35 "Bolsa plástica 25x35cm"    											"Aluminio y Plástico" "stand
 7502208804747 "Bolsa Camiseta Poliseda 18x32cm 500g"    						"Aluminio y Plástico" "standard" "piece" "piece" 0.00 45.00 0.00
 
 7502208804747 "Bolsa Camiseta Poliseda 18x32cm 1kg"    							"Aluminio y Plástico" "standard" "piece" "piece" 70.50 85.00 0.00
-BULTOBOLSAPOL18X32 "Bulto Bolsa Camiseta Poliseda 18x32cm 25kg"    				"Aluminio y Plástico" "standard" "bulk" "bulk" 1761.00 2113.20 0.00
+BULTOBOLSAPOL18X32 "Bulto de Bolsa Camiseta Poliseda 18x32cm 25kg"    				"Aluminio y Plástico" "standard" "bulk" "bulk" 1761.00 2113.20 0.00
 
 
 
@@ -1769,7 +1816,7 @@ BULTOBOLSAPOL18X32 "Bulto Bolsa Camiseta Poliseda 18x32cm 25kg"    				"Aluminio
  "Bolsa Camiseta Poliseda 18x40cm 500g"    						"Aluminio y Plástico" "standard" "piece" "piece" 0.00 45.00 0.00
 
  "Bolsa Camiseta Poliseda 18x40cm 1kg"    							"Aluminio y Plástico" "standard" "piece" "piece" 68.61 79.00 0.00
-BULTOBOLSAPOL18X40 "Bulto Bolsa Camiseta Poliseda 18x40cm 25kg"    				"Aluminio y Plástico" "standard" "bulk" "bulk" 1715.00 2058 0.00
+BULTOBOLSAPOL18X40 "Bulto de Bolsa Camiseta Poliseda 18x40cm 25kg"    				"Aluminio y Plástico" "standard" "bulk" "bulk" 1715.00 2058 0.00
 
 
 
@@ -1777,7 +1824,7 @@ BULTOBOLSAPOL18X40 "Bulto Bolsa Camiseta Poliseda 18x40cm 25kg"    				"Aluminio
 7502208804044 "Bolsa Camiseta Poliseda 25x50cm 500g"    						"Aluminio y Plástico" "standard" "piece" "piece" 0.00 45.00 0.00
 
 7502208804044 "Bolsa Camiseta Poliseda 25x50cm 1kg"    							"Aluminio y Plástico" "standard" "piece" "piece" 68.61 79.00 0.00
-BULTOBOLSAPOL25X50 "Bulto Bolsa Camiseta Poliseda 25x50cm 25kg"    				"Aluminio y Plástico" "standard" "bulk" "bulk" 1715.00 2058 0.00
+BULTOBOLSAPOL25X50 "Bulto de Bolsa Camiseta Poliseda 25x50cm 25kg"    				"Aluminio y Plástico" "standard" "bulk" "bulk" 1715.00 2058 0.00
 
 
 
@@ -1785,7 +1832,7 @@ BULTOBOLSAPOL25X50 "Bulto Bolsa Camiseta Poliseda 25x50cm 25kg"    				"Aluminio
 7502208804051 "Bolsa Camiseta Poliseda 30x60cm 500g"    						"Aluminio y Plástico" "standard" "piece" "piece" 0.00 45.00 0.00
 
 7502208804051 "Bolsa Camiseta Poliseda 30x60cm 1kg"    							"Aluminio y Plástico" "standard" "piece" "piece" 68.61 79.00 0.00
-BULTOBOLSAPOL30X60 "Bulto Bolsa Camiseta Poliseda 30x60cm 25kg"    				"Aluminio y Plástico" "standard" "bulk" "bulk" 1715.00 2058 0.00
+BULTOBOLSAPOL30X60 "Bulto de Bolsa Camiseta Poliseda 30x60cm 25kg"    				"Aluminio y Plástico" "standard" "bulk" "bulk" 1715.00 2058 0.00
 
 
 
@@ -1793,7 +1840,7 @@ BULTOBOLSAPOL30X60 "Bulto Bolsa Camiseta Poliseda 30x60cm 25kg"    				"Aluminio
 632627889746 "Bolsa Poliseda Asa mediana 30x60cm 500g"    						"Aluminio y Plástico" "standard" "piece" "piece" 0.00 45.00 0.00
 
 632627889746 "Bolsa Poliseda Asa mediana 1kg"    								"Aluminio y Plástico" "standard" "piece" "piece" 67.00 82.00 0.00
-BULTOBOLSAPOLASAMED "Bulto Bolsa Camiseta Poliseda 30x60cm 25kg"    			"Aluminio y Plástico" "standard" "bulk" "bulk" 1715.00 2058 0.00
+BULTOBOLSAPOLASAMED "Bulto de Bolsa Camiseta Poliseda 30x60cm 25kg"    			"Aluminio y Plástico" "standard" "bulk" "bulk" 1715.00 2058 0.00
 
 
 7502208802705 "Tapas Domo EU 50pzas"    										"Aluminio y Plástico" "standard" "piece" "piece" 31.00 39.00 0.00
@@ -1815,40 +1862,51 @@ TAPADOMOEU "Tapas Domo EU 50pzas"    											"Aluminio y Plástico" "standard
 7501091726181 "Tapas Plásticas Luxury Lids Inix l77 100pzas"    					"Aluminio y Plástico" "standard" "piece" "piece" 0.00 0.00 0.00
 
 7502208800121 "Vaso Reyma #16 25pzas"    											"Aluminio y Plástico" "standard" "piece" "piece" 26.00 31.00 0.00
-CAJAVASOREYMA16->7502208800121:40 "Caja Vaso Reyma #16 40paq 25pzas c/u"    							"Aluminio y Plástico" "standard" "piece" "piece" 1032.00 1135 0.00
+CAJAVASOREYMA16->7502208800121:40 "Caja Vaso Reyma #16 40paq 25pzas c/u"    		"Aluminio y Plástico" "standard" "piece" "piece" 1032.00 1135 0.00
 
 752216095409 "Flexivaso irrompible Jaguar #16 cap 484ml 20pzas"    					"Aluminio y Plástico" "standard" "piece" "piece" 0.00 0.00 0.00
 
-752216031100 "Caja Vaso Jaguar #12 cap 20paq 50pzas c/u"    						"Aluminio y Plástico" "standard" "box" "box" 627.00 689.00 0.00
-752216031100 "Vaso Jaguar #12 cap 349ml 50pzas"    									"Aluminio y Plástico" "standard" "package" "package" 32.00 38.00 0.00
-752216031100 "Vaso Jaguar #12 cap 349ml"    										"Aluminio y Plástico" "standard" "package" "package" 0.64 2.00 0.00
+CAJAVASOREYMA8 "Caja Vaso Reyma #8 20paq 50pzas c/u"    							"Aluminio y Plástico" "standard" "box" "box" 451.00 518.00 0.00
+7502208800077 "Vaso Reyma #8 50pzas"    											"Aluminio y Plástico" "standard" "package" "package" 22.50 27.00 0.00
+7502208800077 "Vaso Reyma #8"    													"Aluminio y Plástico" "standard" "piece" "piece" 0.45 1.00 0.00
 
+CAJAVASOREYMA10 "Caja Vaso Reyma #10 20paq 50pzas c/u"    							"Aluminio y Plástico" "standard" "box" "box" 573.00 630.00 0.00
+752216095157 "Vaso Reyma #10 50pzas"    											"Aluminio y Plástico" "standard" "package" "package" 28.55 33.00 0.00
+752216095157 "Vaso Reyma #10"    													"Aluminio y Plástico" "standard" "piece" "piece" 0.57 1.00 0.00
+
+
+CAJAVASOREYMA10 "Caja Vaso Reyma #12 20paq 50pzas c/u"    							"Aluminio y Plástico" "standard" "box" "box" 573.00 630.00 0.00
 7502208800091 "Vaso Reyma #12 50pzas"    											"Aluminio y Plástico" "standard" "package" "package" 31.50 39.00 0.00
-
-CAJAVASOREYMA10 "Caja Vaso Reyma #10 20paq 50pzas c/u"    							"Aluminio y Plástico" "standard" "box" "box" 631.00 694.00 0.00
-752216095157 "Vaso Reyma #10 50pzas"    											"Aluminio y Plástico" "standard" "package" "package" 31.50 38.00 0.00
-752216095157 "Vaso Reyma #10"    													"Aluminio y Plástico" "standard" "piece" "piece" 0.00 2.00 0.00
 
 7502208800022 "Vaso Plástico Reyma #4CH 50pzas"    									"Aluminio y Plástico" "standard" "piece" "piece" 0.00 21.50 0.00
 
-CAJAVASOJAGUAR10 "Caja Vaso plástico Jaguar #10 50pzas"    							"Aluminio y Plástico" "standard" "box" "box" 487.00 535.50 0.00
 752216095157 "Vaso Jaguar #10 cap 318ml 50pzas"    									"Aluminio y Plástico" "standard" "piece" "piece" 24.33 29.00 0.00
+CAJAVASOJAGUAR10 "Caja Vaso plástico Jaguar #10 50pzas"    							"Aluminio y Plástico" "standard" "box" "box" 487.00 535.50 0.00
 
-7501219113046 "Vaso #16 Bicolor Primo cap 470ml 20pzas"    							"Aluminio y Plástico" "standard" "piece" "piece" 27.00 33.00 0.00
+752216031100 "Caja Vaso Jaguar #12 20paq 50pzas c/u"    							"Aluminio y Plástico" "standard" "box" "box" 627.00 689.00 0.00
+752216031100 "Vaso Jaguar #12 cap 349ml 50pzas"    									"Aluminio y Plástico" "standard" "package" "package" 32.00 38.00 0.00
+752216031100 "Vaso Jaguar #12 cap 349ml"    										"Aluminio y Plástico" "standard" "package" "package" 0.64 2.00 0.00
 
-7501219120778 "Vaso 32 lh Primo 25pzas"    											"Aluminio y Plástico" "standard" "piece" "piece" 0.00 0.00 0.00
+7502208802316 "Vaso Reyma 32EU cap 946ml"    										"Aluminio y Plástico" "standard" "piece" "piece" 2.00 3.00 0.00
+7502208802316 "Vaso Reyma 32EU cap 946ml 25pzas"    								"Aluminio y Plástico" "standard" "piece" "piece" 50.10 59.00 0.00
+CAJAVASOREYMA32EU "Caja Vaso Reyma 32EU 20paq 25pzas c/u"    						"Aluminio y Plástico" "standard" "box" "box" 1002.00 1102.00 0.00
 
-7502208802316 "Vaso Reyma 32eu cap 946ml 25pzas"    									"Aluminio y Plástico" "standard" "piece" "piece" 0.00 0.00 0.00
+CAJAVASOCRISTALINIX207 "Caja Envase Cristal Inix vc-7807 cap 207ml 25pzas"    		"Aluminio y Plástico" "standard" "piece" "piece" 1123.50 1236 0.00
+7501091708415 "Envase Cristal Inix vc-7807 cap 207ml 25pzas"    					"Aluminio y Plástico" "standard" "piece" "piece" 28.00 34.00 0.00
+7501091708415 "Envase Cristal Inix vc-7807 cap 207ml"    							"Aluminio y Plástico" "standard" "piece" "piece" 1.12 2.00 0.00
 
-7501091708415 "Envase Cristal Inix vc-7807 cap 207ml 25pzas"    					"Aluminio y Plástico" "standard" "piece" "piece" 0.00 0.00 0.00
+7501219113046 "Vaso #16 Bicolor Primo cap 470ml 20pzas"    							"Aluminio y Plástico" "standard" "piece" "piece" 27.50 33.00 0.00
+
+7501219120778 "Vaso 32LH Primo 25pzas"    											"Aluminio y Plástico" "standard" "piece" "piece" 44.00 53.00 0.00
+CAJAVASOPRIMO32LH "Vaso 32LH Primo 20paq"    										"Aluminio y Plástico" "standard" "box" "box" 880.00 968.00 0.00
 
 7502208804167 "Contenedor con divisón 8x8 50pzas"    								"Aluminio y Plástico" "standard" "piece" "piece" 0.00 125.00 0.00
 
 7502208800145 "Vaso Contenedor Reyma 1L 25pzas"    											"Aluminio y Plástico" "standard" "piece" "piece" 58.00 69.00 0.00
 CAJAVASOCONTENEDORREYMA1L->7502208800145:20 "Caja Vaso Contenedor Reyma 20pzas 1L c/u"		"Aluminio y Plástico" "standard" "box" "box" 1158.00 1274.00 0.00
 
-041594206270 "Vaso térmico Dart #32 15pzas cap 946ml"    							"Aluminio y Plástico" "standard" "package" "package" 0.00 0.00 0.00
-CAJAVASOTERDART32->041594206270:20 "Caja Vaso térmico Dart #32 20paq"    			"Aluminio y Plástico" "standard" "box" "box" 0.00 0.00 0.00
+041594206270 "Vaso térmico Dart #32 15pzas cap 946ml"    							"Aluminio y Plástico" "standard" "package" "package" 22.00 26.00 0.00
+CAJAVASOTERDART32->041594206270:20 "Caja Vaso térmico Dart #32 20paq"    			"Aluminio y Plástico" "standard" "box" "box" 440 484.00 0.00
 
 041594206331 "Vaso térmico Dart #16 25pzas cap 473ml"    							"Aluminio y Plástico" "standard" "package" "package" 24.00 28.00 0.00
 CAJAVASOTERDART16->041594206331:25 "Caja Vaso térmico Dart #16 25paq"    			"Aluminio y Plástico" "standard" "box" "box" 471.00 0.00 0.00
@@ -1866,8 +1924,8 @@ CAJAVASOTERDART8->041594231173:40 "Caja Vaso térmico Dart #8 40paq"					"Alumin
 
 VASOGELATINA5 "Vaso Gelatina #5"    												"Aluminio y Plástico" "standard" "piece" "piece" 0.00 0.00 0.00
 
-!BOLSACUBITO250 "Bolsa de Cubitos"													"Aluminio y Plástico" "standard" "kilogram" "kilogram" 0.00 25.00 0.00
-!BOLSACUBITO500 "Bolsa de Cubitos"													"Aluminio y Plástico" "standard" "kilogram" "kilogram" 0.00 50.00 0.00
+!BOLSACUBITO250 "Bolsa de Cubitos"													"Aluminio y Plástico" "standard" "kilogram" "kilogram" 19.50 25.00 0.00
+!BOLSACUBITO500 "Bolsa de Cubitos"													"Aluminio y Plástico" "standard" "kilogram" "kilogram" 39.00 50.00 0.00
 !BOLSACUBITO1K "Bolsa de Cubitos"													"Aluminio y Plástico" "standard" "kilogram" "kilogram" 78.00 95.00 0.00
 
 PAPELDESTRAZABLANCO "Papel Destraza Blanco 1kg"										"Aluminio y Plástico" "standard" "piece" "piece" 21.00 39.00 0.00
@@ -1887,69 +1945,100 @@ BOLSAROLLO1K "Bolsa de Rollo 1kg"													"Aluminio y Plástico" "standard" 
 706460249484 "Pedigree Razas Pequeñas Res en filetes 100g"    				"Sobres y Premios" "standard" "piece" "piece" 0.00 12.00 0.00
 7506174510732 "Pedigree Adulto Cordero 100g"    							"Sobres y Premios" "standard" "piece" "piece" 0.00 12.00 0.00
 
-706460000665 "Sobre Whiskas Atún 85g"    									"Sobres y Premios" "standard" "piece" "piece" 0.00 0.00 0.00
-706460000641 "Sobre Whiskas Salmón 100g"    								"Sobres y Premios" "standard" "piece" "piece" 0.00 0.00 0.00
+706460000665 "Sobre Whiskas Atún 85g"    									"Sobres y Premios" "standard" "piece" "piece" 0.00 13.00 0.00
+706460000641 "Sobre Whiskas Salmón 100g"    								"Sobres y Premios" "standard" "piece" "piece" 0.00 13.00 0.00
 
-!CROQUETASWHISKAS"Croquetas Whiskas"										"Alimento Seco" "standard" "kilogram" "kilogram" 0.00 60.00 0.00
+!CRQWHISKAS "Croquetas Whiskas"												"Alimento Seco" "standard" "kilogram" "kilogram" 0.00 60.00 0.00
+!CRQWHISKAS1K "Croquetas Whiskas 1kg"										"Alimento Seco" "standard" "piece" "piece" 0.00 60.00 0.00
 
-BULTOCROQUETASGATOLUKAT "Bulto Croquetas Gato Lukat 15kg"					"Alimento Seco" "standard" "bulk" "bulk" 0.00 585.00 0.00
-!CROQUETASGATOLUKAT "Croquetas Gato Lukat"									"Alimento Seco" "standard" "kilogram" "kilogram" 0.00 42.00 0.00
+BULTOCRQLUKAT "Bulto de Croquetas Lukat 15kg"								"Alimento Seco" "standard" "bulk" "bulk" 0.00 585.00 0.00
+!CRQLUKAT "Croquetas Lukat"													"Alimento Seco" "standard" "kilogram" "kilogram" 0.00 42.00 0.00
+CRQLUKAT1K "Croquetas Lukat 1kg"											"Alimento Seco" "standard" "piece" "piece" 0.00 42.00 0.00
 
-!CROQUETASPERRONADULTO "Croquetas Perrón Adulto"    						"Alimento Seco" "standard" "kilogram" "kilogram" 0.00 35.00 0.00
-!CROQUETASPERRONCACHORRO "Croquetas Perrón Cachorro"    					"Alimento Seco" "standard" "kilogram" "kilogram" 0.00 0.00 0.00
-!CROQUETASSENTINELA "Croquetas Sentinela"    								"Alimento Seco" "standard" "kilogram" "kilogram" 0.00 0.00 0.00
-!CROQUETASPEDIADULTO "Croquetas Pedegree Adulto"    						"Alimento Seco" "standard" "kilogram" "kilogram" 0.00 0.00 0.00
-!CROQUETASPEDICACHORRO "Croquetas Pedegree Cachorro"    					"Alimento Seco" "standard" "kilogram" "kilogram" 0.00 0.00 0.00
-!CROQUETASDOGCHOWCACHORRO "Croquetas Dog Chow Cachorro"    					"Alimento Seco" "standard" "kilogram" "kilogram" 42.00 0.00 0.00
+BULTOCRQPERRONADULTO "Bulto de Croquetas Perrón Adulto 20kg"    			"Alimento Seco" "standard" "bulk" "bulk" 0.00 640.00 0.00
+!CRQPERRONA "Croquetas Perrón Adulto"    									"Alimento Seco" "standard" "kilogram" "kilogram" 0.00 25.00 0.00
+CRQPERRONA1K "Croquetas Perrón Adulto 1kg"    								"Alimento Seco" "standard" "piece" "piece" 0.00 25.00 0.00
 
-BULTOCROQUETASPERRONADULTO "Bulto Croquetas Perrón Adulto 20kg"    			"Alimento Seco" "standard" "bulk" "bulk" 0.00 640.00 0.00
-BULTOCROQUETASPERRONCACHORRO "Bulto Croquetas Perrón Cachorro 20kg"    		"Alimento Seco" "standard" "bulk" "bulk" 590.00 640.00 0.00
+BULTOCRQPERRONCACHORRO "Bulto de Croquetas Perrón Cachorro 20kg"    		"Alimento Seco" "standard" "bulk" "bulk" 590.00 640.00 0.00
+!CRQPERRONC "Croquetas Perrón Cachorro"    									"Alimento Seco" "standard" "kilogram" "kilogram" 0.00 0.00 0.00
+!CRQPERRONC1K "Croquetas Perrón Cachorro 1kg"    							"Alimento Seco" "standard" "piece" "piece" 0.00 0.00 0.00
 
-BULTODOGCHOWCACHORRO "Bulto Dog Chow Cachorro 25kg"    						"Alimento Seco" "standard" "bulk" "bulk" 0.00 0.00 0.00
-BULTODOGCHOWCADULTO "Bulto Dog Chow Adulto 25kg"    						"Alimento Seco" "standard" "bulk" "bulk" 0.00 0.00 0.00
+
+BULTOCRQCENTINELA "Bulto de Croquetas El Centinela 20kg"    				"Alimento Seco" "standard" "bulk" "bulk" 0.00 0.00 0.00
+!CRQCENTINELA "Croquetas El Centinela"    									"Alimento Seco" "standard" "kilogram" "kilogram" 0.00 0.00 0.00
+CRQCENTINELA1K "Croquetas El Centinela 1kg"    								"Alimento Seco" "standard" "piece" "piece" 0.00 0.00 0.00
+
+!CRQPEDIA "Croquetas Pedegree Adulto"    									"Alimento Seco" "standard" "kilogram" "kilogram" 0.00 0.00 0.00
+!CRQPEDIC "Croquetas Pedegree Cachorro"    									"Alimento Seco" "standard" "kilogram" "kilogram" 0.00 0.00 0.00
+
+!CRQDOGCHOWA "Croquetas Dog Chow Adulto"    								"Alimento Seco" "standard" "kilogram" "kilogram" 42.00 0.00 0.00
+!CRQDOGCHOWC "Croquetas Dog Chow Cachorro"    								"Alimento Seco" "standard" "kilogram" "kilogram" 42.00 0.00 0.00
+
+BULTODOGCHOWCACHORRO "Bulto de Croquetas Dog Chow Cachorro 25kg"    		"Alimento Seco" "standard" "bulk" "bulk" 0.00 0.00 0.00
+BULTODOGCHOWCADULTO "Bulto Dog de Croquetas Chow Adulto 25kg"    			"Alimento Seco" "standard" "bulk" "bulk" 0.00 0.00 0.00
 
 [DEP-012 "Artículos para el Hogar"]		
-7501102232168 "Veladoras Farolito 16 Velas"    								"Velas y Veladoras" "standard" "piece" "piece" 75.00 85.00 0.00
-7501557200767 "Veladora de parafina Caramelo"    							"Velas y Veladoras" "standard" "piece" "piece" 0.00 0.00 0.00
-7501557230689 "Veladora de parafina Gigante 100"    						"Velas y Veladoras" "standard" "piece" "piece" 0.00 0.00 0.00
-7501557230672 "Veladora de parafina Gigante 500"    						"Velas y Veladoras" "standard" "piece" "piece" 0.00 0.00 0.00
+7501102232168 "Veladoras Farolito 16 Velas"    								"Velas y Veladoras" "standard" "piece" "piece" 77.90 93.00 0.00
+
+7501557201405 "Veladora Aramo Eco Candil #1"    							"Velas y Veladoras" "standard" "piece" "piece" 65.00 84.00 0.00
+7501557201405 "Caja Veladora Aramo Eco Candil #1 12pzas"    				"Velas y Veladoras" "standard" "box" "box" 775.15 853.00 0.00
+
+7501557200767 "Veladora Aramo Eco Caramelo"    								"Velas y Veladoras" "standard" "piece" "piece" 0.00 0.00 0.00
+
+7501557230689 "Veladora Gigante 100"    									"Velas y Veladoras" "standard" "piece" "piece" 0.00 0.00 0.00
+7501557230672 "Veladora Gigante 500"    									"Velas y Veladoras" "standard" "piece" "piece" 0.00 0.00 0.00
+
 7501102269621 "Veladora Eco Farolito"    									"Velas y Veladoras" "standard" "piece" "piece" 0.00 0.00 0.00
+7501102269607 "Veladora Eco Farolito Jumbo 1"    							"Velas y Veladoras" "standard" "piece" "piece" 86.00 103.00 0.00
+7501102269591 "Veladora Eco Farolito Jumbo 3"    							"Velas y Veladoras" "standard" "piece" "piece" 33.00 43.00 0.00
 
-7501102269591 "Veladora Eco Farolito Jumbo 3"    							"Velas y Veladoras" "standard" "piece" "piece" 0.00 0.00 0.00
+7501102269720 "Veladora Farolito San Judas Jumbo 2"    						"Velas y Veladoras" "standard" "piece" "piece" 62.00 81.00 0.00
+7501102269720 "Caja Veladora Farolito San Judas Jumbo 2 6pzas"    			"Velas y Veladoras" "standard" "piece" "piece" 0.00 0.00 0.00
 
-744831194643 "Veladora Gran 15 Rosita"    									"Velas y Veladoras" "standard" "piece" "piece" 0.00 105.00 0.00
+7501102269713 "Veladora Farolito Virgen Cerrito Jumbo 2"    				"Velas y Veladoras" "standard" "piece" "piece" 63.00 81.00 0.00
+7501102269713 "Caja Veladora Farolito Virgen Cerrito Jumbo 2 6pzas"    		"Velas y Veladoras" "standard" "piece" "piece" 380.00 418.00 0.00
+
+649646903339 "Veladora La Soledad Comercial Azul"    						"Velas y Veladoras" "standard" "piece" "piece" 9.60 14.00 0.00
+649646903339 "Caja Veladora La Soledad Comercial Azul 20pzas"    			"Velas y Veladoras" "standard" "box" "box" 192.00 245.00 0.00
+
+649646900406 "Veladora La Soledad Comercial"    							"Velas y Veladoras" "standard" "piece" "piece" 9.60 14.00 0.00
+649646900406 "Caja Veladora La Soledad Comercial 20pzas"    				"Velas y Veladoras" "standard" "box" "box" 192.00 245.00 0.00
+
+744831194605 "Veladora Rosita Mini"    										"Velas y Veladoras" "standard" "piece" "piece" 10.50 13.50 0.00
+744831194605 "Caja Veladora Rosita Mini 24pzas"    							"Velas y Veladoras" "standard" "box" "box" 254.00 280.00 0.00
+
+744831194612 "Veladora Rosita #3"    										"Velas y Veladoras" "standard" "piece" "piece" 15.00 20.00 0.00
+
+744831194643 "Veladora Rosita Gran 15"    									"Velas y Veladoras" "standard" "piece" "piece" 89.00 110.00 0.00
+744831194643 "Caja Veladora Rosita Gran 15"    								"Velas y Veladoras" "standard" "piece" "piece" 534.00 587.00 0.00
+
 744831150915 "Veladora FAMA limón"    										"Velas y Veladoras" "standard" "piece" "piece" 0.00 0.00 0.00
 7503040863077 "Veladora Ecolimón Sacramento Aram Luz"    					"Velas y Veladoras" "standard" "piece" "piece" 0.00 0.00 0.00
 744831122219 "Veladora Luz Eterna"    										"Velas y Veladoras" "standard" "piece" "piece" 0.00 15.00 0.00
-CAJAVELADORAVASO "Caja de Veladoras de vaso 20pzas"         				"Encendedores y Cerillos" "standard" "box" "box" 0.00 245.00 0.00
+
 CAJAVELADORAPAPEL "Caja de Veladoras de papel 48pzas"         				"Encendedores y Cerillos" "standard" "box" "box" 0.00 624.00 0.00
+
 7502221793516 "Encendedor desechable fogo 25pzas"         					"Encendedores y Cerillos" "standard" "box" "box" 0.00 0.00 0.00
 077910000017 "Cerillos Maya 10pzas 50 cerillos c/u"      					"Encendedores y Cerillos" "standard" "box" "box" 0.00 0.00 0.00
 077910000000 "Cerillos Maya 5pzas 10 cajas 50 cerillos c/u"      			"Encendedores y Cerillos" "standard" "box" "box" 0.00 0.00 0.00
 7501232001306 "Cerillos Flama 5pzas 115 cerillos c/u"     					"Encendedores y Cerillos" "standard" "box" "box" 0.00 49.00 0.00
 
 [DEP-013 "Surtido Adicional (Mostrador)"]
-CSUELTOMBRBLANCO "Marlboro Blanco Suelto"  									"Cigarros" "standard" "piece" "piece" 0.00 0.00 0.00
-75035259 "Cajetilla Marlboro Blanco 20"  									"Cigarros" "standard" "package" "package" 0.00 0.00 0.00
-75068844 "Cajetilla Marlboro Blanco 14"  									"Cigarros" "standard" "package" "package" 0.00 0.00 0.00
+CIGARROMBRROJO "Cigarro Baronet Suelto"  									"Cigarros" "standard" "piece" "piece" 4.87 7.00 0.00
+75001322 "Cajetilla Baronet 20"  											"Cigarros" "standard" "package" "package" 0.00 54.00 0.00
+BARONETPAQ20 "Paquete de Cajetillas Baronet 10pzas 20c c/u"  								"Cigarros" "standard" "package" "package" 0.00 540.00 0.00
 
-CSUELTOMBRROJO "Marlboro Rojo Suelto"  										"Cigarros" "standard" "piece" "piece" 4.87 7.00 0.00
+CIGARROMBRROJO "Cigarro Marlboro Rojo Suelto"  								"Cigarros" "standard" "piece" "piece" 4.87 7.00 0.00
 75001322 "Cajetilla Marlboro Rojo 20"  										"Cigarros" "standard" "package" "package" 97.40 117.00 0.00
-MARLBOROROJOPAQ20 "Paquete Marlboro Rojo 10pzas 20' c/u"  					"Cigarros" "standard" "package" "package" 974.00 1071.00 0.00
+MARLBOROROJOPAQ20 "Paquete de Cajetillas Marlboro Rojo 10pzas 20c c/u"  					"Cigarros" "standard" "package" "package" 974.00 1071.00 0.00
 
-CSUELTOMBRRUBI "Marlboro Rubí Suelto"  										"Cigarros" "standard" "piece" "piece" 0.00 0.00 0.00
-75001339 "Cajetilla Marlboro Rojo 14"  										"Cigarros" "standard" "package" "package" 0.00 0.00 0.00
+CIGARROMBRRUBI "Cigarro Marlboro Rubí Suelto"  								"Cigarros" "standard" "piece" "piece" 0.00 7.00 0.00
 75021597 "Cajetilla Marlboro Rubí 20"  										"Cigarros" "standard" "package" "package" 95.00 105.00 0.00
 
-75066345 "Cajetilla Marlboro Sandía 20"										"Cigarros" "standard" "package" "package" 0.00 0.00 0.00
-CSUELTOMBRSANDIA "Marlboro Sandía Suelto"  									"Cigarros" "standard" "package" "package" 0.00 0.00 0.00
+CIGARROLMROJO "Cigarro L&M Rojo Suelto"  									"Cigarros" "standard" "piece" "piece" 3.75 5.00 0.00
+75069902 "Cajetilla L&M Rojo 20"  											"Cigarros" "standard" "package" "package" 0.00 74.00 0.00
+LMROJOPAQ20 "Paquete de Cajetillas L&M Rojo 10pzas 20c c/u"  								"Cigarros" "standard" "package" "package" 0.00 741.00 0.00
 
-CSUELTOLMROJO "L&M Rojo Suelto"  											"Cigarros" "standard" "piece" "piece" 0.00 0.00 0.00
-75069902 "Cajetilla L&M Rojo 20"  											"Cigarros" "standard" "package" "package" 0.00 0.00 0.00
-75022266 "Cajetilla L&M Rojo 14"  											"Cigarros" "standard" "package" "package" 0.00 0.00 0.00
-LMROJOPAQ20 "Paquete L&M Rojo 10pzas 20' c/u"  								"Cigarros" "standard" "package" "package" 0.00 741.00 0.00
-
-75071295 "Cajetilla Pall Mall Alaska 20"  									"Cigarros" "standard" "package" "package" 0.00 0.00 0.00
 7501001258030 "PeptoBismol Tableta Masticable"  							"Medicamentos Libres" "standard" "package" "package" 0.00 0.00 0.00
 7501095451201 "Sal de Uvas Picot"  											"Medicamentos Libres" "standard" "package" "package" 0.00 0.00 0.00
 75916565 "Vick Vaporup 12g"  												"Medicamentos Libres" "standard" "package" "package" 0.00 0.00 0.00
@@ -1958,11 +2047,11 @@ LMROJOPAQ20 "Paquete L&M Rojo 10pzas 20' c/u"  								"Cigarros" "standard" "pa
 80051671 "Crema de Avellanas Nutella 200g"													"Mermeladas, Cremas y Jarabes" "standard" "piece" "piece" 55.00 65.00 0.00
 CAJANUTELLA200->80051671:12 "Caja Crema de Avellanas Nutella 12pzas 200g c/u"				"Mermeladas, Cremas y Jarabes" "standard" "box" "box" 653.00 718.00 0.00
 
-789742895050 "Crema de Avellanas Nutella 350g"													"Mermeladas, Cremas y Jarabes" "standard" "piece" "piece" 0.00 0.00 0.00
+789742895050 "Crema de Avellanas Nutella 350g"												"Mermeladas, Cremas y Jarabes" "standard" "piece" "piece" 0.00 0.00 0.00
 
 7501668613548 "Jarabe sabor tres leches Presto 1L"     	 									"Mermeladas, Cremas y Jarabes" "standard" "piece" "piece" 0.00 0.00 0.00
 665688663406 "Mermelada de fresa La Doña 1kg"     											"Mermeladas, Cremas y Jarabes" "standard" "piece" "piece" 0.00 0.00 0.00
-665688665578 "Mermelada de piña La Doña 1kg"     											"Mermelfadas, Cremas y Jarabes" "standard" "piece" "piece" 0.00 0.00 0.00
+665688665578 "Mermelada de piña La Doña 1kg"     											"Mermeladas, Cremas y Jarabes" "standard" "piece" "piece" 0.00 0.00 0.00
 665688000102 "Crema Panadera sabor Vainilla La Doña 1kg"     								"Mermeladas, Cremas y Jarabes" "standard" "piece" "piece" 0.00 0.00 0.00
 665688006166 "Crema Panadera sabor chocolate La Doña 1kg"     								"Mermeladas, Cremas y Jarabes" "standard" "piece" "piece" 0.00 0.00 0.00
 665688361067 "Cobertura sabor a Chocolate Chocolup's 1kg"     								"Mermeladas, Cremas y Jarabes" "standard" "piece" "piece" 85.00 100.00 0.00
@@ -1979,7 +2068,6 @@ CAJANUTELLA200->80051671:12 "Caja Crema de Avellanas Nutella 12pzas 200g c/u"			
 614143602108 "Palapa Saborizante Vainilla 500ml"     										"Concentrados" "standPalapaard" "piece" "piece" 28.00 34.00 0.00
 CAJASABORIZANTEPALAPA500->614143602108:20 "Caja Palapa Saborizante Vainilla 20pzas 500ml"	"Concentrados" "standard" "piece" "piece" 565.00 622.00 0.00
 
-#HARINADEARRORZ "Harina de Arroz" "Levadura "standard" "piece" "piece" 0.00 0.00 0.00
 #SALSAPAQ "Salsa de Paquete"
 #BLUNT
 #TOTIS
@@ -1992,6 +2080,8 @@ ANÍS
 
 GELATINA PIÑA-COCO
 CREMA DE COCO
+
+PALITO DE PALETA
 
 COFFEMATE
 CEPILLO DE DIENTE
