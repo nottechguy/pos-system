@@ -10,6 +10,7 @@ import re
 import json
 import argparse
 import urllib.request
+import shutil
 from urllib.error import HTTPError, URLError
 
 API_URL = "http://127.0.0.1:8000/api/products/sync"
@@ -102,7 +103,9 @@ def parse_catalog(filepath, target_dept, update_mode):
                     "update_mode": update_mode
                 }
 
-                console_print(f"Syncing: {barcode} - {payload['name'][:50]}...", linebreak=False)
+                terminal_width = shutil.get_terminal_size().columns
+                message = f"Syncing: {barcode} - {payload['name']}"
+                console_print(message.ljust(terminal_width - 1), linebreak=False)
                 if sync_product(payload):
                     # Print bold green OK (ANSI escape codes: \033[1;32m = Bold Green, \033[0m = Reset)
                     console_print(" \033[1;32mOK\033[0m")
