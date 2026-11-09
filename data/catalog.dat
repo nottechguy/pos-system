@@ -403,14 +403,14 @@ CAJANUTRIOLI800->7501039122846:12 "Caja Aceite de soya Nutrioli 12pzas 800ml c/u
 7501048103010 "Aceite Canoil 946ml"                   												"Harinas y Aceites" "standard" "piece" "piece" 39.00 44.00 0.00
 CAJAACEITECANOIL946->7501048103010:12 "Caja Aceite Canoil 12pzas 946ml c/u"                   		"Harinas y Aceites" "standard" "box" "box" 460.00 510.00 0.00
 
-7501077400302 "MASECA Tamal 1kg"           			   												"Harinas y Aceites" "standard" "piece" "piece" 0.00 22.00 0.00
-07501077401309->7501077400302:10 "MASECA Tamal 10pzas 1kg c/u"     									"Harinas y Aceites" "standard" "package" "package" 185.00 200 0.00
+7501077400302 "MASECA Tamal 1kg"           			   												"Harinas y Aceites" "standard" "piece" "piece" 18.39 22.00 0.00
+07501077401309->7501077400302:10 "MASECA Tamal 10pzas 1kg c/u"     									"Harinas y Aceites" "standard" "package" "package" 183.96 200 0.00
 
-7501077400050 "MASECA 1kg"                  														"Harinas y Aceites" "standard" "piece" "piece" 0.00 22.00 0.00
-07501077400159->7501077400050:10 "MASECA 10pzas 1kg c/u"           									"Harinas y Aceites" "standard" "package" "package" 185.00 199.00 0.00
+7501077400050 "MASECA 1kg"                  														"Harinas y Aceites" "standard" "piece" "piece" 18.39 22.00 0.00
+07501077400159->7501077400050:10 "MASECA 10pzas 1kg c/u"           									"Harinas y Aceites" "standard" "package" "package" 183.96 199.00 0.00
 
-7501077400708 "MASECA Antojitos 1kg"           														"Harinas y Aceites" "standard" "piece" "piece" 0.00 22.00 0.00
-07501077401705->7501077400708:10 "MASECA Antojitos 10pzas 1kg c/u"           						"Harinas y Aceites" "standard" "package" "package" 185.00 200.00 0.00
+7501077400708 "MASECA Antojitos 1kg"           														"Harinas y Aceites" "standard" "piece" "piece" 18.39 22.00 0.00
+07501077401705->7501077400708:10 "MASECA Antojitos 10pzas 1kg c/u"           						"Harinas y Aceites" "standard" "package" "package" 183.96 200.00 0.00
 
 7503006468018 "Harina de trigo extrafina Guadalupe Optima 10kg"      								"Harinas y Aceites" "standard" "piece" "piece" 0.00 0.00 0.00
 7503006468315 "Harina de trigo extrafina Guadalupe Optima 25kg"      								"Harinas y Aceites" "standard" "piece" "piece" 0.00 0.00 0.00
@@ -615,7 +615,7 @@ CAJANESCAFESOBRE->7501000911783:16 "Caja Nescafé sobre 16 sobres 14g c/u"      
 7501008057247 "Zucaritas kellogg's 380g"                      										"Cereales y Avena" "standard" "piece" "piece" 0.00 0.00 0.00
 7501005107013 "Maizena atole sabor chocolate 45g"                  									"Cereales y Avena" "standard" "piece" "piece" 0.00 14.00 0.00
 7501005106801 "Maizena atole sabor fresa 47g"                      									"Cereales y Avena" "standard" "piece" "piece" 0.00 14.00 0.00
-7501005106979 "Maizena atole sabor vainilla 47g"                      								 "Cereales y Avena" "standard" "piece" "piece" 0.00 14.00 0.00
+7501005106979 "Maizena atole sabor vainilla 47g"                      								"Cereales y Avena" "standard" "piece" "piece" 0.00 14.00 0.00
 
 TIRAVUALAVAINILLA "Tira Vualá sabor Vainilla 60g"                       							"Galletas y Panes" "standard" "piece" "piece" 100.00 115.00 0.00
 TIRAVUALACHOCOLATE "Tira Vualá sabor Chocolate 60g"                       							"Galletas y Panes" "standard" "piece" "piece" 100.00 115.00 0.00
@@ -629,7 +629,11 @@ TIRAVUALACHOCOLATE "Tira Vualá sabor Chocolate 60g"                       					
 658480001101 "Salmas horneadas 144g 8paq 3 tostadas c/u"                       						"Galletas y Panes" "standard" "piece" "piece" 25.92 32.00 0.00
 7501030433927 "Salmas horneadas 144g 8paq 3 tostadas c/u"                       					"Galletas y Panes" "standard" "piece" "piece" 25.92 32.00 0.00
 
-7501000664221 "Saladitas gamesa 186g"                                 		"Galletas y Panes" "standard" "piece" "piece" 0.00 0.00 0.00
+GALLETASALADITAS "Galletas Saladitas gamesa 12g"                                 					"Galletas y Panes" "standard" "piece" "piece" 1.27 1.80 0.00
+CAJASALADITASGAMESA186 "Caja de Galletas Saladitas gamesa 200paq 12g c/u"							"Galletas y Panes" "standard" "piece" "piece" 255.65 295.00 0.00
+
+7501000664221 "Galletas Saladitas gamesa 186g"                                 						"Galletas y Panes" "standard" "piece" "piece" 19.63 23.50 0.00
+CAJASALADITASGAMESA186 "Caja de Galletas Saladitas gamesa 12paq 186g c/u"							"Galletas y Panes" "standard" "piece" "piece" 235.61 260.00 0.00
 
 7500810047811 "Mini Pan tostado clásico Bimbo 3paq 115g"                 	 "Galletas y Panes" "standard" "piece" "piece" 20.75 25.00 0.00
 
@@ -731,8 +735,8 @@ CAJACRACKETS135->7500478005512:20 "Caja Crackets gamesa 20pzas 135g c/u"	"Gallet
 
 7501008703441 "Mexicanas Cuétara 135g"                              		"Galletas y Panes" "standard" "piece" "piece" 0.00 0.00 0.00
 
-7501008759455 "Palmeras Cuétara sabor Coco 166g"                    						"Galletas y Panes" "standard" "piece" "piece" 15.00 18.00 0.00
-CAJAPALMERASCUETARA166->7501008759455:25 "Caja Palmeras Cuétara sabor Coco 25paq 166g c/u"	"Galletas y Panes" "standard" "box" "box" 377.00 415.00 0.00
+7501008759455 "Palmeras Cuétara sabor Coco 166g"                    						"Galletas y Panes" "standard" "piece" "piece" 13.41 18.00 0.00
+CAJAPALMERASCUETARA166->7501008759455:25 "Caja Palmeras Cuétara sabor Coco 20paq 166g c/u"	"Galletas y Panes" "standard" "box" "box" 268.26 295.00 0.000
 
 735257002476 "Polvo para gelatina D'Gari sabor naranja 120g"         		"Gelatinas" "standard" "piece" "piece" 0.00 12.00 0.00
 735257002643 "Polvo para gelatina D'Gari sabor fresa 120g"           		"Gelatinas" "standard" "piece" "piece" 0.00 12.00 0.00
@@ -857,7 +861,7 @@ CAJAJUMEXBIDAFRESA237->7501013106794:24 "Caja JUMEX Bida Fresa 24pzas 237ml c/u"
 7501013104066 "JUMEX Durazno 960ml"                   				"Jugos y Néctares" "standard" "piece" "piece" 0.00 0.00 0.00
 7501013104073 "JUMEX Manzana 960ml"                   				"Jugos y Néctares" "standard" "piece" "piece" 0.00 0.00 0.00
 
-7501013106893 "JUMEX Arándano 960ml"                   				"Jugos y Néctares" "standard" "piece" "piece" 0.00 0.00 0.00
+7501013106893 "JUMEX Arándano 960ml"                   				"Jugos y Néctares" "standard" "piece" "piece" 0.00 39.00 0.00
 
 031200454577 "Ocean Spray Uva y Arándano 1L"                   		"Jugos y Néctares" "standard" "piece" "piece" 0.00 38.00 0.00
 031200454560 "Ocean Spray Arándano 1L"                   			"Jugos y Néctares" "standard" "piece" "piece" 0.00 38.00 0.00
@@ -975,18 +979,18 @@ CAJAELECTROLITCOCO->7501125144851:12 "Caja Electrolit sabor Coco 12pzas 625ml c/
 036731323002 "Gatorade sabor Lima-Limón 1L"          				"Bebidas Rehidratantes" "standard" "piece" "piece" 0.00 0.00 0.00
 036731321008 "Gatorade sabor Naranja 1L"              				"Bebidas Rehidratantes" "standard" "piece" "piece" 0.00 0.00 0.00
 7506192507349 "Amper Regular 474ml"              		  			"Bebidas Rehidratantes" "standard" "piece" "piece" 16.28 20.50 0.00
-7506192507349 "Amper Energy 473ml"              		  				"Bebidas Rehidratantes" "standard" "piece" "piece" 18.00 21.00 0.00
+7506192507349 "Amper Energy 473ml"              		  			"Bebidas Rehidratantes" "standard" "piece" "piece" 18.00 21.00 0.00
 
 7501055317653 "Powerade sabor moras 1L"              				"Bebidas Rehidratantes" "standard" "piece" "piece" 0.00 0.00 0.00
-7501055329267 "Powerade sabor moras 500ml"              			"Bebidas Rehidratantes" "standard" "piece" "piece" 0.00 0.00 0.00
+7501055329267 "Powerade sabor moras 500ml"              			"Bebidas Rehidratantes" "standard" "piece" "piece" 0.00 27.00 0.00
 
-7501055392629 "Powerade Zero sabor moras 500ml"              		"Bebidas Rehidratantes" "standard" "piece" "piece" 0.00 0.00 0.00
+7501055392629 "Powerade Zero sabor moras 500ml"              		"Bebidas Rehidratantes" "standard" "piece" "piece" 0.00 27.00 0.00
 
 7501055317677 "Powerade sabor naranja 1L"              				"Bebidas Rehidratantes" "standard" "piece" "piece" 0.00 0.00 0.00
-7501055329380 "Powerade sabor naranja 500ml"              			"Bebidas Rehidratantes" "standard" "piece" "piece" 0.00 0.00 0.00
+7501055329380 "Powerade sabor naranja 500ml"              			"Bebidas Rehidratantes" "standard" "piece" "piece" 0.00 27.00 0.00
 
 7501055317660 "Powerade sabor frutas 1L"              				"Bebidas Rehidratantes" "standard" "piece" "piece" 0.00 0.00 0.00
-7501055329298 "Powerade sabor frutas 500ml"              			"Bebidas Rehidratantes" "standard" "piece" "piece" 0.00 0.00 0.00
+7501055329298 "Powerade sabor frutas 500ml"              			"Bebidas Rehidratantes" "standard" "piece" "piece" 0.00 27.00 0.00
 
 744607840804 "New Mix PALOMA 350ml"                   				"Cervezas y Licores" "standard" "piece" "piece" 0.00 0.00 0.00
 
@@ -1174,6 +1178,7 @@ PALMEXMINIRUEDAPAPA "Palmex Mini rueda Papa 1kg"         					"Papas Fritas, Fri
 7501011154865 "PakeTaxo Botanero 255g"                        				"Papas Fritas, Frituras y Cacahuates" "standard" "piece" "piece" 43.70 59.00 0.00
 7501011154902 "PakeTaxo Mezcladito 255g"                        			"Papas Fritas, Frituras y Cacahuates" "standard" "piece" "piece" 43.70 59.00 0.00
 7500478048120 "Sabritas Super Pack 25pzas 1,089kg"            				"Papas Fritas, Frituras y Cacahuates" "standard" "box" "box" 186.04 225.00 0.00
+17500478018533 "Sabri Surtido 35pzas 1,46kg"            					"Papas Fritas, Frituras y Cacahuates" "standard" "box" "box" 295.59 325.00 0.00
 7500478052271 "Sabritones Donitas sabor Sal y Limón 50g"            		"Papas Fritas, Frituras y Cacahuates" "standard" "piece" "piece" 11.85 16.00 0.00
 7501011127012 "Tostitos 62g"                                  				"Papas Fritas, Frituras y Cacahuates" "standard" "piece" "piece" 17.44 22.00 0.00
 7501011126879 "Tostitos Xtra Flamin Hot 62g"                  				"Papas Fritas, Frituras y Cacahuates" "standard" "piece" "piece" 17.44 22.00 0.00
@@ -1203,43 +1208,43 @@ PALMEXMINIRUEDAPAPA "Palmex Mini rueda Papa 1kg"         					"Papas Fritas, Fri
 7503014785374 "Pistache tostado sin aceite Premier 1kg"        				"Granos y Semillas" "standard" "piece" "piece" 0.00 0.00 0.00
 7503029320034 "Nuez India con sal de mar Premier 1kg"          				"Granos y Semillas" "standard" "piece" "piece" 0.00 0.00 0.00
 
-097339000054 "Salsa Valentina 370ml"                   									"Salsas" "standard" "piece" "piece" 15.91 19.00 0.00
-0097339000054->097339000054:24 "Caja de Salsa Valentina 24pzas 370ml c/u"                  "Salsas" "standard" "piece" "box" 382.05 420.00 0.00
+097339000054 "Salsa Valentina 370ml"                   										"Salsas" "standard" "piece" "piece" 15.91 19.00 0.00
+0097339000054->097339000054:24 "Caja de Salsa Valentina 24pzas 370ml c/u"                  	"Salsas" "standard" "piece" "box" 382.05 420.00 0.00
 
-7501003393050 "Salsa Búfalo Clásica 150g"             									"Salsas" "standard" "piece" "piece" 14.35 17.00 0.00
-CAJASALSABUFALO150->7501003393050:24 "Caja de Salsa Búfalo Clásica 24pzas 150g c/u"        "Salsas" "standard" "box" "box" 344.51 379.00 0.00
+7501003393050 "Salsa Búfalo Clásica 150g"             										"Salsas" "standard" "piece" "piece" 14.35 17.00 0.00
+CAJASALSABUFALO150->7501003393050:24 "Caja de Salsa Búfalo Clásica 24pzas 150g c/u"        	"Salsas" "standard" "box" "box" 344.51 379.00 0.00
 
-7501003393067 "Salsa Búfalo Clásica 380ml"             									"Salsas" "standard" "piece" "piece" 18.00 22.00 0.00
+7501003393067 "Salsa Búfalo Clásica 380ml"             										"Salsas" "standard" "piece" "piece" 18.00 22.00 0.00
 CAJASALSABUFALO380->7501003393067:24 "Caja de Salsa Búfalo Clásica 24pzas 380ml"         	"Salsas" "standard" "box" "box" 433.00 476.00 0.00
 
-7501003393081 "Salsa Búfalo Clásica 990g"              									"Salsas" "standard" "piece" "piece" 46.75 56.00 0.00
-CAJASALSABUFALO990 "Caja de Salsa Búfalo Clásica 12pzas 990g c/u"              			"Salsas" "standard" "box" "box" 561.08 617.00 0.00
+7501003393081 "Salsa Búfalo Clásica 990g"              										"Salsas" "standard" "piece" "piece" 46.75 56.00 0.00
+CAJASALSABUFALO990 "Caja de Salsa Búfalo Clásica 12pzas 990g c/u"              				"Salsas" "standard" "box" "box" 561.08 617.00 0.00
 
-647541022049 "Salsa Chamoy El Chilerito 1.5L"         									"Salsas" "standard" "piece" "piece" 42.00 49.00 0.00
+647541022049 "Salsa Chamoy El Chilerito 1.5L"         										"Salsas" "standard" "piece" "piece" 42.00 49.00 0.00
 CAJACHILERITO15L:647541022049:12 "Caja de Salsa Chamoy El Chilerito 12pzas 1.5L c/u"     	"Salsas" "standard" "box" "box" 500.00 550.00 0.00
  
-647541022032 "Salsa Chamoy El Chilerito 1L"         									"Salsas" "standard" "piece" "piece" 32.00 39.00 0.00
+647541022032 "Salsa Chamoy El Chilerito 1L"         										"Salsas" "standard" "piece" "piece" 32.00 39.00 0.00
 CAJACHILERITO1L->647541022032:12 "Caja de Salsa Chamoy El Chilerito 12pzas 1L c/u"			"Salsas" "standard" "box" "box" 382.00 420.00 0.00
 
-647541022025 "Salsa Chamoy El Chilerito 400ml"         									"Salsas" "standard" "piece" "piece" 16.00 19.00 0.00
+647541022025 "Salsa Chamoy El Chilerito 400ml"         										"Salsas" "standard" "piece" "piece" 16.00 19.00 0.00
 CAJACHILERITO400->647541022025:24 "Caja de Salsa Chamoy El Chilerito 24pzas 400ml c/u"     "Salsas" "standard" "box" "box" 379.00 417.00 0.00
 
-097339000078 "Salsa Costa Brava 1L"            											"Salsas" "standard" "piece" "piece" 28.00 34.00 0.00
+097339000078 "Salsa Costa Brava 1L"            												"Salsas" "standard" "piece" "piece" 28.00 34.00 0.00
 1097339000078->097339000078:12 "Caja de Salsa Costa Brava 12pzas 1L c/u"        			"Salsas" "standard" "box" "box" 339.00 373.00 0.00
 
-097339000115 "Salsa Costa Brava 1.5L"            										"Salsas" "standard" "piece" "piece" 37.00 45.00 0.00
+097339000115 "Salsa Costa Brava 1.5L"            											"Salsas" "standard" "piece" "piece" 37.00 45.00 0.00
 97339000115548->097339000115:12 "Caja de Salsa Costa Brava 12pzas 1.5L c/u"     			"Salsas" "standard" "box" "box" 448.00 493.00 0.00
                                                                                       
-SALSAVALENTINA "Paquete Salsa Valentina 50pzas 8g c/u"									"Salsas" "standard" "piece" "piece" 33.00 45.00 0.00
+SALSAVALENTINA "Paquete Salsa Valentina 50pzas 8g c/u"										"Salsas" "standard" "piece" "piece" 33.00 45.00 0.00
 
 [DEP-008 "Limpieza del Hogar"]
-7501026017001 "Jabón de tocador Mädi 150g"                       						"Detergentes y Suavizantes" "standard" "piece" "piece" 13.55 16.00 0.00
+7501026017001 "Jabón de tocador Mädi 150g"                       							"Detergentes y Suavizantes" "standard" "piece" "piece" 13.55 16.00 0.00
 CAJAJABONMADI150->7501026017001:40 "Caja de Jabón de tocador Mädi 40pzas 150g c/u"			"Detergentes y Suavizantes" "standard" "box" "box" 542.03 596.00 0.00
 
-7501026006654 "Jabón de tocador Rosa Venus rosa 200g"            								"Detergentes y Suavizantes" "standard" "piece" "piece" 14.48 18.00 0.00
-CAJAJABONROSAVENUS->7501026006654:30 "Caja de Jabón de tocador Rosa Venus rosa 30pzas 200g c/u"	"Detergentes y Suavizantes" "standard" "box" "box" 434.51 478.00 0.00
+7501026006654 "Jabón de tocador Rosa Venus rosa 200g"            									"Detergentes y Suavizantes" "standard" "piece" "piece" 14.48 18.00 0.00
+CAJAJABONROSAVENUS->7501026006654:30 "Caja de Jabón de tocador Rosa Venus rosa 30pzas 200g c/u"		"Detergentes y Suavizantes" "standard" "box" "box" 434.51 478.00 0.00
 
-7501026006654 "Jabón de tocador Rosa Venus blanco 200g"            								"Detergentes y Suavizantes" "standard" "piece" "piece" 14.48 18.00 0.00
+7501026006654 "Jabón de tocador Rosa Venus blanco 200g"            									"Detergentes y Suavizantes" "standard" "piece" "piece" 14.48 18.00 0.00
 CAJAJABONROSAVENUS->7501026006654:30 "Caja de Jabón de tocador Rosa Venus blanco 30pzas 200g c/u"	"Detergentes y Suavizantes" "standard" "box" "box" 434.51 478.00 0.00
 
 7501026006753 "Jabón de tocador blanco neutro Vennus 200g"       						"Detergentes y Suavizantes" "standard" "piece" "piece" 15.06 19.00 0.00
@@ -1717,6 +1722,9 @@ PAQCOLGATE90->7509546687353:24 "Paquete Colgate Protección Anticaries 24pzas 90
 719243645267 "Palillo Dental de Madera Don Bolsón 10cajas 250pzas c/u"   	 								"Cuidado Dental y Corporal" "standard" "piece" "piece" 0.00 0.00 0.00
 719243645274 "Palillo Dental de Madera Don Bolsón 250pzas"    												"Cuidado Dental y Corporal" "standard" "piece" "piece" 0.00 10.00 0.00
 
+8901314837899 "Cepillo Colgate Extra Clean"    																"Cuidado Dental y Corporal" "standard" "piece" "piece" 10.38 12.50 0.00
+CEPILLOCOLGATEEC "Paquete Cepillo Colgate Extra Clean 13pzas"												"Cuidado Dental y Corporal" "standard" "package" "package" 135.00 162.00 0.00
+
 [DEP-010 "Desechables"]
 
 7501943444966 "Pañales KleenBebé Suavelastic Etapa 5 40pzas"							"Pañales" "standard" "piece" "piece" 0.00 265.00 0.00
@@ -1868,11 +1876,11 @@ CAJAVASOREYMA16->7502208800121:40 "Caja Vaso Reyma #16 40paq 25pzas c/u"    		"A
 
 CAJAVASOREYMA8 "Caja Vaso Reyma #8 20paq 50pzas c/u"    							"Aluminio y Plástico" "standard" "box" "box" 451.00 518.00 0.00
 7502208800077 "Vaso Reyma #8 50pzas"    											"Aluminio y Plástico" "standard" "package" "package" 22.50 27.00 0.00
-7502208800077 "Vaso Reyma #8"    													"Aluminio y Plástico" "standard" "piece" "piece" 0.45 1.00 0.00
+VASOREYMA8 "Vaso Reyma #8"    													"Aluminio y Plástico" "standard" "piece" "piece" 0.45 1.00 0.00
 
 CAJAVASOREYMA10 "Caja Vaso Reyma #10 20paq 50pzas c/u"    							"Aluminio y Plástico" "standard" "box" "box" 573.00 630.00 0.00
 752216095157 "Vaso Reyma #10 50pzas"    											"Aluminio y Plástico" "standard" "package" "package" 28.55 33.00 0.00
-752216095157 "Vaso Reyma #10"    													"Aluminio y Plástico" "standard" "piece" "piece" 0.57 1.00 0.00
+VASOREYMA10 "Vaso Reyma #10"    													"Aluminio y Plástico" "standard" "piece" "piece" 0.57 1.00 0.00
 
 
 CAJAVASOREYMA10 "Caja Vaso Reyma #12 20paq 50pzas c/u"    							"Aluminio y Plástico" "standard" "box" "box" 573.00 630.00 0.00
@@ -1883,17 +1891,17 @@ CAJAVASOREYMA10 "Caja Vaso Reyma #12 20paq 50pzas c/u"    							"Aluminio y Pl�
 752216095157 "Vaso Jaguar #10 cap 318ml 50pzas"    									"Aluminio y Plástico" "standard" "piece" "piece" 24.33 29.00 0.00
 CAJAVASOJAGUAR10 "Caja Vaso plástico Jaguar #10 50pzas"    							"Aluminio y Plástico" "standard" "box" "box" 487.00 535.50 0.00
 
-752216031100 "Caja Vaso Jaguar #12 20paq 50pzas c/u"    							"Aluminio y Plástico" "standard" "box" "box" 627.00 689.00 0.00
+CAJAVASOJAGUAR12 "Caja Vaso Jaguar #12 20paq 50pzas c/u"    							"Aluminio y Plástico" "standard" "box" "box" 627.00 689.00 0.00
 752216031100 "Vaso Jaguar #12 cap 349ml 50pzas"    									"Aluminio y Plástico" "standard" "package" "package" 32.00 38.00 0.00
-752216031100 "Vaso Jaguar #12 cap 349ml"    										"Aluminio y Plástico" "standard" "package" "package" 0.64 2.00 0.00
+VASOJAGUAR12 "Vaso Jaguar #12 cap 349ml"    										"Aluminio y Plástico" "standard" "package" "package" 0.64 2.00 0.00
 
-7502208802316 "Vaso Reyma 32EU cap 946ml"    										"Aluminio y Plástico" "standard" "piece" "piece" 2.00 3.00 0.00
+VASOREYMA32EU "Vaso Reyma 32EU cap 946ml"    										"Aluminio y Plástico" "standard" "piece" "piece" 2.00 3.00 0.00
 7502208802316 "Vaso Reyma 32EU cap 946ml 25pzas"    								"Aluminio y Plástico" "standard" "piece" "piece" 50.10 59.00 0.00
 CAJAVASOREYMA32EU "Caja Vaso Reyma 32EU 20paq 25pzas c/u"    						"Aluminio y Plástico" "standard" "box" "box" 1002.00 1102.00 0.00
 
 CAJAVASOCRISTALINIX207 "Caja Envase Cristal Inix vc-7807 cap 207ml 25pzas"    		"Aluminio y Plástico" "standard" "piece" "piece" 1123.50 1236 0.00
 7501091708415 "Envase Cristal Inix vc-7807 cap 207ml 25pzas"    					"Aluminio y Plástico" "standard" "piece" "piece" 28.00 34.00 0.00
-7501091708415 "Envase Cristal Inix vc-7807 cap 207ml"    							"Aluminio y Plástico" "standard" "piece" "piece" 1.12 2.00 0.00
+VASOCRISTAL "Envase Cristal Inix vc-7807 cap 207ml"    								"Aluminio y Plástico" "standard" "piece" "piece" 1.12 2.00 0.00
 
 7501219113046 "Vaso #16 Bicolor Primo cap 470ml 20pzas"    							"Aluminio y Plástico" "standard" "piece" "piece" 27.50 33.00 0.00
 
@@ -1969,7 +1977,10 @@ BULTOCRQCENTINELA "Bulto de Croquetas El Centinela 20kg"    				"Alimento Seco" 
 CRQCENTINELA1K "Croquetas El Centinela 1kg"    								"Alimento Seco" "standard" "piece" "piece" 0.00 0.00 0.00
 
 !CRQPEDIA "Croquetas Pedegree Adulto"    									"Alimento Seco" "standard" "kilogram" "kilogram" 0.00 0.00 0.00
+CRQPEDIA1K "Croquetas Pedegree Adulto 1kg"    								"Alimento Seco" "standard" "piece" "piece" 0.00 0.00 0.00
+
 !CRQPEDIC "Croquetas Pedegree Cachorro"    									"Alimento Seco" "standard" "kilogram" "kilogram" 0.00 0.00 0.00
+CRQPEDIC1K "Croquetas Pedegree Cachorro 1kg"    							"Alimento Seco" "standard" "piece" "piece" 0.00 0.00 0.00
 
 !CRQDOGCHOWA "Croquetas Dog Chow Adulto"    								"Alimento Seco" "standard" "kilogram" "kilogram" 42.00 0.00 0.00
 !CRQDOGCHOWC "Croquetas Dog Chow Cachorro"    								"Alimento Seco" "standard" "kilogram" "kilogram" 42.00 0.00 0.00
@@ -1978,6 +1989,9 @@ BULTODOGCHOWCACHORRO "Bulto de Croquetas Dog Chow Cachorro 25kg"    		"Alimento 
 BULTODOGCHOWCADULTO "Bulto Dog de Croquetas Chow Adulto 25kg"    			"Alimento Seco" "standard" "bulk" "bulk" 0.00 0.00 0.00
 
 [DEP-012 "Artículos para el Hogar"]		
+7500938006646 "Foco LED Tianlai 50W"    								"Velas y Veladoras" "standard" "piece" "piece" 0.00 0.00 0.00
+7404005961930 "Foco Chiyoda Plus 100W"    								"Velas y Veladoras" "standard" "piece" "piece" 0.00 0.00 0.00
+
 7501102232168 "Veladoras Farolito 16 Velas"    								"Velas y Veladoras" "standard" "piece" "piece" 77.90 93.00 0.00
 
 7501557201405 "Veladora Aramo Eco Candil #1"    							"Velas y Veladoras" "standard" "piece" "piece" 65.00 84.00 0.00
@@ -2026,18 +2040,18 @@ CAJAVELADORAPAPEL "Caja de Veladoras de papel 48pzas"         				"Encendedores 
 [DEP-013 "Surtido Adicional (Mostrador)"]
 CIGARROMBRROJO "Cigarro Baronet Suelto"  									"Cigarros" "standard" "piece" "piece" 4.87 7.00 0.00
 75001322 "Cajetilla Baronet 20"  											"Cigarros" "standard" "package" "package" 0.00 54.00 0.00
-BARONETPAQ20 "Paquete de Cajetillas Baronet 10pzas 20c c/u"  								"Cigarros" "standard" "package" "package" 0.00 540.00 0.00
+BARONETPAQ20 "Paquete de Cajetillas Baronet 10pzas 20c c/u"  				"Cigarros" "standard" "package" "package" 0.00 540.00 0.00
 
 CIGARROMBRROJO "Cigarro Marlboro Rojo Suelto"  								"Cigarros" "standard" "piece" "piece" 4.87 7.00 0.00
 75001322 "Cajetilla Marlboro Rojo 20"  										"Cigarros" "standard" "package" "package" 97.40 117.00 0.00
-MARLBOROROJOPAQ20 "Paquete de Cajetillas Marlboro Rojo 10pzas 20c c/u"  					"Cigarros" "standard" "package" "package" 974.00 1071.00 0.00
+MARLBOROROJOPAQ20 "Paquete de Cajetillas Marlboro Rojo 10pzas 20c c/u"  	"Cigarros" "standard" "package" "package" 974.00 1071.00 0.00
 
 CIGARROMBRRUBI "Cigarro Marlboro Rubí Suelto"  								"Cigarros" "standard" "piece" "piece" 0.00 7.00 0.00
 75021597 "Cajetilla Marlboro Rubí 20"  										"Cigarros" "standard" "package" "package" 95.00 105.00 0.00
 
 CIGARROLMROJO "Cigarro L&M Rojo Suelto"  									"Cigarros" "standard" "piece" "piece" 3.75 5.00 0.00
 75069902 "Cajetilla L&M Rojo 20"  											"Cigarros" "standard" "package" "package" 0.00 74.00 0.00
-LMROJOPAQ20 "Paquete de Cajetillas L&M Rojo 10pzas 20c c/u"  								"Cigarros" "standard" "package" "package" 0.00 741.00 0.00
+LMROJOPAQ20 "Paquete de Cajetillas L&M Rojo 10pzas 20c c/u"  				"Cigarros" "standard" "package" "package" 0.00 741.00 0.00
 
 7501001258030 "PeptoBismol Tableta Masticable"  							"Medicamentos Libres" "standard" "package" "package" 0.00 0.00 0.00
 7501095451201 "Sal de Uvas Picot"  											"Medicamentos Libres" "standard" "package" "package" 0.00 0.00 0.00
