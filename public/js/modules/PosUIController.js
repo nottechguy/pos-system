@@ -813,6 +813,10 @@ defineModule("PosUIController", ["$", "CSSCore", "AsyncRequest", "TemplateEngine
                     break;
                 case 'p':
                     e.preventDefault();
+                    var searchInput = document.getElementById("pos_search_input");
+                    if (document.activeElement === searchInput) {
+                        return; // Prevent opening promo modal if typing barcode starting with 'P'
+                    }
                     openPromotionModal();
                     break;
                 case 's':
