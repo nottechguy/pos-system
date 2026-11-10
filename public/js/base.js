@@ -2673,7 +2673,11 @@ defineModule("JSEventController", ["EventType", "Parent"], (function $controller
         var eventTypeWithPrefix = EVENT_TYPE_PREFIX + evtType;
         var parent = requireModule("Parent").byAttribute(evt.target, eventTypeWithPrefix);
         if (parent == null) return;
+        
         var ctrlInstance = new getControllerInstance(parent, eventTypeWithPrefix);
+        
+        // ✨ THE FIX: Ensure controller instance successfully resolved before calling methods
+        if (!ctrlInstance.controller) return;
 
         ctrlInstance.callMethod(evt);
         ctrlInstance = null;
@@ -2804,26 +2808,30 @@ defineModule("JSEventController", ["EventType", "Parent"], (function $controller
      */
     function getControllerData(target, eventType) {
         var controller, method = null;
-        var controllerName = "";
         var parent;
         var isNewInstance = false;
 
         parent = requireModule("Parent").byAttribute(target, CONTROLLER_ATTRIBUTE);
+        
+        // ✨ THE FIX: Return null if no controller element wrapper is found in the ancestor tree
+        if (!parent) {
+            return null;
+        }
 
         isNewInstance = parent.hasAttribute(CONTROLLER_NEW_INSTANCE);
-        controller = parent.getAttribute(CONTROLLER_ATTRIBUTE)
+        controller = parent.getAttribute(CONTROLLER_ATTRIBUTE);
 
         method = target.getAttribute(eventType).replace(/^\@/, '');
 
         var params = target.hasAttribute(CONTROLLER_PARAMS) ?
-            target.getAttribute(CONTROLLER_PARAMS) : null;;
+            target.getAttribute(CONTROLLER_PARAMS) : null;
 
         return {
             controller: controller,
             method: method,
             params: params,
             newInstance: isNewInstance
-        }
+        };
     }
 
     /**
