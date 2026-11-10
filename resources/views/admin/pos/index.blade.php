@@ -21,7 +21,7 @@
                                 <!-- Promoción Button (Opens Promotion Modal, Shortcut: 'p') -->
                                 <button type="button" class="btn btn-secondary" data-jscontroller="PosUIController" data-jsclick="@openPromotionModal" title="Seleccionar Promoción (P)" style="display: flex; align-items: center; gap: 4px; padding: 0.5rem 0.75rem; white-space: nowrap; background: #7c3aed; color: #fff; border: none; border-radius: 4px; cursor: pointer; margin-right: 4px;">
                                     <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 20 20" height="18px" viewBox="1 1 18 18" width="18px" fill="#ffffff"><g><g><rect fill="none" height="20" width="20"/></g></g><g><path d="M17.56,9.58l-7.14-7.14C10.14,2.16,9.76,2,9.36,2H3.5C2.67,2,2,2.67,2,3.5v5.86c0,0.4,0.16,0.78,0.44,1.06l7.14,7.14 c0.59,0.59,1.54,0.59,2.12,0l5.86-5.86C18.15,11.11,18.15,10.17,17.56,9.58z M5.5,6.75c-0.69,0-1.25-0.56-1.25-1.25 S4.81,4.25,5.5,4.25S6.75,4.81,6.75,5.5S6.19,6.75,5.5,6.75z"/></g></svg>
-                                    Promoción (P)
+                                    Promoción (Z)
                                 </button>
 
                                 <button type="button" class="btn btn-secondary" data-jscontroller="PosUIController" data-jsclick="@openCustomerModal" title="Seleccionar Cliente (C)" style="display: flex; align-items: center; gap: 4px; padding: 0.5rem 0.75rem; white-space: nowrap; background: #2563eb; color: #fff; border: none; border-radius: 4px; cursor: pointer; margin-right: 4px;">
