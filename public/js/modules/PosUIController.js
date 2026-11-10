@@ -814,8 +814,9 @@ defineModule("PosUIController", ["$", "CSSCore", "AsyncRequest", "TemplateEngine
                 case 'p':
                     e.preventDefault();
                     var searchInput = document.getElementById("pos_search_input");
+                    // Do not open promotion modal if the user is currently typing in the search/barcode input
                     if (document.activeElement === searchInput) {
-                        return; // Prevent opening promo modal if typing barcode starting with 'P'
+                        return;
                     }
                     openPromotionModal();
                     break;
