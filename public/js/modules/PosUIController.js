@@ -194,7 +194,7 @@ defineModule("PosTemplateRegister", ["TemplateEngine"], function (global, requir
     `);
 
     TemplateEngine.register("search_result", `
-        <button type="button" class="product-card" role="listitem" aria-label="Add {{name}} to cart" data-jscontroller="PosUIController" data-jsclick="@clickAddToCart" data-product='{"id": {{id}}, "name": "{{name}}", "price": {{price}}, "sku": "{{sku}}", "unit": "{{unit}}"}'>
+        <button type="button" class="product-card" role="listitem" aria-label="Add {{name}} to cart" data-jscontroller="PosUIController" data-jsclick="@clickAddToCart" data-product="{{encoded_data}}">
             <div class="product-card-title">{{name}}</div>
             <div class="product-card-price">$\{{price}} / {{unit}}</div>
         </button>
@@ -388,9 +388,10 @@ defineModule("PosUIController", ["$", "CSSCore", "AsyncRequest", "TemplateEngine
     function handleProductCardKeydown(event) {
         if (event.key === 'Enter') {
             event.preventDefault();
-            var productStr = event.target.getAttribute('data-product');
-            if (productStr) {
-                var product = JSON.parse(productStr);
+            var encodedStr = event.target.getAttribute('data-product');
+            if (encodedStr) {
+                var jsonStr = decodeURIComponent(escape(atob(encodedStr)));
+                var product = JSON.parse(jsonStr);
                 addToCart(product, null);
                 $.fromIDOrElement("pos_product_grid").innerHTML = "";
                 clearSearchInput();
@@ -1011,8 +1012,15 @@ defineModule("PosUIController", ["$", "CSSCore", "AsyncRequest", "TemplateEngine
             resultsContainer.innerHTML = "";
             
             if (products.length > 0) {
-                TemplateEngine.renderList("search_result", products, resultsContainer);
-                // Attach keydown listener to each rendered product card
+                // ✨ Encode JSON to base64 to safely handle single/double quotes in product names
+                var processedProducts = products.map(function(p) {
+                    var copy = Object.assign({}, p);
+                    copy.encoded_data = btoa(unescape(encodeURIComponent(JSON.stringify(p))));
+                    return copy;
+                });
+
+                TemplateEngine.renderList("search_result", processedProducts, resultsContainer);
+                
                 var cards = resultsContainer.querySelectorAll('.product-card');
                 cards.forEach(function(card) {
                     card.addEventListener('keydown', handleProductCardKeydown);
@@ -1026,8 +1034,9 @@ defineModule("PosUIController", ["$", "CSSCore", "AsyncRequest", "TemplateEngine
     }
 
     function clickAddToCart(event, ctrlInstance) {
-        var productStr = ctrlInstance.targetElement.getAttribute('data-product');
-        var product = JSON.parse(productStr);
+        var encodedStr = ctrlInstance.targetElement.getAttribute('data-product');
+        var jsonStr = decodeURIComponent(escape(atob(encodedStr)));
+        var product = JSON.parse(jsonStr);
         
         addToCart(product, null);
         
