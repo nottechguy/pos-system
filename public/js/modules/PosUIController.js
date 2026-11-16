@@ -1095,7 +1095,10 @@ defineModule("PosUIController", ["$", "CSSCore", "AsyncRequest", "TemplateEngine
     }
 
     function addToCart(product, forceQuantity) {
-        var existingIndex = cart.findIndex(function(item) { return item.id === product.id; });
+        if (!product || !product.id) return;
+        
+        var targetProductId = product.id;
+        var existingIndex = cart.findIndex(function(item) { return item.id === targetProductId; });
         var qtyToAdd = (forceQuantity !== undefined && forceQuantity !== null) ? forceQuantity : 1;
 
         if (existingIndex > -1) {
@@ -1130,6 +1133,20 @@ defineModule("PosUIController", ["$", "CSSCore", "AsyncRequest", "TemplateEngine
 
         PosStorageManager.saveCart(cart);
         renderCart();
+
+        // Scroll to bottom and apply shine animation
+        var container = $.fromIDOrElement("pos_cart_items");
+        if (container) {
+            container.scrollTop = container.scrollHeight;
+
+            var addedItemEl = container.querySelector('.cart-item[data-id="' + targetProductId + '"]');
+            if (addedItemEl) {
+                addedItemEl.classList.add('cart-item-shine');
+                setTimeout(function() {
+                    addedItemEl.classList.remove('cart-item-shine');
+                }, 1000);
+            }
+        }
     }
 
     function renderCart() {
@@ -1168,7 +1185,14 @@ defineModule("PosUIController", ["$", "CSSCore", "AsyncRequest", "TemplateEngine
 
         var formattedTotal = formatMoney(total);
         if (subtotalEl) subtotalEl.innerText = formattedTotal;
-        if (totalEl) totalEl.innerText = formattedTotal;
+        if (totalEl) {
+            totalEl.innerText = formattedTotal;
+
+            totalEl.classList.remove('total-highlight');
+            // Force reflow to restart animation if triggered rapidly
+            void totalEl.offsetWidth; 
+            totalEl.classList.add('total-highlight');
+        }
     }
 
     function updateTotalsSummary() {
