@@ -917,7 +917,11 @@ defineModule("PosUIController", ["$", "CSSCore", "AsyncRequest", "TemplateEngine
         var req = new AsyncRequest("/admin/pos/search")
             .setMethod("POST")
             .setRequestHeaders({ "X-CSRF-TOKEN": csrfToken, "Content-Type": "application/json" })
-            .setData({ term: barcode, store_id: storeId });
+            .setData({ 
+                term: barcode, 
+                store_id: storeId,
+                customer_id: currentCustomer ? currentCustomer.id : null // ✨ Added customer_id support here
+            });
 
         req.onSuccess(function (response) {
             var products = JSON.parse(response.responseText);
