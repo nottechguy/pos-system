@@ -50,7 +50,7 @@ defineModule("DialogManager", [], function (
         }
     }
 
-    exports.open = function (modalElement, options) {
+exports.open = function (modalElement, options) {
         options = options || {};
         if (activeModal) {
             exports.close();
@@ -73,13 +73,18 @@ defineModule("DialogManager", [], function (
         keydownHandler = handleKeydown;
         document.addEventListener('keydown', keydownHandler);
 
-        // Trap initial focus
+        // Trap initial focus, prioritizing [autofocus] elements
         window.requestAnimationFrame(function () {
-            var focusable = getFocusableElements(modalElement);
-            if (focusable.length > 0) {
-                focusable[0].focus();
+            var autofocusEl = modalElement.querySelector('[autofocus]');
+            if (autofocusEl && typeof autofocusEl.focus === 'function') {
+                autofocusEl.focus();
             } else {
-                modalElement.focus();
+                var focusable = getFocusableElements(modalElement);
+                if (focusable.length > 0) {
+                    focusable[0].focus();
+                } else {
+                    modalElement.focus();
+                }
             }
         });
     };
@@ -114,7 +119,7 @@ defineModule("DialogManager", [], function (
 defineModule("PosTemplateRegister", ["TemplateEngine"], function (global, requireModule, requireDynamic, requireLazy, module, exports, TemplateEngine) {
     'use strict';
 
-TemplateEngine.register("cashier_auth_modal", `
+    TemplateEngine.register("cashier_auth_modal", `
         <div class="modal-backdrop" id="cashier_auth_modal_wrapper" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: flex; justify-content: center; align-items: center; z-index: 1100;" tabindex="-1">
             <div class="modal-content" style="background: #fff; padding: 2rem; border-radius: 8px; width: 400px; max-width: 95vw; display: flex; flex-direction: column; box-shadow: 0 8px 24px rgba(0,0,0,0.2);">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
@@ -232,7 +237,7 @@ TemplateEngine.register("cashier_auth_modal", `
     `);
 
     TemplateEngine.register("scale_modal", `
-        <div class="modal-backdrop" id="scale_modal_wrapper" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: flex; justify-content: center; align-items: center; z-index: 1050;" tabindex="-1">
+        <div class="modal-backdrop" id="scale_modal_wrapper" tabindex="-1">
             <div class="modal-content" style="background: #fff; padding: 2rem; border-radius: 8px; width: 750px; max-width: 95vw; height: 550px; max-height: 90vh; display: flex; flex-direction: column; box-shadow: 0 8px 24px rgba(0,0,0,0.2);" data-jscontroller="PosUIController">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-shrink: 0;">
                     <h3 style="margin: 0;">Báscula Digital - Selección a Granel</h3>
@@ -259,9 +264,9 @@ TemplateEngine.register("cashier_auth_modal", `
                     </div>
                 </div>
 
-                <div class="modal-actions" style="display: flex; justify-content: flex-end; gap: 1rem; margin-top: 1rem; flex-shrink: 0;">
-                    <button type="button" class="btn btn-secondary" data-jscontroller="PosUIController" data-jsclick="@closeScaleModal" style="padding: 0.5rem 1rem; cursor: pointer;">Cancelar</button>
-                    <button type="button" class="btn btn-primary" id="scale_modal_confirm_btn" data-jscontroller="PosUIController" data-jsclick="@confirmScaleItem" disabled style="padding: 0.5rem 1.5rem; cursor: pointer; background: #059669; color: #fff; border: none; border-radius: 4px; opacity: 0.5;">Agregar al Carrito</button>
+                <div class="modal-actions">
+                    <button type="button" class="c_button c_button--text modal-actions-button__cancel" data-jscontroller="PosUIController" data-jsclick="@closeScaleModal">Cancelar</button>
+                    <button type="button" class="c_button c_button--raised modal-actions-button__accept" id="scale_modal_confirm_btn" data-jscontroller="PosUIController" data-jsclick="@confirmScaleItem" disabled>Agregar</button>
                 </div>
             </div>
         </div>
