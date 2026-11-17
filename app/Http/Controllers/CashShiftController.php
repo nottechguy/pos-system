@@ -112,16 +112,33 @@ class CashShiftController extends Controller
             ->groupBy('payment_methods.id', 'payment_methods.name')
             ->get();
 
+        // ✨ Fetch and map denominations with translations
+        $denominations = DB::table('cash_denominations')
+            ->where('is_active', true)
+            ->orderByDesc('value')
+            ->get()
+            ->map(function ($denom) {
+                $typeKey = $denom->type; // 'bill' or 'coin'
+                $translatedType = __("denominations.types.{$typeKey}") ?? ucfirst($typeKey);
+                
+                return [
+                    'id' => $denom->id,
+                    'value' => (float) $denom->value,
+                    'type' => $denom->type,
+                    'translated_type' => $translatedType,
+                    'label' => '$' . number_format($denom->value, $denom->value < 1 ? 2 : 0) . ' (' . $translatedType . ')',
+                ];
+            });
+
         return response()->json([
             'shift' => $shift->load(['opener', 'closer', 'terminal', 'store']),
             'total_sales' => (float) $totalSales,
             'transaction_count' => $transactionCount,
             'top_products' => $topProducts,
             'payments_breakdown' => $paymentsBreakdown,
-            'denominations' => DB::table('cash_denominations')->where('is_active', true)->get()
+            'denominations' => $denominations
         ]);
     }
-
     public function activeSummary(Request $request): JsonResponse
     {
         // Find the most recent open shift for the authenticated user or terminal

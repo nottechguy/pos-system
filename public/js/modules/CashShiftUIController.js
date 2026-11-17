@@ -26,7 +26,7 @@ defineModule("CashShiftUIController", ["$", "AsyncRequest", "TemplateEngine", "D
                             <tbody>
                                 {{#denominations}}
                                 <tr>
-                                    <td style="padding: 8px 10px; border-bottom: 1px solid #f3f4f6;">$\{{value}} ({{type}})</td>
+                                    <td style="padding: 8px 10px; border-bottom: 1px solid #f3f4f6;">$\{{value}} ({{translated_type}})</td>
                                     <td style="padding: 8px 10px; border-bottom: 1px solid #f3f4f6;">
                                         <input type="number" class="form-control denomination-qty" data-id="{{id}}" data-value="{{value}}" value="0" min="0" step="1" data-jscontroller="CashShiftUIController" data-jsinput="@calculateCountedTotal" style="width: 100px; padding: 4px;">
                                     </td>

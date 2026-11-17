@@ -178,7 +178,7 @@ defineModule("PosTemplateRegister", ["TemplateEngine"], function (global, requir
                 <div>{{price}}</div>
             </div>
             <div class="cart-item-details">
-                <div class="cart-item-title" style="font-weight: 500; color: #1f2937;">{{name}}</div>
+                <div class="cart-item-title">{{name}}</div>
                 {{#if has_discount}}
                 <div class="cart-item-discount-tag" style="font-size: 0.75rem; color: #059669;">{{discount_name}}: -{{formatted_discount}}</div>
                 {{/if}}
