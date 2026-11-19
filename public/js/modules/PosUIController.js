@@ -800,44 +800,50 @@ defineModule("PosUIController", ["$", "CSSCore", "AsyncRequest", "TemplateEngine
         if (!isInputActive) {
             switch (e.key.toLowerCase()) {
                 case '1':
+                    /*
                     e.preventDefault();
                     var prodSec = $.fromIDOrElement('pos_cart_section');
-                    if (prodSec) prodSec.focus();
+                    if (prodSec) prodSec.focus();/*
                     break;
                 case '2':
+                    /*
                     e.preventDefault();
                     var cartSec = $.fromIDOrElement('pos_products_section');
                     if (cartSec) {
                         cartSec.focus();
                         var firstCartItem = document.querySelector('.cart-item');
                         if (firstCartItem) firstCartItem.focus();
-                    }
+                    }*/
                     break;
                 case 'c':
+                    /*
                     e.preventDefault();
-                    openCustomerModal();
+                    openCustomerModal();*/
                     break;
                 case 'z':
+                    /*
                     e.preventDefault();
                     var searchInput = document.getElementById("pos_search_input");
                     // Do not open promotion modal if the user is currently typing in the search/barcode input
                     if (document.activeElement === searchInput) {
                         return;
                     }
-                    openPromotionModal();
+                    openPromotionModal();*/
                     break;
                 case 's':
                     e.preventDefault();
                     clearSearchInput();
                     break;
                 case 'm':
+                    /*
                     e.preventDefault();
                     var modeSelect = document.getElementById("ticket_mode_select");
-                    if (modeSelect) modeSelect.focus();
+                    if (modeSelect) modeSelect.focus();*/
                     break;
                 case 'b':
+                    /*)
                     e.preventDefault();
-                    openScaleModal();
+                    openScaleModal();*/
                     break;
             }
         }

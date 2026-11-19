@@ -13,6 +13,11 @@ html {
     text-rendering: optimizeLegibility;
 }
 
+#scale_back {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
 .scale-products-section {
     background-color: #1f734c;
     width: 45%; border-right: 1px solid green;

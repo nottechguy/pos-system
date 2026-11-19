@@ -7,8 +7,14 @@
         
         <!-- Left Panel: Product Search & Filter -->
         <div class="scale-section scale-products-section">
-            <div class="search-header">
+            <div class="search-header" style="display: flex; justify-content: space-between;">
                 <h3>Seleccionar producto a granel</h3>
+                <x-bmdc-button id="scale_back" type="link" href="{{ route('admin.dashboard') }}" variant="outlined">
+                    <x-slot name="mIcon">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>
+                    </x-slot>
+                    Voler atrás
+                </x-bmdc-button>
             </div>
 
             <div class="form-group search-bar" style="display: flex; gap: 10px; margin-bottom: 15px;">
