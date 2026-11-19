@@ -1044,13 +1044,27 @@ defineModule("PosUIController", ["$", "CSSCore", "AsyncRequest", "TemplateEngine
         clearSearchInput();
     }
 
+    function isRuleCurrentlyActive(rule) {
+        if (!rule) return false;
+        if (rule.is_active === false || rule.is_active === 0) return false;
+
+        var now = new Date();
+        if (rule.starts_at && new Date(rule.starts_at) > now) return false;
+        if (rule.ends_at && new Date(rule.ends_at) < now) return false;
+
+        return true;
+    }
+
     function calculateItemDiscount(product, quantity) {
-        if (!product.quantity_rules || product.quantity_rules.length === 0) {
+        var qty = Number(quantity) || 0;
+        var unitPrice = Number(product.price) || 0;
+
+        if (qty <= 0 || !Array.isArray(product.quantity_rules) || product.quantity_rules.length === 0) {
             return { amount: 0, name: null };
         }
 
         var applicableRules = product.quantity_rules.filter(function(r) {
-            return quantity >= parseFloat(r.minimum_quantity);
+            return isRuleCurrentlyActive(r) && qty >= parseFloat(r.minimum_quantity);
         });
 
         if (applicableRules.length === 0) {
@@ -1058,39 +1072,51 @@ defineModule("PosUIController", ["$", "CSSCore", "AsyncRequest", "TemplateEngine
         }
 
         applicableRules.sort(function(a, b) {
-            if (b.priority !== a.priority) return b.priority - a.priority;
+            var prioA = Number(a.priority) || 0;
+            var prioB = Number(b.priority) || 0;
+            if (prioB !== prioA) return prioB - prioA;
             return parseFloat(b.minimum_quantity) - parseFloat(a.minimum_quantity);
         });
 
         var rule = applicableRules[0];
-        var unitPrice = product.price;
-        var timesToApply = 1;
-        var groupQty = rule.group_quantity > 0 ? parseFloat(rule.group_quantity) : parseFloat(rule.minimum_quantity);
-
-        if (rule.repeatable) {
-            timesToApply = Math.floor(quantity / groupQty);
-        }
-
-        if (timesToApply <= 0) {
-            return { amount: 0, name: null };
-        }
-
-        var affectedQty = timesToApply * groupQty;
+        var minQty = parseFloat(rule.minimum_quantity) || 1;
+        var rawGroupQty = parseFloat(rule.group_quantity);
+        var groupQty = rawGroupQty > 0 ? rawGroupQty : minQty;
+        var ruleVal = parseFloat(rule.discount_value) || 0;
         var discountAmount = 0;
 
         if (rule.rule_type === 'percentage') {
-            discountAmount = (unitPrice * affectedQty) * (parseFloat(rule.discount_value) / 100);
+            // Percentage off the qualifying/repeatable quantity
+            var qualifyingQty = rule.repeatable
+                ? Math.floor(qty / groupQty) * groupQty
+                : qty;
+            discountAmount = (unitPrice * qualifyingQty) * (ruleVal / 100);
         } else if (rule.rule_type === 'unit_discount') {
-            discountAmount = parseFloat(rule.discount_value) * affectedQty;
+            // Fixed currency discount per unit (or per group if group_quantity > 1)
+            var qualifyingQty = rule.repeatable
+                ? Math.floor(qty / groupQty) * groupQty
+                : qty;
+            discountAmount = ruleVal * qualifyingQty;
         } else if (rule.rule_type === 'fixed_price') {
-            var standardPrice = affectedQty * unitPrice;
-            var discountedPrice = timesToApply * parseFloat(rule.discount_value);
-            discountAmount = Math.max(0, standardPrice - discountedPrice);
+            if (rule.repeatable) {
+                // Repeatable bundle/group price: e.g., every `groupQty` items cost `ruleVal` total
+                var groups = Math.floor(qty / groupQty);
+                var coveredQty = groups * groupQty;
+                var standardCoveredPrice = coveredQty * unitPrice;
+                var promoCoveredPrice = groups * ruleVal;
+                discountAmount = Math.max(0, standardCoveredPrice - promoCoveredPrice);
+            } else {
+                // Non-repeatable tier once minimum_quantity is reached:
+                // If discount_value is treated as the bundle price for `minQty` or unit price:
+                // When qty >= minQty, apply discounted unit/tier pricing across the item
+                var tierUnitPrice = groupQty > 1 ? (ruleVal / groupQty) : ruleVal;
+                discountAmount = Math.max(0, (unitPrice - tierUnitPrice) * qty);
+            }
         }
 
         return {
             amount: Number(discountAmount.toFixed(2)),
-            name: rule.name || 'Descuento Promocional'
+            name: rule.name || 'Regla por cantidad'
         };
     }
 
@@ -1152,6 +1178,7 @@ defineModule("PosUIController", ["$", "CSSCore", "AsyncRequest", "TemplateEngine
     function renderCart() {
         var container = $.fromIDOrElement("pos_cart_items");
         var subtotalEl = $.fromIDOrElement("cart_subtotal");
+        var discountEl = $.fromIDOrElement("cart_discount");
         var totalEl = $.fromIDOrElement("cart_total");
 
         if (!container) return;
@@ -1160,20 +1187,29 @@ defineModule("PosUIController", ["$", "CSSCore", "AsyncRequest", "TemplateEngine
         if (cart.length === 0) {
             container.innerHTML = '<div class="empty-cart-message">Escanea o busca un producto para comenzar</div>';
             if (subtotalEl) subtotalEl.innerText = formatMoney(0);
+            if (discountEl) discountEl.innerText = formatMoney(0);
             if (totalEl) totalEl.innerText = formatMoney(0);
             return;
         }
 
+        var subtotal = 0;
+        var totalDiscount = 0;
         var total = 0;
+
         cart.forEach(function(item) {
-            total += item.line_total;
-            var copy = Object.assign({}, item);
-            copy.price = formatMoney(item.price);
-            copy.original_price = formatMoney(item.original_price || item.price);
-            copy.has_original_price = item.original_price && item.original_price > item.price;
-            copy.line_total = formatMoney(item.line_total);
-            
+            var qty = Number(item.quantity) || 0;
+            var price = Number(item.price) || 0;
             var discountAmount = Number(item.discount_amount || 0);
+
+            subtotal += qty * price;
+            totalDiscount += discountAmount;
+            total += Number(item.line_total) || 0;
+
+            var copy = Object.assign({}, item);
+            copy.price = formatMoney(price);
+            copy.original_price = formatMoney(item.original_price || price);
+            copy.has_original_price = item.original_price && item.original_price > price;
+            copy.line_total = formatMoney(item.line_total);
             copy.has_discount = discountAmount > 0;
             copy.formatted_discount = formatMoney(discountAmount);
             copy.min_qty = item.min_qty || (item.allows_fraction ? 0.001 : 1);
@@ -1183,27 +1219,37 @@ defineModule("PosUIController", ["$", "CSSCore", "AsyncRequest", "TemplateEngine
             container.appendChild(itemEl);
         });
 
-        var formattedTotal = formatMoney(total);
-        if (subtotalEl) subtotalEl.innerText = formattedTotal;
+        if (subtotalEl) subtotalEl.innerText = formatMoney(subtotal);
+        if (discountEl) discountEl.innerText = formatMoney(totalDiscount);
         if (totalEl) {
-            totalEl.innerText = formattedTotal;
+            totalEl.innerText = formatMoney(total);
 
             totalEl.classList.remove('total-highlight');
-            // Force reflow to restart animation if triggered rapidly
-            void totalEl.offsetWidth; 
+            void totalEl.offsetWidth;
             totalEl.classList.add('total-highlight');
         }
     }
 
     function updateTotalsSummary() {
         var subtotalEl = $.fromIDOrElement("cart_subtotal");
+        var discountEl = $.fromIDOrElement("cart_discount");
         var totalEl = $.fromIDOrElement("cart_total");
 
-        var total = cart.reduce(function(sum, item) { return sum + item.line_total; }, 0);
-        var formattedTotal = formatMoney(total);
+        var subtotal = cart.reduce(function(sum, item) {
+            return sum + ((Number(item.quantity) || 0) * (Number(item.price) || 0));
+        }, 0);
 
-        if (subtotalEl) subtotalEl.innerText = formattedTotal;
-        if (totalEl) totalEl.innerText = formattedTotal;
+        var totalDiscount = cart.reduce(function(sum, item) {
+            return sum + (Number(item.discount_amount) || 0);
+        }, 0);
+
+        var total = cart.reduce(function(sum, item) {
+            return sum + (Number(item.line_total) || 0);
+        }, 0);
+
+        if (subtotalEl) subtotalEl.innerText = formatMoney(subtotal);
+        if (discountEl) discountEl.innerText = formatMoney(totalDiscount);
+        if (totalEl) totalEl.innerText = formatMoney(total);
     }
 
     function calculateChange() {

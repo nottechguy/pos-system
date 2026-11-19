@@ -93,7 +93,7 @@ class ProductPricingController extends Controller
         $validated['created_by_user_id'] = auth()->id();
         $validated['is_active'] = $request->has('is_active');
         // Defaulting repeatable to true for standard bulk (e.g., 3 for $10, 6 for $20)
-        $validated['repeatable'] = $request->has('repeatable') ?? true;
+        $validated['repeatable'] = $request->boolean('repeatable', true);
         $validated['priority'] = 1; // Default priority
 
         ProductQuantityRule::create($validated);
